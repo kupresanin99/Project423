@@ -42,7 +42,7 @@ Indians vs. White Sox, predicted runs = 7.9
 Cubs vs. Pirates, predicted runs = 8.2  
 Rockies vs. Reds, predicted runs = 11.9  
 
-The best betting opportunity for April 10 is the bet the OVER on Rockies vs. Reds.  
+The best betting opportunity for April 10 is the bet the OVER 10.5 on Rockies vs. Reds.  
 
 If the game has 11 or more runs, the gambler wins.  
 If the game has 10 or fewer runs, the gambler loses.  
