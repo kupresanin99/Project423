@@ -9,7 +9,8 @@
 ## Project Charter 
 
 **Vision**:  
-To take it to the man.  In other words, for gambling purposes, help users consistently beat the MLB over / under runs totals wagers.  
+To take it to the man.  
+In other words, for gambling purposes, help users consistently beat the MLB over / under runs totals wagers.  
 
 **Mission**:  
 Each day, the user can pull the runs total predictions for the slate of MLB games.  
@@ -18,14 +19,35 @@ These predictions can be used to make educated bets.
 **Success criteria**:  
 
 **Statistical Criteria**:  
-Mean square error  
-(model will produce a numerical prediction, "Total Runs Scored" for each MLB game today)  
-(Hope to keep this under 1 run, but not sure at this point).  
+Mean Square Error, from regression, boosted tree, or random forest final model.  
+Model will produce a numerical prediction, "Total Runs Scored" for each MLB game today.  
+Hope to keep this under 1 run, but not sure at this point.  
 
 **Business Criteria**:  
 To win at sports gambling, the bettor needs to win more than 55 percent of wagers placed.  
 From deployment through the end of the 2019 MLB regular season, I will use the model and track a running total of wagers won.  
 
+**Example**:  
+Say on April 10, there are three MLB games scheduled:  
+Indians vs. White Sox, run total = 8.5
+Cubs vs. Pirates, run total = 7.5  
+Rockies vs. Reds, run total = 10.5  
+
+The user runs the model and the daily predictions are:  
+Indians vs. White Sox, predicted runs = 7.9  
+Cubs vs. Pirates, predicted runs = 8.2  
+Rockies vs. Reds, predicted runs = 11.9  
+
+The best betting opportunity for April 10 is the bet the OVER on Rockies vs. Reds.  
+
+The gambler could bet OVER on Rockies vs. Reds, and if the game has 11 or more runs, the gambler wins.  
+If the game has 10 or fewer runs, the gambler loses.  
+Bets pay even money, so a $100 bet wins $100.  
+The reason the gambler must win more than 55 percent of wagers is the bookie charges a commission to make the wager.  
+
+
+
+ 
 
 
 
