@@ -60,6 +60,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
   
 1.  A working app that meets the MSiA criteria.  
 2.  Enough modeling predictive power to take it to the man.  
+3.  Testing / Logging / QA crash course.  
 
 **Epics**:  
   
@@ -69,14 +70,37 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 1.4.  Automate continuous daily data collection.  
 1.5.  Develop web app for user to obtain daily predictions.  
 
-2.1.  
+2.1.  Upon functionality, begin to track if predictions can beat the bookie.  
+2.2.  Additional variables can be entered into modeling, but keeping it simple to start:  
+
+Available variables (per day):  
+Matchup variables (location, stadium, surface, time, etc...)  
+Weather variables (temperature, wind, cloud coverage, etc...)  
+Matchup variables (starting pitcher record / runs given up / history and team record)  
+
+3.1.  Develop these skills from scratch (no experience on any of them).  
 
 **Stories**:  
-1.1.a.  Learn how to pull API data.  
-1.1.b.  
+
+1.1.a.  Learn how to pull API data (website already selected and required variables available).  
+1.1.b.  Learn where to put API data.  
+1.1.c.  Revisit manipulating / cleaning / transforming data in Python.  
+
+1.2.a.  Develop models using Scikit-Learn - likely regression, boosted tree, and random forest.  
+1.2.b.  Determine reasonable strategy for train / test split.  
+1.2.c.  
 
 
- 
+
+
+
+
+
+
+
+
+
+
 
 
 
