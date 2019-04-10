@@ -74,7 +74,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 2.2.  Additional variables can be entered into modeling, but keeping it simple to start:  
 
 Available variables (per day):  
-Matchup variables (location, stadium, surface, time, etc...)  
+Venue variables (location, stadium, surface, time, etc...)  
 Weather variables (temperature, wind, cloud coverage, etc...)  
 Matchup variables (starting pitcher record / runs given up / history and team record)  
 
