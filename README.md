@@ -34,7 +34,7 @@ Pirates vs. Cubs, runs total = 7.5
 Indians vs. Tigers, runs total = 7.0  
 Rays vs. White Sox, runs total = 8.5
 
-![example](https://github.com/kupresanin99/Project423#project-charter/mlb.png)
+![example](https://raw.githubusercontent.com/kupresanin99/Project423#project-charter/mlb.png)
 
 The above "runs total" values are set by the bookie before the game is played.  
 The gambler can bet UNDER if he thinks the game will have fewer runs than the above values.  
