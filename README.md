@@ -19,8 +19,8 @@ These predictions can be used to make educated bets.
 **Success criteria**:  
 
 **Statistical Criteria**:  
-Mean Square Error, from regression, boosted tree, or random forest final model.  
-Model will produce a numerical prediction, "Total Runs Scored" for each MLB game today.  
+Mean Square Error, from the regression, boosted tree, or random forest final model.  
+The model will produce a numerical prediction, "Total Runs Scored" for each MLB game today.  
 Hope to keep this under 1 run, but not sure at this point.  
 
 **Business Criteria**:  
@@ -29,7 +29,7 @@ From deployment through the end of the 2019 MLB regular season, I will use the m
 
 **Example**:  
 Say on April 10, there are three MLB games scheduled:  
-Indians vs. White Sox, run total = 8.5
+Indians vs. White Sox, run total = 8.5  
 Cubs vs. Pirates, run total = 7.5  
 Rockies vs. Reds, run total = 10.5  
 
