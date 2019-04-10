@@ -34,17 +34,20 @@ Cubs vs. Pirates, runs total = 7.5
 Rockies vs. Reds, runs total = 10.5  
 
 The above "runs total" values are set by the bookie before the game is played.  
+The gambler can bet UNDER if he thinks the game will have fewer runs than the above values.  
+The gambler can bet OVER if she thinks the game will have more runs than the above values.  
 
-The user runs the model and the daily predictions are:  
+The user runs the model early in the day and the predictions are:  
 Indians vs. White Sox, predicted runs = 7.9  
 Cubs vs. Pirates, predicted runs = 8.2  
 Rockies vs. Reds, predicted runs = 11.9  
 
 The best betting opportunity for April 10 is the bet the OVER on Rockies vs. Reds.  
 
-The gambler could bet OVER on Rockies vs. Reds, and if the game has 11 or more runs, the gambler wins.  
+If the game has 11 or more runs, the gambler wins.  
 If the game has 10 or fewer runs, the gambler loses.  
 Bets pay even money, so a $100 bet wins $100.  
+
 The reason the gambler must win more than 55 percent of wagers is the bookie charges a commission to make the wager.  
 
 
