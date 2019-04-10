@@ -40,9 +40,9 @@ The above "runs total" values are set by the bookie before the game is played.
 The gambler can bet UNDER if he thinks the game will have fewer runs than the above values.  
 The gambler can bet OVER if she thinks the game will have more runs than the above values.  
 
-The user runs the model early in the day and the predictions are:  
+The user accesses the model early in the day and the predictions are:  
 Pirates vs. Cubs, predicted runs = 7.9  
-Indians vs. Tigers, predicted runs = 6.2  
+Indians vs. Tigers, predicted runs = 6.4  
 Rays vs. White Sox, predicted runs = 9.9  
 
 The best betting opportunity for April 10 is the bet the OVER 8.5 on Rays vs. White Sox.  
