@@ -30,23 +30,23 @@ From deployment through the end of the 2019 MLB regular season, I will use the m
 
 **Example**:  
 Say on April 10, there are three MLB games scheduled:  
-Indians vs. White Sox, runs total = 8.5  
-Cubs vs. Pirates, runs total = 7.5  
-Rockies vs. Reds, runs total = 10.5  
+Pirates vs. Cubs, runs total = 7.5  
+Indians vs. Tigers, runs total = 7.0 
+Rays vs. White Sox, runs total = 8.5
 
 The above "runs total" values are set by the bookie before the game is played.  
 The gambler can bet UNDER if he thinks the game will have fewer runs than the above values.  
 The gambler can bet OVER if she thinks the game will have more runs than the above values.  
 
 The user runs the model early in the day and the predictions are:  
-Indians vs. White Sox, predicted runs = 7.9  
-Cubs vs. Pirates, predicted runs = 8.2  
-Rockies vs. Reds, predicted runs = 11.9  
+Pirates vs. Cubs, predicted runs = 7.9  
+Indians vs. Tigers, predicted runs = 6.2  
+Rays vs. White Sox, predicted runs = 9.9  
 
-The best betting opportunity for April 10 is the bet the OVER 10.5 on Rockies vs. Reds.  
+The best betting opportunity for April 10 is the bet the OVER 8.5 on Rays vs. White Sox.  
 
-If the game has 11 or more runs, the gambler wins.  
-If the game has 10 or fewer runs, the gambler loses.  
+If the game has 9 or more runs, the gambler wins.  
+If the game has 8 or fewer runs, the gambler loses.  
 Bets pay even money, so a $100 bet wins $100.  
 
 The reason the gambler must win more than 55 percent of wagers is the bookie charges a commission to make the wager.  
