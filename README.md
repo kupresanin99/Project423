@@ -45,7 +45,7 @@ Pirates vs. Cubs, predicted runs = 7.9
 Indians vs. Tigers, predicted runs = 6.4  
 Rays vs. White Sox, predicted runs = 9.9  
 
-The best betting opportunity for April 10 is the bet the OVER 8.5 on Rays vs. White Sox.  
+The best betting opportunity for April 10 is to bet the OVER 8.5 on Rays vs. White Sox.  
 
 If the game has 9 or more runs, the gambler wins.  
 If the game has 8 or fewer runs, the gambler loses.  
