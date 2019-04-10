@@ -29,9 +29,11 @@ From deployment through the end of the 2019 MLB regular season, I will use the m
 
 **Example**:  
 Say on April 10, there are three MLB games scheduled:  
-Indians vs. White Sox, run total = 8.5  
-Cubs vs. Pirates, run total = 7.5  
-Rockies vs. Reds, run total = 10.5  
+Indians vs. White Sox, runs total = 8.5  
+Cubs vs. Pirates, runs total = 7.5  
+Rockies vs. Reds, runs total = 10.5  
+
+The above "runs total" values are set by the bookie before the game is played.  
 
 The user runs the model and the daily predictions are:  
 Indians vs. White Sox, predicted runs = 7.9  
