@@ -21,7 +21,7 @@ These predictions can be used to make educated bets.
 **Statistical Criteria**:  
 Mean Square Error, from the regression, boosted tree, or random forest final model.  
 The model will produce a numerical prediction, "Total Runs Scored" for each MLB game today.  
-Hope to keep this under 1 run, but not sure at this point.  
+Hope to keep MSE (test) under 1 run, but not sure at this point.  
 
 **Business Criteria**:  
 To win at sports gambling, the bettor needs to win more than 55 percent of wagers placed.  
