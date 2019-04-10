@@ -10,7 +10,7 @@
 
 **Vision**:  
 To take it to the man.  
-In other words, for gambling purposes, help users consistently beat the MLB over / under runs totals wagers.  
+In other words, for gambling purposes, help the user to consistently beat the MLB over / under runs totals wagers.  
 
 **Mission**:  
 Each day, the user can pull the runs total predictions for the slate of MLB games.  
