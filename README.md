@@ -3,6 +3,7 @@
 <!-- toc -->
 
 - [Project Charter](#project-charter)
+- [Backlog](#backlog)
 
 <!-- tocstop -->
 
@@ -51,6 +52,9 @@ Bets pay even money, so a $100 bet wins $100.
 The reason the gambler must win more than 55 percent of wagers is the bookie charges a commission to make the wager.  
 
 
+## Backlog
+
+Hey bub.
 
  
 
