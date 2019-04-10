@@ -56,7 +56,25 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 
 ## Backlog
 
-Hey bub.
+**Themes**:  
+  
+1.  A working app that meets the MSiA criteria.  
+2.  Enough modeling predictive power to take it to the man.  
+
+**Epics**:  
+  
+1.1.  Source data from baseball statistics API.  
+1.2.  Build predictive models based on local data.  
+1.3.  Successfully migrate data from API to cloud database.  
+1.4.  Automate continuous daily data collection.  
+1.5.  Develop web app for user to obtain daily predictions.  
+
+2.1.  
+
+**Stories**:  
+1.1.a.  Learn how to pull API data.  
+1.1.b.  
+
 
  
 
