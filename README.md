@@ -16,7 +16,7 @@ In other words, for gambling purposes, help the user to consistently beat the ML
 Each day, the user can pull the runs total predictions for the slate of MLB games.  
 These predictions can be used to make educated bets.
 
-**Success criteria**:  
+**Success Criteria**:  
 
 **Statistical Criteria**:  
 Mean Square Error, from the regression, boosted tree, or random forest final model.  
