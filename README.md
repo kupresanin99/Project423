@@ -18,11 +18,15 @@
 
 ## Project Charter 
 
-**Vision**: To enable animals everywhere to enjoy music just for them. 
+**Vision**: To take it to the man.  In other words, for gambling purposes, help users consistently beat the MLB over / under runs totals wagers.  
 
-**Mission**: Enable users to add songs that they like and produce new song recommendations based on their entries.
+**Mission**: Each day, the user can pull the runs total predictions for the slate of MLB games.  These predictions can be used to make educated bets.
 
-**Success criteria**: Users play 80% of recommended songs more than once. 
+**Success criteria**: 
+
+Statistical Criteria: Mean square error (model will produce a numerical prediction) (Hope to keep this under 1 run, but not sure at this point).
+
+Business Criteria:  To win at sports gambling, the bettor needs to win more than 55 percent of wagers placed.  From deployment through the end of the 2019 MLB regular season, I will use the model and track a running total of wagers won.  
 
 
 _Note_: Project charters should actually be more detailed than this! But this is where the charter belongs.  
