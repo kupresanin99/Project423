@@ -31,7 +31,7 @@ From deployment through the end of the 2019 MLB regular season, I will use the m
 **Example**:  
 Say on April 10, there are three MLB games scheduled:  
 Pirates vs. Cubs, runs total = 7.5  
-Indians vs. Tigers, runs total = 7.0 
+Indians vs. Tigers, runs total = 7.0  
 Rays vs. White Sox, runs total = 8.5
 
 The above "runs total" values are set by the bookie before the game is played.  
