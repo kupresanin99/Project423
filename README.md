@@ -78,17 +78,36 @@ Matchup variables (location, stadium, surface, time, etc...)
 Weather variables (temperature, wind, cloud coverage, etc...)  
 Matchup variables (starting pitcher record / runs given up / history and team record)  
 
+Additional variables will require table joins and additional API pulls, which can be implemented in the future.  
+
 3.1.  Develop these skills from scratch (no experience on any of them).  
+3.2.  Work with Max so we can both become stronger software developers.  
 
 **Stories**:  
 
-1.1.a.  Learn how to pull API data (website already selected and required variables available).  
-1.1.b.  Learn where to put API data.  
-1.1.c.  Revisit manipulating / cleaning / transforming data in Python.  
+1.1.a.  Learn how to pull API data (website already selected and required variables available) (1/2 day).  
+1.1.b.  Learn where to put API data (1/2 day).  
+1.1.c.  Revisit manipulating / cleaning / transforming data in Python (1 day).  
 
-1.2.a.  Develop models using Scikit-Learn - likely regression, boosted tree, and random forest.  
-1.2.b.  Determine reasonable strategy for train / test split.  
-1.2.c.  
+1.2.a.  Develop models using Scikit-Learn - likely regression, boosted tree, and random forest (1/2 day).  
+1.2.b.  Determine reasonable strategy for train / test split (1/4 day).  
+1.2.c.  Strategize to keep this all organized and not haphazard (1/4 day).  
+
+1.3.a.  Learn from instructors how to run things on cloud (5 days).  
+
+1.4.a.  Learn from instructors how to run things automatically (bash scripts, e.g.) (2 days).  
+
+1.5.a.  Learn from instructors how to create working web app (3 days).  
+
+2.1.a.  Daily tracking of model performance / gambling wins (1 hour / day).  
+
+2.2.a.  Adding additional variables to the model for performance improvement (placeholder, not sure if time) (icebox).  
+
+3.1.a.  Develop testing, logging, QA skills (5 days).  
+
+3.2.a.  Work with Max to gain skills (ongoing).  
+
+
 
 
 
