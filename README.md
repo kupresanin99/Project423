@@ -10,12 +10,17 @@
 ## Project Charter 
 
 **Vision**:  
-To take it to the man.  
-In other words, for gambling purposes, help the user to consistently beat the MLB over / under runs totals wagers.  
+With legalized sports betting, there is a market for selling predictive services to gamblers.  
+Main point:  help the bettor consistently beat the MLB over / under runs totals wagers.  
+
+For each baseball game, the bookie sets an OVER / UNDER line for total runs scored (example below).  
+The bettor can wager on OVER if s/he thinks more runs will be scored than the bookie's line.  
+Likewise, the bettor can wager on UNDER if s/he thinks fewer runs will be scored than the bookie's line.  
+
 
 **Mission**:  
-Each day, the user can pull the runs total predictions for the slate of MLB games.  
-These predictions can be used to make educated bets.
+Each day, the bettor can pull the runs total predictions for the slate of today's MLB games.  
+These predictions can be used to make educated bets.  
 
 **Success Criteria**:  
 
