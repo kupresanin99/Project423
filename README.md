@@ -11,29 +11,32 @@
 
 **Vision**:  
 With legalized sports betting, there is a market for selling predictive services to gamblers.  
-Main point:  help the bettor consistently beat the MLB over / under runs totals wagers.  
+Main point:  help the bettor consistently beat the MLB over / under runs totals offered by the bookie.  
 
 For each baseball game, the bookie sets an OVER / UNDER line for total runs scored (example below).  
 The bettor can wager on OVER if s/he thinks more runs will be scored than the bookie's line.  
 Likewise, the bettor can wager on UNDER if s/he thinks fewer runs will be scored than the bookie's line.  
 
+Bets pay even money (less a 10 percent commission), so the bettor must win 55 percent of bets to break even.  
+
 
 **Mission**:  
-Each day, the bettor can pull the runs total predictions for the slate of today's MLB games.  
+Each day, the bettor can pull from the web app the runs total predictions for the slate of today's MLB games.  
 These predictions can be used to make educated bets.  
 
 **Success Criteria**:  
 
 **Statistical Criteria**:  
-Mean Square Error, from the regression, boosted tree, or random forest final model.  
+Root mean square error, from the regression, boosted tree, or random forest final model.  
 The model will produce a numerical prediction, "Total Runs Scored" for each MLB game today.  
-Hope to keep MSE (test) under 1 run, but not sure at this point.  
+Hope to keep RMSE (test) under 1 run, but not sure at this point.  
 
 **Business Criteria**:  
 To win at sports gambling, the bettor needs to win more than 55 percent of wagers placed.  
 From deployment through the end of the 2019 MLB regular season, I will use the model and track a running total of wagers won.  
+If the app can beat the bookie over the course of the remainder of the baseball season, we will consider it a success.  
 
-**Example**:  
+**Example Scenario**:  
 Say on April 10, there are three MLB games scheduled:  
 Pirates vs. Cubs, runs total = 7.5  
 Indians vs. Tigers, runs total = 7.0  
@@ -63,17 +66,18 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 
 **Themes**:  
   
-1.  A working app that meets the MSiA criteria.  
-2.  Enough modeling predictive power to take it to the man.  
-3.  Testing / Logging / QA crash course.  
+1.  A working app that meets the MSiA 423 criteria.  
+2.  Enough modeling predictive power to win 55 percent of bets placed.  
 
 **Epics**:  
   
-1.1.  Source data from baseball statistics API.  
-1.2.  Build predictive models based on local data.  
-1.3.  Successfully migrate data from API to cloud database.  
-1.4.  Automate continuous daily data collection.  
-1.5.  Develop web app for user to obtain daily predictions.  
+1.1.  Source data from baseball statistics API.  (Next two weeks)  
+1.2.  Format the data from json into pandas dataframe.  (Next two weeks)  
+1.2.  Build predictive models based on historical 2018 data.  (Next two weeks)  
+1.3.  Successfully migrate data / model from API to cloud database.  
+1.4.  Implement testing / logging / QA per best practices.  
+1.5.  Automate continuous daily data collection (2019 data for today's predictions).  
+1.6.  Develop web app for user to obtain daily predictions.  
 
 2.1.  Upon functionality, begin to track if predictions can beat the bookie.  
 2.2.  Additional variables can be entered into modeling, but keeping it simple to start:  
@@ -84,9 +88,6 @@ Weather variables (temperature, wind, cloud coverage, etc...)
 Matchup variables (starting pitcher record / runs given up / history and team record)  
 
 Additional variables will require table joins and additional API pulls, which can be implemented in the future.  
-
-3.1.  Develop these skills from scratch (no experience on any of them).  
-3.2.  Work with Max so we can both become stronger software developers.  
 
 **Stories**:  
 
@@ -100,17 +101,16 @@ Additional variables will require table joins and additional API pulls, which ca
 
 1.3.a.  Learn from instructors how to run things on cloud (5 days).  
 
-1.4.a.  Learn from instructors how to run things automatically (bash scripts, e.g.) (2 days).  
+1.4.a.  Learn pytest (1/4 day).  
+1.4.b.  Write tests (1/4 day).  
 
-1.5.a.  Learn from instructors how to create working web app (3 days).  
+1.5.a.  Learn from instructors how to run things automatically (bash scripts, e.g.) (2 days).  
+
+1.6.a.  Learn from instructors how to create working web app (3 days).  
 
 2.1.a.  Daily tracking of model performance / gambling wins (1 hour / day).  
 
 2.2.a.  Adding additional variables to the model for performance improvement (placeholder, not sure if time) (icebox).  
-
-3.1.a.  Develop testing, logging, QA skills (5 days).  
-
-3.2.a.  Work with Max to gain skills (ongoing).  
 
 
 
