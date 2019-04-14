@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="" />
+    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/april12_pull.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/clean_historical_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/initial_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/pull_historical_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/InitialModel.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/InitialModel.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/Tester.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/model_data" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/model_data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/open_historical_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/open_historical_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/outfile1" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/baseball2018" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/outfile_april_12_post" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/pull_historical_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/pull_historical_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,31 +24,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/add_songs.py">
+        <entry file="file://$PROJECT_DIR$/notebooks/datapull/initial_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="411">
+              <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,20 +39,39 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-526" />
-    <option name="y" value="-1417" />
-    <option name="width" value="2560" />
-    <option name="height" value="1417" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/notebooks/datapull/pull_historical_data.py" />
+        <option value="$PROJECT_DIR$/notebooks/datapull/clean_historical_data.py" />
+        <option value="$PROJECT_DIR$/notebooks/datapull/april12_pull.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/notebooks/datapull/initial_model.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="180" />
+    <option name="y" value="124" />
+    <option name="width" value="1080" />
+    <option name="height" value="607" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -70,7 +87,18 @@
             <path>
               <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project423" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project423" type="462c0819:PsiDirectoryNode" />
               <item name="notebooks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project423" type="462c0819:PsiDirectoryNode" />
+              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
+              <item name="datapull" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
@@ -85,7 +113,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -110,7 +137,73 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.initial_model">
+    <configuration name="april12_pull" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project423" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/notebooks/datapull" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notebooks/datapull/april12_pull.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="clean_historical_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project423" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/notebooks/datapull" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notebooks/datapull/clean_historical_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="initial_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project423" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/notebooks/datapull" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notebooks/datapull/initial_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Project423" type="Python.FlaskServer">
       <module name="Project423" />
       <option name="target" value="$PROJECT_DIR$/app/__init__.py" />
@@ -118,7 +211,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -126,6 +219,13 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.initial_model" />
+        <item itemvalue="Python.clean_historical_data" />
+        <item itemvalue="Python.april12_pull" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -141,11 +241,13 @@
       <workItem from="1554949863361" duration="1000000" />
       <workItem from="1554950875624" duration="2000" />
       <workItem from="1555023770317" duration="1197000" />
+      <workItem from="1555191055463" duration="42000" />
+      <workItem from="1555211687401" duration="3318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2365000" />
+    <option name="totallyTimeSpent" value="5725000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -157,18 +259,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-526" y="-1417" width="2560" height="1417" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="809" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17337088" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28683835" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2608089" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32939324" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.23570432" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32939324" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -185,6 +288,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Project423$april12_pull.coverage" NAME="april12_pull Coverage Results" MODIFIED="1555214513072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+    <SUITE FILE_PATH="coverage/Project423$clean_historical_data.coverage" NAME="clean_historical_data Coverage Results" MODIFIED="1555214665662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+    <SUITE FILE_PATH="coverage/Project423$initial_model.coverage" NAME="initial_model Coverage Results" MODIFIED="1555215240137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -198,13 +306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -225,18 +326,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/train_model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/Tester.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/InitialModel.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/April12_pull.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/add_songs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/pull_historical_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/clean_historical_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/april12_pull.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/initial_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
