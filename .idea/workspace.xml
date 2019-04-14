@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/notebooks/datapull/april14_pull.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/April12_pull.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/InitialModel.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/model_data" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/model_data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/open_historical_data.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/pull_historical_data.ipynb" beforeDir="false" />
-    </list>
+    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +288,7 @@
       <workItem from="1555023770317" duration="1197000" />
       <workItem from="1555191055463" duration="42000" />
       <workItem from="1555211687401" duration="3452000" />
-      <workItem from="1555247745619" duration="1842000" />
+      <workItem from="1555247745619" duration="1973000" />
     </task>
     <task id="LOCAL-00001" summary="Brought notebooks into Pycharm as .py files.">
       <created>1555215366127</created>
@@ -309,7 +301,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7701000" />
+    <option name="totallyTimeSpent" value="7832000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
