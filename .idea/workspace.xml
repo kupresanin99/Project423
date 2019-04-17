@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/notebooks/datapull/Result_Puller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_16_pre" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_16_pre" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_prediction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_14" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_14" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_15" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_15" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/datapull/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/tester.py" afterDir="false" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notebooks/datapull/tester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="62">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -31,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1067">
-              <caret line="175" column="22" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
+            <state relative-caret-position="-98">
+              <caret line="221" column="30" selection-start-line="221" selection-start-column="30" selection-end-line="221" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -62,9 +63,9 @@
         <option value="$PROJECT_DIR$/notebooks/datapull/daily_scrub.py" />
         <option value="$PROJECT_DIR$/notebooks/datapull/api_data_grab.py" />
         <option value="$PROJECT_DIR$/notebooks/daily_prediction.py" />
-        <option value="$PROJECT_DIR$/notebooks/datapull/daily_prediction.py" />
         <option value="$PROJECT_DIR$/notebooks/datapull/Another_tester.py" />
         <option value="$PROJECT_DIR$/notebooks/datapull/Result_Puller.py" />
+        <option value="$PROJECT_DIR$/notebooks/datapull/daily_prediction.py" />
         <option value="$PROJECT_DIR$/notebooks/datapull/tester.py" />
       </list>
     </option>
@@ -320,7 +321,8 @@
       <workItem from="1555329007135" duration="942000" />
       <workItem from="1555363804859" duration="3411000" />
       <workItem from="1555457279348" duration="295000" />
-      <workItem from="1555463648025" duration="9754000" />
+      <workItem from="1555463648025" duration="10154000" />
+      <workItem from="1555500880571" duration="2537000" />
     </task>
     <task id="LOCAL-00001" summary="Brought notebooks into Pycharm as .py files.">
       <created>1555215366127</created>
@@ -350,11 +352,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555469424976</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Reasonably working app in PyCharm.">
+      <created>1555473935814</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555473935814</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22234000" />
+    <option name="totallyTimeSpent" value="25171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,25 +375,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="959" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25504324" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25859952" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4713467" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.8266509" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.23421589" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.33206108" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3313679" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2104019" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.07739308" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.20990565" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.625" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -430,7 +438,7 @@
     <SUITE FILE_PATH="coverage/Project423$initial_model.coverage" NAME="initial_model Coverage Results" MODIFIED="1555248407297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$api_data_grab.coverage" NAME="api_data_grab Coverage Results" MODIFIED="1555365349697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$Another_tester.coverage" NAME="Another_tester Coverage Results" MODIFIED="1555472050849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
-    <SUITE FILE_PATH="coverage/Project423$tester.coverage" NAME="tester Coverage Results" MODIFIED="1555473737061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+    <SUITE FILE_PATH="coverage/Project423$tester.coverage" NAME="tester Coverage Results" MODIFIED="1555503008041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$april14_pull.coverage" NAME="april14_pull Coverage Results" MODIFIED="1555248395788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
   </component>
   <component name="editorHistoryManager">
@@ -563,13 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1067">
-          <caret line="175" column="22" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/Result_Puller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -580,10 +581,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-98">
+          <caret line="221" column="30" selection-start-line="221" selection-start-column="30" selection-end-line="221" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="62">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>

@@ -203,3 +203,41 @@ def get_predicted_runs(data, month, day):
     today['predicted.runs'] = predictions_today
 
     return today
+
+
+def user_input_results(today):
+
+    import numpy as np
+    bookie = []
+    outcome = []
+    print(today)
+    for game in range(today.shape[0]):
+        print()
+        q = "Enter bookie line for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
+        bookie.append(float(input(q)))
+        a = "Enter runs scored for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
+        outcome.append(int(input(a)))
+
+    today['bookie'] = bookie
+    today['outcome'] = outcome
+    today['predicted.run.rank'] = today['predicted.runs'].rank()
+    today['predicted.bookie.rank'] = today['bookie'].rank()
+    today['the.bet'] = np.where(today['predicted.run.rank'] - today['predicted.bookie.rank'] >= 0, 'OVER', 'UNDER')
+    today['betting.opportunity'] = abs(today['predicted.run.rank'] - today['predicted.bookie.rank'])
+
+    condition_list = [today["outcome"] > today["bookie"],
+                      today["outcome"] < today["bookie"],
+                      today["outcome"] == today["bookie"]]
+    choice_list = ["OVER", "UNDER", "PUSH"]
+    today['game.result'] = np.select(condition_list, choice_list)
+
+    condition_list2 = [today["the.bet"] == today["game.result"],
+                       (today["the.bet"] != today["game.result"]) & (today["game.result"] != "PUSH"),
+                       today["game.result"] == "PUSH"]
+    choice_list2 = [100, -100, 0]
+
+    today['bet.result'] = np.select(condition_list2, choice_list2)
+
+    today.sort_values(by=['betting.opportunity'], ascending=False, inplace=True)
+
+    return today
