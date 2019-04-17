@@ -3,7 +3,6 @@ def daily_data(month, day):
     import http.client
     import json
     from pandas.io.json import json_normalize
-    import pickle
 
     conn = http.client.HTTPSConnection("api.sportradar.us")
 
