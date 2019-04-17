@@ -2,6 +2,10 @@ from api_data_grab import daily_data
 from daily_prediction import get_predicted_runs
 import pickle
 import numpy as np
+import pandas as pd
+
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
 
 month = input("Give the month as 4, 5, 6, 7, 8, or 9, OK? ")
 day = input("Give the day as 1, 2, ..., 29, 30, or 31, OK? ")
@@ -19,6 +23,7 @@ bookie = []
 outcome = []
 print(today)
 for game in range(today.shape[0]):
+    print()
     q = "Enter bookie line for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
     bookie.append(input(q))
     a = "Enter runs scored for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
@@ -34,7 +39,7 @@ today['game.result'] = np.where(today['outcome'] > today['bookie'], 'OVER', 'UND
 today['game.result'] = np.where(today['outcome'] == today['bookie'], 'PUSH', today['game.result'])
 today['bet.result'] = np.where(today['the.bet'] == today['game.result'], 100, -100)
 today['bet.result'] = np.where(today['game.result'] == 'PUSH', 0, today['bet.result'])
-today.sort_values('betting.opportunity', ascending=False)
+today = today.sort_values('betting.opportunity', ascending=False)
 print(today)
 
 with open('./daily_results/results_{0}_{1}'.format(month, day), 'wb') as fp:
