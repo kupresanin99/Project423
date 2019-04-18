@@ -205,7 +205,7 @@ def get_predicted_runs(data, month, day):
     return today
 
 
-def user_input_results(today):
+def user_input_lines_and_results(today):
 
     import numpy as np
     bookie = []
@@ -238,6 +238,25 @@ def user_input_results(today):
 
     today['bet.result'] = np.select(condition_list2, choice_list2)
 
+    today.sort_values(by=['betting.opportunity'], ascending=False, inplace=True)
+
+    return today
+
+
+def user_input_lines(today):
+    import numpy as np
+    bookie = []
+    print(today)
+    for game in range(today.shape[0]):
+        print()
+        q = "Enter bookie line for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
+        bookie.append(float(input(q)))
+
+    today['bookie'] = bookie
+    today['predicted.run.rank'] = today['predicted.runs'].rank()
+    today['predicted.bookie.rank'] = today['bookie'].rank()
+    today['the.bet'] = np.where(today['predicted.run.rank'] - today['predicted.bookie.rank'] >= 0, 'OVER', 'UNDER')
+    today['betting.opportunity'] = abs(today['predicted.run.rank'] - today['predicted.bookie.rank'])
     today.sort_values(by=['betting.opportunity'], ascending=False, inplace=True)
 
     return today

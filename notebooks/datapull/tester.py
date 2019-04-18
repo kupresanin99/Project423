@@ -1,40 +1,38 @@
 from api_data_grab import daily_data
-from daily_prediction import get_predicted_runs, user_input_results
-import pickle
+from daily_prediction import get_predicted_runs, \
+    user_input_lines_and_results, user_input_lines
 import pandas as pd
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
-print("Hey, bub, need a data pull?")
+print("Hey, bub, need an API data pull?")
 answer = input("If so, type YES: ")
 print()
 month = input("Give the month as 4, 5, 6, 7, 8, or 9: ")
 day = input("Give the day as 1, 2, ..., 29, 30, or 31: ")
 print()
 
-# Need to put decision here for user
-# Are you gambling for today?
-# Or are you just inputting results from the past?
+print("Do you need gambling picks for today or recording past results?")
+print()
+print("Recording past results?  Enter 1")
+print("Gambling picks for today?  Enter 2")
+task = int(input("1 or 2: "))
 
 if answer == "YES":
-
     data = daily_data(month, day)
-    # with open('./daily_data/outfile_{0}_{1}_pre'.format(month, day), 'wb') as fp:
-    #     pickle.dump(data, fp)
     data.to_csv('./daily_data/outfile_{0}_{1}_pre'.format(month, day), encoding='utf-8')
 
 else:
-    # with open('./daily_data/outfile_{0}_{1}_pre'.format(month, day), 'rb') as fp:
-    #     data = pickle.load(fp)
     data = pd.read_csv('./daily_data/outfile_{0}_{1}_pre'.format(month, day), encoding='utf-8')
 
-today = get_predicted_runs(data, month, day)
-today = user_input_results(today)
+if task == 1:
+    today = get_predicted_runs(data, month, day)
+    today = user_input_lines_and_results(today)
+    print(today)
+    today.to_csv('./daily_results/results_{0}_{1}'.format(month, day), encoding='utf-8')
 
-print(today)
-
-# with open('./daily_results/results_{0}_{1}'.format(month, day), 'wb') as fp:
-#     pickle.dump(today, fp)
-
-today.to_csv('./daily_results/results_{0}_{1}'.format(month, day), encoding='utf-8')
+elif task == 2:
+    today = get_predicted_runs(data, month, day)
+    today = user_input_lines(today)
+    print(today)
