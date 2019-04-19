@@ -1,4 +1,5 @@
-# Kupresanin Project Repository
+# Joe Kupresanin Project Repository
+# Max Holiber is QA
 
 <!-- toc -->
 
