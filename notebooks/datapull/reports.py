@@ -26,11 +26,12 @@ def run_reports():
     results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
 
     print()
-    print("Profit since tracking began on April 14:")
+    print("Profit since tracking for 2019 season:")
     print()
-    print("Presume each bet is $100")
+    print("Each bet is $100")
     print()
-    print(list(team_dict.keys()))
+    team_list = list(team_dict.keys())
+    print(sorted(team_list))
     print()
     team = input("Select your favorite team code: ")
     # Report 1:  Running total of just betting the best daily bet
