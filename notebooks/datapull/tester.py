@@ -7,9 +7,11 @@ import pandas as pd
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
+print()
 print("Recording past results?  Enter 1")
 print("Gambling picks for today?  Enter 2")
 print("Run reports?  Enter 3")
+print()
 task = int(input("1 or 2 or 3: "))
 
 if task == 3:
