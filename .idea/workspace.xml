@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
+    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="Getting April data to build results table.">
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_1_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_2_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_3_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_4_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_5_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_6_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_7_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_8_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_9_pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_9.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_18_pre.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_18_pre.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/reports.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/reports.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/tester.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notebooks/datapull/tester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="-136">
               <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -27,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="17">
               <caret line="244" selection-start-line="244" selection-end-line="244" />
             </state>
           </provider>
@@ -83,8 +97,8 @@
         <option value="$PROJECT_DIR$/notebooks/datapull/Result_Puller.py" />
         <option value="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_15" />
         <option value="$PROJECT_DIR$/notebooks/datapull/daily_prediction.py" />
-        <option value="$PROJECT_DIR$/notebooks/datapull/tester.py" />
         <option value="$PROJECT_DIR$/notebooks/datapull/reports.py" />
+        <option value="$PROJECT_DIR$/notebooks/datapull/tester.py" />
       </list>
     </option>
   </component>
@@ -332,7 +346,7 @@
       <workItem from="1555590716664" duration="2526000" />
       <workItem from="1555599412068" duration="1546000" />
       <workItem from="1555611574103" duration="4597000" />
-      <workItem from="1555635195673" duration="662000" />
+      <workItem from="1555635195673" duration="2185000" />
     </task>
     <task id="LOCAL-00001" summary="Brought notebooks into Pycharm as .py files.">
       <created>1555215366127</created>
@@ -418,11 +432,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555628074773</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added team reporting!">
+      <created>1555637430157</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555637430157</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Getting April data to build results table.">
+      <created>1555638964055</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555638964055</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38286000" />
+    <option name="totallyTimeSpent" value="39809000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -441,7 +469,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45400944" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6273585" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -492,7 +520,9 @@
     <MESSAGE value="Switched input / output files to csv." />
     <MESSAGE value="Made menu for gambling picks or record yesterday results." />
     <MESSAGE value="Added reporting, migrated to PyCharm, baby!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added reporting, migrated to PyCharm, baby!" />
+    <MESSAGE value="Added team reporting!" />
+    <MESSAGE value="Getting April data to build results table." />
+    <option name="LAST_COMMIT_MESSAGE" value="Getting April data to build results table." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Project423$pull_historical_data.coverage" NAME="pull_historical_data Coverage Results" MODIFIED="1555329257105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
@@ -501,7 +531,7 @@
     <SUITE FILE_PATH="coverage/Project423$initial_model.coverage" NAME="initial_model Coverage Results" MODIFIED="1555248407297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$api_data_grab.coverage" NAME="api_data_grab Coverage Results" MODIFIED="1555365349697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$Another_tester.coverage" NAME="Another_tester Coverage Results" MODIFIED="1555472050849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
-    <SUITE FILE_PATH="coverage/Project423$tester.coverage" NAME="tester Coverage Results" MODIFIED="1555637388455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+    <SUITE FILE_PATH="coverage/Project423$tester.coverage" NAME="tester Coverage Results" MODIFIED="1555638710853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$april14_pull.coverage" NAME="april14_pull Coverage Results" MODIFIED="1555248395788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
   </component>
   <component name="editorHistoryManager">
@@ -647,13 +677,6 @@
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_17" />
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_results/Untitled.ipynb" />
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_data/outfile_4_18_pre" />
-    <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="244" selection-start-line="244" selection-end-line="244" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/api_data_grab.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -670,11 +693,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="-136">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
         </state>
       </provider>
     </entry>
