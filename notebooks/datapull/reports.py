@@ -26,30 +26,29 @@ def run_reports():
     results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
 
     print()
-    print("Profit since tracking for 2019 season:")
-    print()
-    print("Each bet is $100")
-    print()
-    team_list = list(team_dict.keys())
-    print(sorted(team_list))
-    print()
-    team = input("Select your favorite team code: ")
+    print("Results for 2019 season:")
+    print("(Each bet is $100)")
+
     # Report 1:  Running total of just betting the best daily bet
     print()
     report1 = results.groupby('date').apply(lambda t: t[t['betting.opportunity'] == t['betting.opportunity'].max()])
-    print("(Grandmaster) Bet the best bet each day: $", report1['bet.result'].sum(), "   Total Bets: ",
+    print("Only bet the 10-star pick each day: $", report1['bet.result'].sum(), "   Total Bets: ",
           report1['bet.result'].count(), sep='')
     sleep(3)
     print()
 
     # Report 2:  Running total of betting every game for which we have data
-    print("(Degenerate) Bet every game each day: $", results['bet.result'].sum(), "    Total Bets: ",
+    print("Bet every single game every day: $", results['bet.result'].sum(), "    Total Bets: ",
           results['bet.result'].count(), sep='')
     sleep(3)
     print()
 
     # Report 3:  Favorite Team
+    team_list = list(team_dict.keys())
+    print(sorted(team_list))
+    print()
+    team = input("Select your favorite team code: ")
     report3 = results[(results['home'] == team) | (results['away'] == team)]
-    print("(Homer) Bet only the ", team_dict[team], " games: $", report3['bet.result'].sum(), "     Total Bets: ",
+    print("Bet only the ", team_dict[team], " games: $", report3['bet.result'].sum(), "     Total Bets: ",
           report3['bet.result'].count(), sep='')
     print()
