@@ -1,0 +1,5 @@
+,away,home,month,day,predicted.runs,bookie,outcome,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,game.result,bet.result
+10,OAK,HOU,4,6,8.863916759335394,9.5,6,1.0,4.0,UNDER,3.0,UNDER,100
+2,SEA,CWS,4,6,10.138349310197524,9.0,11,4.0,3.0,OVER,1.0,OVER,100
+12,MIA,ATL,4,6,10.033099845140065,8.5,6,3.0,2.0,OVER,1.0,UNDER,-100
+13,TOR,CLE,4,6,9.91810734706865,8.0,9,2.0,1.0,OVER,1.0,OVER,100

@@ -1,0 +1,5 @@
+,away,home,month,day,predicted.runs,bookie,outcome,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,game.result,bet.result
+9,TB,SF,4,5,9.644459985348965,7.0,7,3.0,1.0,OVER,2.0,PUSH,0
+2,BOS,ARI,4,5,9.270321369920268,9.0,23,2.0,3.0,UNDER,1.0,OVER,-100
+6,OAK,HOU,4,5,9.08385556831384,8.5,5,1.0,2.0,UNDER,1.0,UNDER,100
+1,LAD,COL,4,5,10.071714591962905,11.0,16,4.0,4.0,OVER,0.0,OVER,100

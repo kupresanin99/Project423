@@ -1,0 +1,5 @@
+,away,home,month,day,predicted.runs,bookie,outcome,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,game.result,bet.result
+2,NYY,BAL,4,7,10.119493583716581,9.0,18,4.0,3.5,OVER,0.5,OVER,100
+8,MIN,PHI,4,7,9.661946970849668,8.5,3,2.0,1.5,OVER,0.5,UNDER,-100
+12,KC,DET,4,7,9.703872593841801,9.0,4,3.0,3.5,UNDER,0.5,UNDER,100
+14,OAK,HOU,4,7,9.363103570125554,8.5,17,1.0,1.5,UNDER,0.5,OVER,-100

@@ -1,0 +1,6 @@
+,away,home,month,day,predicted.runs,bookie,outcome,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,game.result,bet.result
+3,CWS,CLE,4,3,10.076958119444804,6.5,11,4.0,1.5,OVER,2.5,OVER,100
+4,CHC,ATL,4,3,9.811729160382818,9.0,10,3.0,4.5,UNDER,1.5,OVER,-100
+9,STL,PIT,4,3,9.694383715240356,7.5,9,2.0,3.0,UNDER,1.0,OVER,-100
+2,COL,TB,4,3,8.631183832066018,6.5,1,1.0,1.5,UNDER,0.5,UNDER,100
+10,HOU,TEX,4,3,10.743424784639638,9.0,4,5.0,4.5,OVER,0.5,UNDER,-100
