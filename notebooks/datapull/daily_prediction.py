@@ -216,7 +216,7 @@ def user_input_lines_and_results(today):
         q = "Enter bookie line for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
         bookie.append(float(input(q)))
         a = "Enter runs scored for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
-        outcome.append(int(input(a)))
+        outcome.append(float(input(a)))
 
     today['bookie'] = bookie
     today['outcome'] = outcome
