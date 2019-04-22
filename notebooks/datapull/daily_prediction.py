@@ -209,12 +209,12 @@ def get_predicted_runs(data, month, day):
                    'min_samples_leaf': min_samples_leaf,
                    'bootstrap': bootstrap}
 
-    print("Cooking up today's model, please wait about 5 minutes.")
+    print("Serving up today's model, so wait about 10 minutes, OK?")
     print()
     rf = RandomForestRegressor()  # Random search of parameters, using 5 fold cross validation
     rf_random = RandomizedSearchCV(estimator = rf,
                                    param_distributions = random_grid,
-                                   n_iter = 20, cv = 5, verbose=0,
+                                   n_iter = 50, cv = 5, verbose=0,
                                    # random_state=99,
                                    n_jobs = -1)
     # Fit the random search model
