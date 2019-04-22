@@ -195,9 +195,9 @@ def get_predicted_runs(data, month, day):
 
     # Get good set of hyperparameters (daily tuning)
 
-    n_estimators = [int(x) for x in np.linspace(start = 200, stop = 2000, num = 10)]  # Number of trees in random forest
+    n_estimators = [int(x) for x in np.linspace(start=200, stop=2000, num=10)]  # Number of trees in random forest
     max_features = ['auto', 'sqrt']    # Number of features to consider at every split
-    max_depth = [int(x) for x in np.linspace(10, 110, num = 11)]      # Maximum number of levels in tree
+    max_depth = [int(x) for x in np.linspace(10, 110, num=11)]      # Maximum number of levels in tree
     max_depth.append(None)
     min_samples_split = [2, 5, 10]    # Minimum number of samples required to split a node
     min_samples_leaf = [1, 2, 4]    # Minimum number of samples required at each leaf node
@@ -212,11 +212,11 @@ def get_predicted_runs(data, month, day):
     print("Serving up today's model, so wait about 10 minutes, OK?")
     print()
     rf = RandomForestRegressor()  # Random search of parameters, using 5 fold cross validation
-    rf_random = RandomizedSearchCV(estimator = rf,
-                                   param_distributions = random_grid,
-                                   n_iter = 50, cv = 5, verbose=0,
+    rf_random = RandomizedSearchCV(estimator=rf,
+                                   param_distributions=random_grid,
+                                   n_iter=50, cv=5, verbose=0,
                                    # random_state=99,
-                                   n_jobs = -1)
+                                   n_jobs=-1)
     # Fit the random search model
     rf_random.fit(features, labels)
     print("Today's random forest model parameters: ")
