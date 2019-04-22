@@ -4,6 +4,7 @@ def get_predicted_runs(data, month, day):
     import numpy as np
     import pickle
     import pandas as pd
+    from sklearn.model_selection import RandomizedSearchCV
 
     data['home.win.pct'] = data['game.home.win'] / (data['game.home.win'] + data['game.home.loss'])
     data['away.win.pct'] = data['game.away.win'] / (data['game.away.win'] + data['game.away.loss'])
@@ -191,16 +192,56 @@ def get_predicted_runs(data, month, day):
     features = model_data.drop('total.runs', axis=1)
     features = np.array(features)
 
-    forest_final = RandomForestRegressor(n_estimators=1600, random_state=99,
-                                         bootstrap=True, max_depth=10,
-                                         max_features='sqrt', min_samples_leaf=4,
-                                         min_samples_split=2)
+    # Get good set of hyperparameters (daily tuning)
+
+    n_estimators = [int(x) for x in np.linspace(start = 200, stop = 2000, num = 10)]  # Number of trees in random forest
+    max_features = ['auto', 'sqrt']    # Number of features to consider at every split
+    max_depth = [int(x) for x in np.linspace(10, 110, num = 11)]      # Maximum number of levels in tree
+    max_depth.append(None)
+    min_samples_split = [2, 5, 10]    # Minimum number of samples required to split a node
+    min_samples_leaf = [1, 2, 4]    # Minimum number of samples required at each leaf node
+    bootstrap = [True, False]    # Method of selecting samples for training each tree
+    random_grid = {'n_estimators': n_estimators,    # Create the random grid
+                   'max_features': max_features,
+                   'max_depth': max_depth,
+                   'min_samples_split': min_samples_split,
+                   'min_samples_leaf': min_samples_leaf,
+                   'bootstrap': bootstrap}
+    print()
+    print("Cooking up today's model, please wait about 5 minutes.")
+    rf = RandomForestRegressor()  # Random search of parameters, using 5 fold cross validation
+    rf_random = RandomizedSearchCV(estimator = rf,
+                                   param_distributions = random_grid,
+                                   n_iter = 20, cv = 5, verbose=0,
+                                   random_state=99, n_jobs = -1)
+    # Fit the random search model
+    rf_random.fit(features, labels)
+    print("Today's random forest model parameters: ")
+    print("Number of Estimators: ", rf_random.best_params_['n_estimators'])
+    print("Bootstrap: ", rf_random.best_params_['bootstrap'])
+    print("Maximum Depth: ", rf_random.best_params_['max_depth'])
+    print("Maximum Features: ", rf_random.best_params_['max_features'])
+    print("Minimum Samples per Leaf: ", rf_random.best_params_['min_samples_leaf'])
+    print("Minimum Samples per Split: ", rf_random.best_params_['min_samples_split'])
+    print()
+
+    forest_final = RandomForestRegressor(n_estimators=rf_random.best_params_['n_estimators'],
+                                         random_state=99,
+                                         bootstrap=rf_random.best_params_['bootstrap'],
+                                         max_depth=rf_random.best_params_['max_depth'],
+                                         max_features=rf_random.best_params_['max_features'],
+                                         min_samples_leaf=rf_random.best_params_['min_samples_leaf'],
+                                         min_samples_split=rf_random.best_params_['min_samples_split'])
 
     forest_final.fit(features, labels)
 
     predict_features = model_predict_today.drop('total.runs', axis=1)
     predictions_today = forest_final.predict(predict_features)
     today['predicted.runs'] = predictions_today
+
+    # print Today's R2 is
+    # print Todays RMSE is
+    # Good luck!
 
     return today
 

@@ -34,21 +34,21 @@ def run_reports():
     report1 = results.groupby('date').apply(lambda t: t[t['betting.opportunity'] == t['betting.opportunity'].max()])
     print("Only bet the 10-star pick each day: $", report1['bet.result'].sum(), "   Total Bets: ",
           report1['bet.result'].count(), sep='')
-    sleep(3)
+    sleep(1)
     print()
 
     # Report 2:  Running total of betting every game for which we have data
     print("Bet every single game every day: $", results['bet.result'].sum(), "    Total Bets: ",
           results['bet.result'].count(), sep='')
-    sleep(3)
+    sleep(1)
     print()
 
     # Report 3:  Favorite Team
-    team_list = list(team_dict.keys())
-    print(sorted(team_list))
-    print()
-    team = input("Select your favorite team code: ")
-    report3 = results[(results['home'] == team) | (results['away'] == team)]
-    print("Bet only the ", team_dict[team], " games: $", report3['bet.result'].sum(), "     Total Bets: ",
-          report3['bet.result'].count(), sep='')
-    print()
+    # team_list = list(team_dict.keys())
+    # print(sorted(team_list))
+    # print()
+    # team = input("Select your favorite team code: ")
+    # report3 = results[(results['home'] == team) | (results['away'] == team)]
+    # print("Bet only the ", team_dict[team], " games: $", report3['bet.result'].sum(), "     Total Bets: ",
+    #       report3['bet.result'].count(), sep='')
+    # print()

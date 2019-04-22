@@ -16,7 +16,7 @@ def pull_historical_data(month, day):
     conn = http.client.HTTPSConnection("api.sportradar.us")
 
     conn.request("GET",
-                 "/mlb/trial/v6.5/en/games/2017/{0}/{1}/boxscore."
+                 "/mlb/trial/v6.5/en/games/2018/{0}/{1}/boxscore."
                  "json?api_key=bw84ac36vu34rdk5vkkh4psx".format(month, day))
 
     res = conn.getresponse()
@@ -34,5 +34,5 @@ for month in range(4, 10):
         time.sleep(3)
 
 # Save data in pickle
-with open('baseball2017', 'wb') as fp:
+with open('baseball2018', 'wb') as fp:
     pickle.dump(baseball_data, fp)
