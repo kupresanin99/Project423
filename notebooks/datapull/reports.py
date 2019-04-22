@@ -26,7 +26,7 @@ def run_reports():
     results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
 
     print()
-    print("Results for 2019 season:")
+    print("Profit / Loss Report for the 2019 season:")
     print("(Each bet is $100)")
 
     # Report 1:  Running total of just betting the best daily bet
@@ -58,6 +58,7 @@ def run_reports():
             best_team = team
 
     report3 = results[(results['home'] == best_team) | (results['away'] == best_team)]
+    print("The best team to bet on has been the", team_dict[best_team])
     print("Bet only the ", team_dict[best_team], " games: $", report3['bet.result'].sum(), sep="")
     print("Total Bets: ", report3['bet.result'].count(), sep='')
     print("Winning Percentage: ", round(100 * report3['bet.result'].value_counts()[100] / (report3['bet.result'].value_counts()[100] +
