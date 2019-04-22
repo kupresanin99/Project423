@@ -5,6 +5,7 @@ def get_predicted_runs(data, month, day):
     import pickle
     import pandas as pd
     from sklearn.model_selection import RandomizedSearchCV
+    import math
 
     data['home.win.pct'] = data['game.home.win'] / (data['game.home.win'] + data['game.home.loss'])
     data['away.win.pct'] = data['game.away.win'] / (data['game.away.win'] + data['game.away.loss'])
@@ -207,8 +208,9 @@ def get_predicted_runs(data, month, day):
                    'min_samples_split': min_samples_split,
                    'min_samples_leaf': min_samples_leaf,
                    'bootstrap': bootstrap}
-    print()
+
     print("Cooking up today's model, please wait about 5 minutes.")
+    print()
     rf = RandomForestRegressor()  # Random search of parameters, using 5 fold cross validation
     rf_random = RandomizedSearchCV(estimator = rf,
                                    param_distributions = random_grid,
@@ -234,14 +236,20 @@ def get_predicted_runs(data, month, day):
                                          min_samples_split=rf_random.best_params_['min_samples_split'])
 
     forest_final.fit(features, labels)
-
+    predictions = forest_final.predict(features)
     predict_features = model_predict_today.drop('total.runs', axis=1)
     predictions_today = forest_final.predict(predict_features)
     today['predicted.runs'] = predictions_today
 
-    # print Today's R2 is
-    # print Todays RMSE is
-    # Good luck!
+    errors = labels - predictions
+    total_var = labels - np.mean(labels)
+    SSE = np.sum(np.power(errors, 2))
+    SST = np.sum(np.power(total_var, 2))
+    RMSE = math.sqrt(SSE / len(features))
+    RSQ = 1 - SSE / SST
+    print("The tuned model from ", month, "-", day, " using all available variables has RMSE = ", RMSE, sep="")
+    print("The tuned model from ", month, "-", day, " using all available variables has R-Squared = ", RSQ, sep="")
+    print()
 
     return today
 
