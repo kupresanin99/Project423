@@ -195,12 +195,12 @@ def get_predicted_runs(data, month, day):
 
     # Get good set of hyperparameters (daily tuning)
 
-    n_estimators = [int(x) for x in np.linspace(start=200, stop=2000, num=10)]  # Number of trees in random forest
+    n_estimators = [int(x) for x in np.linspace(start=200, stop=3000, num=10)]  # Number of trees in random forest
     max_features = ['auto', 'sqrt']    # Number of features to consider at every split
     max_depth = [int(x) for x in np.linspace(10, 110, num=11)]      # Maximum number of levels in tree
     max_depth.append(None)
-    min_samples_split = [2, 5, 10]    # Minimum number of samples required to split a node
-    min_samples_leaf = [1, 2, 4]    # Minimum number of samples required at each leaf node
+    min_samples_split = [2, 3, 5, 7, 9, 11]    # Minimum number of samples required to split a node
+    min_samples_leaf = [1, 2, 3, 4, 5]    # Minimum number of samples required at each leaf node
     bootstrap = [True, False]    # Method of selecting samples for training each tree
     random_grid = {'n_estimators': n_estimators,    # Create the random grid
                    'max_features': max_features,
@@ -214,8 +214,7 @@ def get_predicted_runs(data, month, day):
     rf = RandomForestRegressor()  # Random search of parameters, using 5 fold cross validation
     rf_random = RandomizedSearchCV(estimator=rf,
                                    param_distributions=random_grid,
-                                   n_iter=50, cv=5, verbose=0,
-                                   # random_state=99,
+                                   n_iter=50, cv=5, verbose=2,
                                    n_jobs=-1)
     # Fit the random search model
     rf_random.fit(features, labels)
@@ -229,7 +228,6 @@ def get_predicted_runs(data, month, day):
     print()
 
     forest_final = RandomForestRegressor(n_estimators=rf_random.best_params_['n_estimators'],
-                                         # random_state=99,
                                          bootstrap=rf_random.best_params_['bootstrap'],
                                          max_depth=rf_random.best_params_['max_depth'],
                                          max_features=rf_random.best_params_['max_features'],

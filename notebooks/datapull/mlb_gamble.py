@@ -8,8 +8,14 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
 print()
-print("Professor Kupe's Baseball Gambling Tool")
+print("Baseball Gambling Tool")
 print()
+
+# 1 Run Reports (need to add "Through date ....")
+# 2 Need to run model for today?
+# 3 If no, run predictions from history for any day from April 1 to present
+# 4 If yes, run model for the day and store results
+
 print("Record Past Games:  Enter 1")
 print("Get Today's Picks:  Enter 2")
 print("Run Reports:        Enter 3")
