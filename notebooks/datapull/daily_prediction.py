@@ -215,7 +215,8 @@ def get_predicted_runs(data, month, day):
     rf_random = RandomizedSearchCV(estimator = rf,
                                    param_distributions = random_grid,
                                    n_iter = 20, cv = 5, verbose=0,
-                                   random_state=99, n_jobs = -1)
+                                   # random_state=99,
+                                   n_jobs = -1)
     # Fit the random search model
     rf_random.fit(features, labels)
     print("Today's random forest model parameters: ")
@@ -228,7 +229,7 @@ def get_predicted_runs(data, month, day):
     print()
 
     forest_final = RandomForestRegressor(n_estimators=rf_random.best_params_['n_estimators'],
-                                         random_state=99,
+                                         # random_state=99,
                                          bootstrap=rf_random.best_params_['bootstrap'],
                                          max_depth=rf_random.best_params_['max_depth'],
                                          max_features=rf_random.best_params_['max_features'],
