@@ -57,7 +57,6 @@ def run_reports():
             max_win = report3['bet.result'].sum()
             best_team = team
 
-    # team = input("Select your favorite team code: ")
     report3 = results[(results['home'] == best_team) | (results['away'] == best_team)]
     print("Bet only the ", team_dict[best_team], " games: $", report3['bet.result'].sum(), sep="")
     print("Total Bets: ", report3['bet.result'].count(), sep='')
