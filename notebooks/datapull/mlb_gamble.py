@@ -9,7 +9,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
 ####
-# Need to build function that checks for valid dates input by user
+# Need to build function for entering dates (lots of repeated code currently)
 # Need to build in valid input checker for user / admin entering lines or scores
 ####
 
