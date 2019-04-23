@@ -214,7 +214,7 @@ def get_predicted_runs(data, month, day):
     rf = RandomForestRegressor()  # Random search of parameters, using 5 fold cross validation
     rf_random = RandomizedSearchCV(estimator=rf,
                                    param_distributions=random_grid,
-                                   n_iter=100, cv=5, verbose=2,
+                                   n_iter=50, cv=5, verbose=0,
                                    n_jobs=-1)
     # Fit the random search model
     rf_random.fit(features, labels)
@@ -253,26 +253,18 @@ def get_predicted_runs(data, month, day):
     return today
 
 
-def user_input_lines_and_results(today):
+def admin_input_results(today):
 
     import numpy as np
-    bookie = []
+    today.drop(today.columns[0], axis=1, inplace=True)
     outcome = []
     print(today)
     for game in range(today.shape[0]):
         print()
-        q = "Enter bookie line for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
-        bookie.append(float(input(q)))
         a = "Enter runs scored for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
         outcome.append(float(input(a)))
 
-    today['bookie'] = bookie
     today['outcome'] = outcome
-    today['predicted.run.rank'] = today['predicted.runs'].rank()
-    today['predicted.bookie.rank'] = today['bookie'].rank()
-    today['the.bet'] = np.where(today['predicted.run.rank'] - today['predicted.bookie.rank'] >= 0, 'OVER', 'UNDER')
-    today['betting.opportunity'] = abs(today['predicted.run.rank'] - today['predicted.bookie.rank'])
-
     condition_list = [today["outcome"] > today["bookie"],
                       today["outcome"] < today["bookie"],
                       today["outcome"] == today["bookie"]]
@@ -291,7 +283,7 @@ def user_input_lines_and_results(today):
     return today
 
 
-def user_input_lines(today):
+def admin_input_lines(today):
     import numpy as np
     bookie = []
     print(today)

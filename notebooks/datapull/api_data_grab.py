@@ -1,8 +1,6 @@
-def daily_data(month, day):
+def api_pull(month, day):
 
     import http.client
-    import json
-    from pandas.io.json import json_normalize
     import pickle
 
     conn = http.client.HTTPSConnection("api.sportradar.us")
@@ -16,6 +14,16 @@ def daily_data(month, day):
     with open('daily_raw/raw_{0}_{1}'.format(month, day), 'wb') as fp:
         pickle.dump(data, fp)
 
+
+def minor_processing(month, day):
+
+    import json
+    from pandas.io.json import json_normalize
+    import pickle
+
+    with open('daily_raw/raw_{0}_{1}'.format(month, day), 'rb') as fp:
+        data = pickle.load(fp)
+
     baseball_data = []
     baseball_data.append(data.decode("utf-8"))
 
@@ -28,5 +36,4 @@ def daily_data(month, day):
                                            ['league.alias', 'league.date', 'league.id', 'league.name'])
 
     data = json_normalize(baseball_normal.iloc[0, 0])
-
-    return data
+    data.to_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')

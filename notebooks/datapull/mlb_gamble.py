@@ -1,7 +1,7 @@
-from api_data_grab import daily_data
+from api_data_grab import api_pull, minor_processing
 from daily_prediction import get_predicted_runs, \
-    user_input_lines_and_results, user_input_lines
-from reports import run_reports
+    admin_input_results, admin_input_lines
+from reports import run_yearly_reports, display_gambling_picks, run_daily_report
 import pandas as pd
 from time import sleep
 
@@ -21,9 +21,9 @@ def print_main_menu():
 
 def print_admin_menu():
     print()
-    print("Enter 1 for API Pull")
-    print("Enter 2 to Input Today's Betting Lines")
-    print("Enter 3 to Input Past Game Results")
+    print("Enter 1 for API Pull (Only Do This Once Per Day)")
+    print("Enter 2 to Input Today's Betting Lines (And Runs Random Forest)")
+    print("Enter 3 to Input Past Game Results (Presumes Model Already Built Yesterday)")
     print("Enter 4 to Return to Main Menu")
     print("Enter 5 to Quit Program")
     print()
@@ -32,9 +32,10 @@ def print_admin_menu():
 def print_user_menu():
     print()
     print("Enter 1 for Today's Picks")
-    print("Enter 2 for Profit Reports")
-    print("Enter 3 to Return to Main Menu")
-    print("Enter 4 to Quit Program")
+    print("Enter 2 for 2019 Profit Reports")
+    print("Enter 3 for Daily Report")
+    print("Enter 4 to Return to Main Menu")
+    print("Enter 5 to Quit Program")
     print()
 
 
@@ -66,9 +67,11 @@ while run_main_menu:
                             print("Invalid Date!")
                             sleep(2)
                         else:
-                            data = daily_data(month, day)
-                            data.to_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+                            api_pull(month, day)
                             print("Attempted API Pull")
+                            sleep(2)
+                            minor_processing(month, day)
+                            print("Performed minor processing")
                             sleep(2)
                     else:
                         print("Jesus, learn how to enter months and dates, OK?")
@@ -80,13 +83,30 @@ while run_main_menu:
 
             elif admin_menu_choice == 2:
                 print()
-                print("This will be the entering of the daily lines commands")
-                sleep(2)
+                print("Run today's model and enter betting lines:")
+                print()
+                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
+                print()
+                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
+                print()
+                data = pd.read_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+                today = get_predicted_runs(data, month, day)
+                today = admin_input_lines(today)
+                today.to_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                print(today)
 
             elif admin_menu_choice == 3:
                 print()
-                print("This will be the entering of yesterday's scores commands")
-                sleep(2)
+                print("Enter past results:")
+                print()
+                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
+                print()
+                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
+                print()
+                today = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                today = admin_input_results(today)
+                today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                print(today)
 
             elif admin_menu_choice == 4:
                 print()
@@ -108,13 +128,31 @@ while run_main_menu:
 
             if user_menu_choice == 1:
                 print()
-                print("This will show today's picks for the user")
+                print("View Gambling Picks:")
+                print()
+                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
+                print()
+                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
+                print()
+                display_gambling_picks(month, day)
                 sleep(2)
 
             elif user_menu_choice == 2:
-                run_reports()
+                run_yearly_reports()
+                sleep(2)
 
             elif user_menu_choice == 3:
+                print()
+                print("Run Daily Report:")
+                print()
+                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
+                print()
+                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
+                print()
+                run_daily_report(month, day)
+                sleep(2)
+
+            elif user_menu_choice == 4:
                 print()
                 print("Back to Main Menu")
                 sleep(2)
@@ -136,27 +174,4 @@ while run_main_menu:
         print("How about a valid menu choice, douche bag?")
         sleep(2)
 
-    # elif task == 1 or task == 2:
-    #     print()
-    #     print("Hey, bub, need an API data pull?")
-    #     answer = input("If so, type YES: ")
-    #
-    #
-    #     if answer == "YES":
-    #
-    #
-    #     else:
-    #         data = pd.read_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
-    #
-    #     if task == 1:
-    #         today = get_predicted_runs(data, month, day)
-    #         today = user_input_lines_and_results(today)
-    #         print(today)
-    #         today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
-    #
-    #     elif task == 2:
-    #         today = get_predicted_runs(data, month, day)
-    #         today = user_input_lines(today)
-    #         print(today)
-    #
 
