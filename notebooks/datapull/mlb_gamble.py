@@ -107,8 +107,9 @@ while run_main_menu:
                 today = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
                 today = admin_input_results(today)
                 today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
-
-                print(today)
+                print("Daily results for ", month, "/", day, sep="")
+                print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
+                                  'predicted.bookie.rank', 'betting.opportunity'], axis=1))
 
             elif admin_menu_choice == 4:
                 print()

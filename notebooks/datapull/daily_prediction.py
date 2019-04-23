@@ -258,7 +258,8 @@ def admin_input_results(today):
     import numpy as np
     today.drop(today.columns[0], axis=1, inplace=True)
     outcome = []
-    print(today)
+    print(today.drop(['month', 'day', 'bookie', 'predicted.run.rank',
+                      'predicted.bookie.rank', 'betting.opportunity'], axis=1))
     for game in range(today.shape[0]):
         print()
         a = "Enter runs scored for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
