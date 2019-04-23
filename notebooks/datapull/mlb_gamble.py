@@ -45,7 +45,6 @@ while run_main_menu:
     run_user_menu = True
     print_main_menu()
     main_menu_choice = int(input("Choice: "))
-    print()
 
     if main_menu_choice == 1:
         while run_admin_menu:
@@ -53,50 +52,52 @@ while run_main_menu:
             admin_menu_choice = int(input("Choice: "))
 
             if admin_menu_choice == 1:
+                print()
                 print("Run API Data Pull:")
-                month = input("Give the month as 4, 5, 6, 7, 8, or 9: ")
-                day = input("Give the day as 1, 2, ..., 29, 30, or 31: ")
+                print()
+                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
+                print()
+                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
                 print()
 
                 if month in [4, 5, 6, 7, 8, 9]:
                     if day in list(range(1, 32)):
-                        if month == 4 and day == 31:
+                        if day == 31 and month in [4, 6, 9]:
                             print("Invalid Date!")
-                            print()
-                        if month == 6 and day == 31:
-                            print("Invalid Date!")
-                            print()
-                        if month == 9 and day == 31:
-                            print("Invalid Date!")
-                            print()
-                        data = daily_data(month, day)
-                        data.to_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+                            sleep(2)
+                        else:
+                            data = daily_data(month, day)
+                            data.to_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+                            print("Attempted API Pull")
+                            sleep(2)
+                    else:
+                        print("Jesus, learn how to enter months and dates, OK?")
+                        sleep(2)
 
                 else:
-                    print()
                     print("Jesus, learn how to enter months and dates, OK?")
-                    sleep(1)
+                    sleep(2)
 
             elif admin_menu_choice == 2:
                 print()
                 print("This will be the entering of the daily lines commands")
-                sleep(1)
+                sleep(2)
 
             elif admin_menu_choice == 3:
                 print()
                 print("This will be the entering of yesterday's scores commands")
-                sleep(1)
+                sleep(2)
 
             elif admin_menu_choice == 4:
                 print()
                 print("Back to Main Menu")
-                sleep(1)
+                sleep(2)
                 run_admin_menu = False
 
             else:
                 print()
                 print("Quitting Program")
-                sleep(1)
+                sleep(2)
                 run_admin_menu = False
                 run_main_menu = False
 
@@ -108,7 +109,7 @@ while run_main_menu:
             if user_menu_choice == 1:
                 print()
                 print("This will show today's picks for the user")
-                sleep(1)
+                sleep(2)
 
             elif user_menu_choice == 2:
                 run_reports()
@@ -116,13 +117,13 @@ while run_main_menu:
             elif user_menu_choice == 3:
                 print()
                 print("Back to Main Menu")
-                sleep(1)
+                sleep(2)
                 run_user_menu = False
 
             else:
                 print()
                 print("Quitting Program")
-                sleep(1)
+                sleep(2)
                 run_user_menu = False
                 run_main_menu = False
 
@@ -133,7 +134,7 @@ while run_main_menu:
     else:
         print()
         print("How about a valid menu choice, douche bag?")
-        sleep(1)
+        sleep(2)
 
     # elif task == 1 or task == 2:
     #     print()
