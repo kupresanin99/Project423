@@ -103,9 +103,11 @@ while run_main_menu:
                 print()
                 day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
                 print()
+                print("Enter game results for ", month, "/", day, sep="")
                 today = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
                 today = admin_input_results(today)
                 today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+
                 print(today)
 
             elif admin_menu_choice == 4:
