@@ -1,5 +1,5 @@
-,away,home,month,day,predicted.runs,bookie,outcome,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,game.result,bet.result
-10,OAK,HOU,4,6,8.863916759335394,9.5,6,1.0,4.0,UNDER,3.0,UNDER,100
-2,SEA,CWS,4,6,10.138349310197524,9.0,11,4.0,3.0,OVER,1.0,OVER,100
-12,MIA,ATL,4,6,10.033099845140065,8.5,6,3.0,2.0,OVER,1.0,UNDER,-100
-13,TOR,CLE,4,6,9.91810734706865,8.0,9,2.0,1.0,OVER,1.0,OVER,100
+,away,home,month,day,predicted.runs,bookie,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,outcome,game.result,bet.result
+0,OAK,HOU,4,6,8.736279788602204,9.5,1.0,4.0,UNDER,3.0,6.0,UNDER,100
+1,SEA,CWS,4,6,10.299762969467354,9.0,4.0,3.0,OVER,1.0,11.0,OVER,100
+2,MIA,ATL,4,6,10.073708483252874,8.5,3.0,2.0,OVER,1.0,6.0,UNDER,-100
+3,TOR,CLE,4,6,9.865664377041297,8.0,2.0,1.0,OVER,1.0,9.0,OVER,100
