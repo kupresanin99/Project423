@@ -1,3 +1,3 @@
-,away,home,month,day,predicted.runs,bookie,outcome,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,game.result,bet.result
-4,KC,DET,4,4,9.894249724414246,7.5,9,1.0,1.0,OVER,0.0,OVER,100
-5,BOS,OAK,4,4,10.345917160511828,8.0,10,2.0,2.0,OVER,0.0,OVER,100
+,away,home,month,day,predicted.runs,bookie,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,outcome,game.result,bet.result
+0,KC,DET,4,4,10.242429380422562,7.5,1.0,1.0,OVER,0.0,9.0,OVER,100
+1,BOS,OAK,4,4,11.084751671047563,8.0,2.0,2.0,OVER,0.0,10.0,OVER,100
