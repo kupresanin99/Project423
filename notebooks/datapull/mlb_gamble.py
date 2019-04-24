@@ -134,31 +134,31 @@ while run_main_menu:
                 print()
                 print("Run today's model and enter betting lines:")
                 print()
-                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
-                print()
-                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
-                print()
-                data = pd.read_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
-                today = get_predicted_runs(data, month, day)
-                today = admin_input_lines(today)
-                today.to_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
-                print(today)
+                month, day = print_choice_menu()
+                if month == 0:
+                    pass
+                else:
+                    data = pd.read_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+                    today = get_predicted_runs(data, month, day)
+                    today = admin_input_lines(today)
+                    today.to_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                    print(today)
 
             elif admin_menu_choice == 3:
                 print()
                 print("Enter past results:")
                 print()
-                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
-                print()
-                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
-                print()
-                print("Enter game results for ", month, "/", day, sep="")
-                today = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-                today = admin_input_results(today)
-                today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
-                print("Daily results for ", month, "/", day, sep="")
-                print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
-                                  'predicted.bookie.rank', 'betting.opportunity'], axis=1))
+                month, day = print_choice_menu()
+                if month == 0:
+                    pass
+                else:
+                    print("Enter game results for ", month, "/", day, sep="")
+                    today = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                    today = admin_input_results(today)
+                    today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                    print("Daily results for ", month, "/", day, sep="")
+                    print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
+                                      'predicted.bookie.rank', 'betting.opportunity'], axis=1))
 
             elif admin_menu_choice == 4:
                 print()
@@ -182,12 +182,12 @@ while run_main_menu:
                 print()
                 print("View Gambling Picks:")
                 print()
-                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
-                print()
-                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
-                print()
-                display_gambling_picks(month, day)
-                sleep(2)
+                month, day = print_choice_menu()
+                if month == 0:
+                    pass
+                else:
+                    display_gambling_picks(month, day)
+                    sleep(2)
 
             elif user_menu_choice == 2:
                 run_yearly_reports()
@@ -197,12 +197,12 @@ while run_main_menu:
                 print()
                 print("Run Daily Report:")
                 print()
-                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
-                print()
-                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
-                print()
-                run_daily_report(month, day)
-                sleep(2)
+                month, day = print_choice_menu()
+                if month == 0:
+                    pass
+                else:
+                    run_daily_report(month, day)
+                    sleep(2)
 
             elif user_menu_choice == 4:
                 print()
