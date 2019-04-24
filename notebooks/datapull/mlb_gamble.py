@@ -60,22 +60,21 @@ def print_choice_menu():
                     print("Invalid Date!")
                     sleep(2)
                 else:
-                    api_pull(month1, day1)
-                    print("Attempted API Pull")
                     sleep(2)
-                    minor_processing(month1, day1)
-                    print("Performed minor processing")
-                    sleep(2)
+                    return month1, day1
             else:
                 print("Date out of bounds")
                 sleep(2)
+                return 0, 0
         else:
             print("Date out of bounds")
             sleep(2)
+            return 0, 0
 
     except ValueError:
         print("Jesus, learn how to enter months and dates, OK?")
         sleep(2)
+        return 0, 0
 
 
 run_main_menu = True
@@ -93,7 +92,17 @@ while run_main_menu:
 
             if admin_menu_choice == 1:
                 print()
-                print_choice_menu()
+                month, day = print_choice_menu()
+                if month == 0:
+                    pass
+                else:
+                    api_pull(month, day)
+                    print("Attempted API Pull")
+                    sleep(2)
+                    minor_processing(month, day)
+                    print("Performed minor processing")
+                    sleep(2)
+
                 # print("Run API Data Pull:")
                 # print()
                 # month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
