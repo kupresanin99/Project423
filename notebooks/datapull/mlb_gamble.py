@@ -44,6 +44,40 @@ def print_user_menu():
     print()
 
 
+def print_choice_menu():
+    month1 = input("Give the month as 4, 5, 6, 7, 8, or 9: ")
+    print()
+    day1 = input("Give the day as 1, 2, ..., 29, 30, or 31: ")
+    print()
+
+    try:
+        month1 = int(month1)
+        day1 = int(day1)
+
+        if month1 in [4, 5, 6, 7, 8, 9]:
+            if day1 in list(range(1, 32)):
+                if day1 == 31 and month1 in [4, 6, 9]:
+                    print("Invalid Date!")
+                    sleep(2)
+                else:
+                    api_pull(month1, day1)
+                    print("Attempted API Pull")
+                    sleep(2)
+                    minor_processing(month1, day1)
+                    print("Performed minor processing")
+                    sleep(2)
+            else:
+                print("Date out of bounds")
+                sleep(2)
+        else:
+            print("Date out of bounds")
+            sleep(2)
+
+    except ValueError:
+        print("Jesus, learn how to enter months and dates, OK?")
+        sleep(2)
+
+
 run_main_menu = True
 
 while run_main_menu:
@@ -59,32 +93,33 @@ while run_main_menu:
 
             if admin_menu_choice == 1:
                 print()
-                print("Run API Data Pull:")
-                print()
-                month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
-                print()
-                day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
-                print()
-
-                if month in [4, 5, 6, 7, 8, 9]:
-                    if day in list(range(1, 32)):
-                        if day == 31 and month in [4, 6, 9]:
-                            print("Invalid Date!")
-                            sleep(2)
-                        else:
-                            api_pull(month, day)
-                            print("Attempted API Pull")
-                            sleep(2)
-                            minor_processing(month, day)
-                            print("Performed minor processing")
-                            sleep(2)
-                    else:
-                        print("Jesus, learn how to enter months and dates, OK?")
-                        sleep(2)
-
-                else:
-                    print("Jesus, learn how to enter months and dates, OK?")
-                    sleep(2)
+                print_choice_menu()
+                # print("Run API Data Pull:")
+                # print()
+                # month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
+                # print()
+                # day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
+                # print()
+                #
+                # if month in [4, 5, 6, 7, 8, 9]:
+                #     if day in list(range(1, 32)):
+                #         if day == 31 and month in [4, 6, 9]:
+                #             print("Invalid Date!")
+                #             sleep(2)
+                #         else:
+                #             api_pull(month, day)
+                #             print("Attempted API Pull")
+                #             sleep(2)
+                #             minor_processing(month, day)
+                #             print("Performed minor processing")
+                #             sleep(2)
+                #     else:
+                #         print("Jesus, learn how to enter months and dates, OK?")
+                #         sleep(2)
+                #
+                # else:
+                #     print("Jesus, learn how to enter months and dates, OK?")
+                #     sleep(2)
 
             elif admin_menu_choice == 2:
                 print()
