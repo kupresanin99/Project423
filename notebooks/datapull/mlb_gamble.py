@@ -4,14 +4,10 @@ from daily_prediction import get_predicted_runs, \
 from reports import run_yearly_reports, display_gambling_picks, run_daily_report
 import pandas as pd
 from time import sleep
+from datetime import datetime
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
-
-####
-# Need to build function for entering dates (lots of repeated code currently)
-# Need to build in valid input checker for user / admin entering lines or scores
-####
 
 
 def print_main_menu():
@@ -59,6 +55,10 @@ def print_choice_menu():
                 if day1 == 31 and month1 in [4, 6, 9]:
                     print("Invalid Date!")
                     sleep(2)
+                elif month1 > datetime.now().month or (month1 == datetime.now().month and day1 > datetime.now().day):
+                    print("Date out of bounds")
+                    sleep(2)
+                    return 0, 0
                 else:
                     sleep(2)
                     return month1, day1
@@ -102,33 +102,6 @@ while run_main_menu:
                     minor_processing(month, day)
                     print("Performed minor processing")
                     sleep(2)
-
-                # print("Run API Data Pull:")
-                # print()
-                # month = int(input("Give the month as 4, 5, 6, 7, 8, or 9: "))
-                # print()
-                # day = int(input("Give the day as 1, 2, ..., 29, 30, or 31: "))
-                # print()
-                #
-                # if month in [4, 5, 6, 7, 8, 9]:
-                #     if day in list(range(1, 32)):
-                #         if day == 31 and month in [4, 6, 9]:
-                #             print("Invalid Date!")
-                #             sleep(2)
-                #         else:
-                #             api_pull(month, day)
-                #             print("Attempted API Pull")
-                #             sleep(2)
-                #             minor_processing(month, day)
-                #             print("Performed minor processing")
-                #             sleep(2)
-                #     else:
-                #         print("Jesus, learn how to enter months and dates, OK?")
-                #         sleep(2)
-                #
-                # else:
-                #     print("Jesus, learn how to enter months and dates, OK?")
-                #     sleep(2)
 
             elif admin_menu_choice == 2:
                 print()

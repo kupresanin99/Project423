@@ -262,8 +262,17 @@ def admin_input_results(today):
                       'predicted.bookie.rank', 'betting.opportunity'], axis=1))
     for game in range(today.shape[0]):
         print()
-        a = "Enter runs scored for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
-        outcome.append(float(input(a)))
+        while True:
+            try:
+                a = "Enter runs scored for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
+                temp1 = input(a)
+                temp1 = float(temp1)
+            except ValueError:
+                print("Bad value")
+                continue
+            else:
+                break
+        outcome.append(temp1)
 
     today['outcome'] = outcome
     condition_list = [today["outcome"] > today["bookie"],
@@ -290,8 +299,18 @@ def admin_input_lines(today):
     print(today)
     for game in range(today.shape[0]):
         print()
-        q = "Enter bookie line for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
-        bookie.append(float(input(q)))
+        while True:
+            try:
+                q = "Enter bookie line for " + today.iloc[game, 0] + " vs " + today.iloc[game, 1] + ": "
+                temp1 = input(q)
+                temp1 = float(temp1)
+            except ValueError:
+                print("Bad value")
+                continue
+            else:
+                break
+
+        bookie.append(temp1)
 
     today['bookie'] = bookie
     today['predicted.run.rank'] = today['predicted.runs'].rank()
