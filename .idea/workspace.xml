@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="Sourcing early April data for a complete set.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_12.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_12.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_17.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_17.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_18.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_18.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_19.csv" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/daily_results/results_4_19.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +23,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-329">
+            <state relative-caret-position="22">
               <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
@@ -92,16 +96,17 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="44" />
-    <option name="width" value="1440" />
-    <option name="height" value="788" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="959" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,7 +140,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,7 +355,8 @@
       <workItem from="1555988435685" duration="53000" />
       <workItem from="1555990101525" duration="194000" />
       <workItem from="1556022251015" duration="4974000" />
-      <workItem from="1556031340227" duration="2240000" />
+      <workItem from="1556031340227" duration="6129000" />
+      <workItem from="1556075507966" duration="4233000" />
     </task>
     <task id="LOCAL-00001" summary="Brought notebooks into Pycharm as .py files.">
       <created>1555215366127</created>
@@ -640,11 +645,25 @@
       <option name="project" value="LOCAL" />
       <updated>1556027443429</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Sourcing early April data for a complete set.">
+      <created>1556037924510</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1556037924510</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Sourcing early April data for a complete set.">
+      <created>1556042938684</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1556042938684</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92456000" />
+    <option name="totallyTimeSpent" value="100578000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -656,24 +675,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="959" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25792506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31019655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924962" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4512894" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.7959906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.26217765" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.33094555" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32808024" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.20990565" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.625" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.20773639" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.6232092" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -736,7 +755,7 @@
     <SUITE FILE_PATH="coverage/Project423$initial_model.coverage" NAME="initial_model Coverage Results" MODIFIED="1555248407297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$api_data_grab.coverage" NAME="api_data_grab Coverage Results" MODIFIED="1555365349697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$Another_tester.coverage" NAME="Another_tester Coverage Results" MODIFIED="1555472050849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
-    <SUITE FILE_PATH="coverage/Project423$tester.coverage" NAME="tester Coverage Results" MODIFIED="1556037441655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+    <SUITE FILE_PATH="coverage/Project423$tester.coverage" NAME="tester Coverage Results" MODIFIED="1556080391590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$april14_pull.coverage" NAME="april14_pull Coverage Results" MODIFIED="1555248395788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
   </component>
   <component name="editorHistoryManager">
@@ -884,7 +903,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
+        <state relative-caret-position="22">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />

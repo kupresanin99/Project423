@@ -1,6 +1,6 @@
-,away,home,month,day,predicted.runs,bookie,outcome,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,game.result,bet.result
-6,KC,NYY,4,18,10.232610040271817,9.0,7,5.0,1.5,OVER,3.5,UNDER,-100
-2,PHI,COL,4,18,9.717501893510057,11.0,8,2.0,5.0,UNDER,3.0,UNDER,100
-3,CWS,DET,4,18,10.181519214390585,9.0,16,4.0,1.5,OVER,2.5,OVER,100
-4,LAD,MIL,4,18,9.158177021841976,9.5,4,1.0,3.0,UNDER,2.0,UNDER,100
-5,SEA,LAA,4,18,10.087748661569915,10.0,21,3.0,4.0,UNDER,1.0,OVER,-100
+,away,home,month,day,predicted.runs,bookie,predicted.run.rank,predicted.bookie.rank,the.bet,betting.opportunity,outcome,game.result,bet.result
+0,CWS,DET,4,18,10.223600489358152,9.0,5.0,1.5,OVER,3.5,16.0,OVER,100
+1,PHI,COL,4,18,9.822722662921654,11.0,2.0,5.0,UNDER,3.0,8.0,UNDER,100
+2,LAD,MIL,4,18,9.20843374014229,9.5,1.0,3.0,UNDER,2.0,4.0,UNDER,100
+3,KC,NYY,4,18,10.060653036219225,9.0,3.0,1.5,OVER,1.5,7.0,UNDER,-100
+4,SEA,LAA,4,18,10.159888129090225,10.0,4.0,4.0,OVER,0.0,21.0,OVER,100
