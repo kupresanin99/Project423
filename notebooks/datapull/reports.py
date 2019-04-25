@@ -67,21 +67,26 @@ def run_yearly_reports():
 
 def display_gambling_picks(month, day):
     import pandas as pd
+    try:
+        gambling_picks = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
+        gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
+                             'month', 'day'], axis=1, inplace=True)
+        print("Sorted from best to worst for ", month, "/", day, sep="")
+        print(gambling_picks)
+    except FileNotFoundError:
+        print("Picks for ", month, "/", day, " not in yet.", sep="")
 
-    gambling_picks = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-    gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
-    gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
-                         'month', 'day'], axis=1, inplace=True)
-    print("Sorted from best to worst for ", month, "/", day, sep="")
-    print(gambling_picks)
 
 
 def run_daily_report(month, day):
     import pandas as pd
-
-    daily_report = pd.read_csv('./daily_results/results_{0}_{1}.csv'.format(month, day))
-    daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
-    daily_report.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
-                         'month', 'day'], axis=1, inplace=True)
-    print("Sorted from best to worst for ", month, "/", day, sep="")
-    print(daily_report)
+    try:
+        daily_report = pd.read_csv('./daily_results/results_{0}_{1}.csv'.format(month, day))
+        daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
+        daily_report.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
+                             'month', 'day'], axis=1, inplace=True)
+        print("Sorted from best to worst for ", month, "/", day, sep="")
+        print(daily_report)
+    except FileNotFoundError:
+        print("Results for ", month, "/", day, " not in yet.", sep="")
