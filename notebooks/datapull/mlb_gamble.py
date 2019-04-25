@@ -80,10 +80,18 @@ def print_choice_menu():
 run_main_menu = True
 
 while run_main_menu:
-    run_admin_menu = True
-    run_user_menu = True
-    print_main_menu()
-    main_menu_choice = int(input("Choice: "))
+    while True:
+        try:
+            run_admin_menu = True
+            run_user_menu = True
+            print_main_menu()
+            main_menu_choice = int(input("Choice: "))
+        except ValueError:
+            print()
+            print("Bad value")
+            continue
+        else:
+            break
 
     if main_menu_choice == 1:
         while run_admin_menu:
@@ -198,5 +206,3 @@ while run_main_menu:
         print()
         print("How about a valid menu choice, douche bag?")
         sleep(2)
-
-
