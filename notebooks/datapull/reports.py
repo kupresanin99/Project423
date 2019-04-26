@@ -78,7 +78,6 @@ def display_gambling_picks(month, day):
         print("Picks for ", month, "/", day, " not in yet.", sep="")
 
 
-
 def run_daily_report(month, day):
     import pandas as pd
     try:
