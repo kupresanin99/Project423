@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="161" column="37" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+            <state relative-caret-position="257">
+              <caret line="212" selection-start-line="212" selection-end-line="212" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -24,10 +25,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
+            <state relative-caret-position="4796">
               <caret line="218" column="33" selection-start-line="218" selection-start-column="33" selection-end-line="218" selection-end-column="33" />
             </state>
           </provider>
@@ -89,10 +90,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="405" />
+    <option name="x" value="-515" />
+    <option name="y" value="-1406" />
+    <option name="width" value="2534" />
+    <option name="height" value="1405" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -119,7 +120,24 @@
             </path>
             <path>
               <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Project423" type="462c0819:PsiDirectoryNode" />
+              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
+              <item name="datapull" type="462c0819:PsiDirectoryNode" />
+              <item name="daily_predictions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project423" type="462c0819:PsiDirectoryNode" />
+              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
+              <item name="datapull" type="462c0819:PsiDirectoryNode" />
+              <item name="daily_raw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project423" type="462c0819:PsiDirectoryNode" />
+              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
+              <item name="datapull" type="462c0819:PsiDirectoryNode" />
+              <item name="daily_results" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,14 +371,10 @@
       <workItem from="1556215030041" duration="1064000" />
       <workItem from="1556228291622" duration="541000" />
       <workItem from="1556280061531" duration="273000" />
-      <workItem from="1556287352105" duration="1256000" />
-    </task>
-    <task id="LOCAL-00005" summary="Reasonably working app in PyCharm.">
-      <created>1555473935814</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1555473935814</updated>
+      <workItem from="1556287352105" duration="1297000" />
+      <workItem from="1556311280899" duration="392000" />
+      <workItem from="1556312652793" duration="88000" />
+      <workItem from="1556367656370" duration="1133000" />
     </task>
     <task id="LOCAL-00006" summary="PyCharm working to pull data, make predictions, save results.">
       <created>1555503804757</created>
@@ -698,11 +712,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556280308879</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Data pull for April 26.">
+      <created>1556288667596</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1556288667599</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113642000" />
+    <option name="totallyTimeSpent" value="115296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -714,14 +735,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="808" extended-state="6" />
+    <frame x="-526" y="-1417" width="2560" height="1417" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29899135" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30382776" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924962" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.93113345" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6232772" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -739,22 +760,22 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19668588" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3040346" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5084227" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32924962" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.92979944" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.1502146" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.26217765" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3313679" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32808024" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.20990565" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.625" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.20773639" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.6232092" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -766,7 +787,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PyCharm working to pull data, make predictions, save results." />
     <MESSAGE value="Switched input / output files to csv." />
     <MESSAGE value="Made menu for gambling picks or record yesterday results." />
     <MESSAGE value="Added reporting, migrated to PyCharm, baby!" />
@@ -791,7 +811,8 @@
     <MESSAGE value="Daily reporting input errors prevented." />
     <MESSAGE value="Ran prelims for April 25" />
     <MESSAGE value="Result input for April 25." />
-    <option name="LAST_COMMIT_MESSAGE" value="Result input for April 25." />
+    <MESSAGE value="Data pull for April 26." />
+    <option name="LAST_COMMIT_MESSAGE" value="Data pull for April 26." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Project423$pull_historical_data.coverage" NAME="pull_historical_data Coverage Results" MODIFIED="1555329257105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
@@ -800,7 +821,7 @@
     <SUITE FILE_PATH="coverage/Project423$initial_model.coverage" NAME="initial_model Coverage Results" MODIFIED="1555248407297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$api_data_grab.coverage" NAME="api_data_grab Coverage Results" MODIFIED="1555365349697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$Another_tester.coverage" NAME="Another_tester Coverage Results" MODIFIED="1555472050849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
-    <SUITE FILE_PATH="coverage/Project423$tester.coverage" NAME="tester Coverage Results" MODIFIED="1556287529729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+    <SUITE FILE_PATH="coverage/Project423$tester.coverage" NAME="tester Coverage Results" MODIFIED="1556368441732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$april14_pull.coverage" NAME="april14_pull Coverage Results" MODIFIED="1555248395788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
   </component>
   <component name="editorHistoryManager">
@@ -935,11 +956,18 @@
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/prelim_model_building/initial_model.py" />
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="161" column="37" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+        <state relative-caret-position="257">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4796">
+          <caret line="218" column="33" selection-start-line="218" selection-start-column="33" selection-end-line="218" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -954,13 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/datapull/daily_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="218" column="33" selection-start-line="218" selection-start-column="33" selection-end-line="218" selection-end-column="33" />
         </state>
       </provider>
     </entry>

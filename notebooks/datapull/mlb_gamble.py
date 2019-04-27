@@ -9,6 +9,8 @@ from datetime import datetime
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
+##### Text input on main menu fucking things up
+
 
 def print_main_menu():
     print()
@@ -86,123 +88,149 @@ while run_main_menu:
             run_user_menu = True
             print_main_menu()
             main_menu_choice = int(input("Choice: "))
+
+            if main_menu_choice == 1:
+                while True:
+                    try:
+                        while run_admin_menu:
+                            print_admin_menu()
+                            admin_menu_choice = int(input("Choice: "))
+
+                            if admin_menu_choice == 1:
+                                print()
+                                month, day = print_choice_menu()
+                                if month == 0:
+                                    pass
+                                else:
+                                    api_pull(month, day)
+                                    print("Attempted API Pull")
+                                    sleep(2)
+                                    minor_processing(month, day)
+                                    print("Performed minor processing")
+                                    sleep(2)
+
+                            elif admin_menu_choice == 2:
+                                print()
+                                print("Run today's model and enter betting lines:")
+                                print()
+                                month, day = print_choice_menu()
+                                if month == 0:
+                                    pass
+                                else:
+                                    data = pd.read_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+                                    today = get_predicted_runs(data, month, day)
+                                    today = admin_input_lines(today)
+                                    today.to_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                                    print(today)
+
+                            elif admin_menu_choice == 3:
+                                print()
+                                print("Enter past results:")
+                                print()
+                                month, day = print_choice_menu()
+                                if month == 0:
+                                    pass
+                                else:
+                                    print("Enter game results for ", month, "/", day, sep="")
+                                    today = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                                    today = admin_input_results(today)
+                                    today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                                    print("Daily results for ", month, "/", day, sep="")
+                                    print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
+                                                      'predicted.bookie.rank', 'betting.opportunity'], axis=1))
+
+                            elif admin_menu_choice == 4:
+                                print()
+                                print("Back to Main Menu")
+                                sleep(2)
+                                run_admin_menu = False
+
+                            elif admin_menu_choice == 5:
+                                print()
+                                print("Quitting Program")
+                                sleep(2)
+                                run_admin_menu = False
+                                run_main_menu = False
+
+                            else:
+                                pass
+
+                    except ValueError:
+                        print()
+                        print("Bad Value Admin Menu")
+                        continue
+                    else:
+                        break
+
+            elif main_menu_choice == 2:
+                while True:
+                    try:
+                        while run_user_menu:
+                            print_user_menu()
+                            user_menu_choice = int(input("Choice: "))
+
+                            if user_menu_choice == 1:
+                                print()
+                                print("View Gambling Picks:")
+                                print()
+                                month, day = print_choice_menu()
+                                if month == 0:
+                                    pass
+                                else:
+                                    display_gambling_picks(month, day)
+                                    sleep(2)
+
+                            elif user_menu_choice == 2:
+                                run_yearly_reports()
+                                sleep(2)
+
+                            elif user_menu_choice == 3:
+                                print()
+                                print("Run Daily Report:")
+                                print()
+                                month, day = print_choice_menu()
+                                if month == 0:
+                                    pass
+                                else:
+                                    run_daily_report(month, day)
+                                    sleep(2)
+
+                            elif user_menu_choice == 4:
+                                print()
+                                print("Back to Main Menu")
+                                sleep(2)
+                                run_user_menu = False
+
+                            elif user_menu_choice == 5:
+                                print()
+                                print("Quitting Program")
+                                sleep(2)
+                                run_user_menu = False
+                                run_main_menu = False
+
+                            else:
+                                pass
+
+                    except ValueError:
+                        print()
+                        print("Bad Value User Menu")
+                        continue
+                    else:
+                        break
+
+            elif main_menu_choice == 3:
+                print("Quitting Program")
+                run_main_menu = False
+
+            else:
+                print()
+                print("How about a valid menu choice, douche bag?")
+                sleep(2)
+
         except ValueError:
             print()
-            print("Bad value")
+            print("Bad Value Main Menu")
             continue
         else:
             break
 
-    if main_menu_choice == 1:
-        while run_admin_menu:
-            print_admin_menu()
-            admin_menu_choice = int(input("Choice: "))
-
-            if admin_menu_choice == 1:
-                print()
-                month, day = print_choice_menu()
-                if month == 0:
-                    pass
-                else:
-                    api_pull(month, day)
-                    print("Attempted API Pull")
-                    sleep(2)
-                    minor_processing(month, day)
-                    print("Performed minor processing")
-                    sleep(2)
-
-            elif admin_menu_choice == 2:
-                print()
-                print("Run today's model and enter betting lines:")
-                print()
-                month, day = print_choice_menu()
-                if month == 0:
-                    pass
-                else:
-                    data = pd.read_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
-                    today = get_predicted_runs(data, month, day)
-                    today = admin_input_lines(today)
-                    today.to_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
-                    print(today)
-
-            elif admin_menu_choice == 3:
-                print()
-                print("Enter past results:")
-                print()
-                month, day = print_choice_menu()
-                if month == 0:
-                    pass
-                else:
-                    print("Enter game results for ", month, "/", day, sep="")
-                    today = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-                    today = admin_input_results(today)
-                    today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
-                    print("Daily results for ", month, "/", day, sep="")
-                    print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
-                                      'predicted.bookie.rank', 'betting.opportunity'], axis=1))
-
-            elif admin_menu_choice == 4:
-                print()
-                print("Back to Main Menu")
-                sleep(2)
-                run_admin_menu = False
-
-            else:
-                print()
-                print("Quitting Program")
-                sleep(2)
-                run_admin_menu = False
-                run_main_menu = False
-
-    elif main_menu_choice == 2:
-        while run_user_menu:
-            print_user_menu()
-            user_menu_choice = int(input("Choice: "))
-
-            if user_menu_choice == 1:
-                print()
-                print("View Gambling Picks:")
-                print()
-                month, day = print_choice_menu()
-                if month == 0:
-                    pass
-                else:
-                    display_gambling_picks(month, day)
-                    sleep(2)
-
-            elif user_menu_choice == 2:
-                run_yearly_reports()
-                sleep(2)
-
-            elif user_menu_choice == 3:
-                print()
-                print("Run Daily Report:")
-                print()
-                month, day = print_choice_menu()
-                if month == 0:
-                    pass
-                else:
-                    run_daily_report(month, day)
-                    sleep(2)
-
-            elif user_menu_choice == 4:
-                print()
-                print("Back to Main Menu")
-                sleep(2)
-                run_user_menu = False
-
-            else:
-                print()
-                print("Quitting Program")
-                sleep(2)
-                run_user_menu = False
-                run_main_menu = False
-
-    elif main_menu_choice == 3:
-        print("Quitting Program")
-        run_main_menu = False
-
-    else:
-        print()
-        print("How about a valid menu choice, douche bag?")
-        sleep(2)
