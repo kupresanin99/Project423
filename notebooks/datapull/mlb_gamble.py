@@ -9,8 +9,6 @@ from datetime import datetime
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
-##### Text input on main menu fucking things up
-
 
 def print_main_menu():
     print()
@@ -57,6 +55,7 @@ def print_choice_menu():
                 if day1 == 31 and month1 in [4, 6, 9]:
                     print("Invalid Date!")
                     sleep(2)
+                    return 0, 0
                 elif month1 > datetime.now().month or (month1 == datetime.now().month and day1 > datetime.now().day):
                     print("Date out of bounds")
                     sleep(2)
