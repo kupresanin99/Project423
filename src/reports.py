@@ -15,7 +15,7 @@ def run_yearly_reports():
                  'CIN': 'Cincinnati Reds', 'LAD': 'Los Angeles Dodgers', 'SD': 'San Diego Padres',
                  'ARI': 'Arizona Diamondbacks', 'SF': 'San Francisco Giants', 'COL': 'Colorado Rockies'}
 
-    path = 'daily_results'
+    path = '../../data/daily_results'
     all_files = glob.glob(path + "/*.csv")
 
     results = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
@@ -68,7 +68,7 @@ def run_yearly_reports():
 def display_gambling_picks(month, day):
     import pandas as pd
     try:
-        gambling_picks = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        gambling_picks = pd.read_csv('../../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
         gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
                              'month', 'day'], axis=1, inplace=True)
@@ -81,7 +81,7 @@ def display_gambling_picks(month, day):
 def run_daily_report(month, day):
     import pandas as pd
     try:
-        daily_report = pd.read_csv('./daily_results/results_{0}_{1}.csv'.format(month, day))
+        daily_report = pd.read_csv('../../data/daily_results/results_{0}_{1}.csv'.format(month, day))
         daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
         daily_report.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
                              'month', 'day'], axis=1, inplace=True)

@@ -11,7 +11,7 @@ def api_pull(month, day):
 
     res = conn.getresponse()
     data = res.read()
-    with open('daily_raw/raw_{0}_{1}'.format(month, day), 'wb') as fp:
+    with open('../../data/daily_raw/raw_{0}_{1}'.format(month, day), 'wb') as fp:
         pickle.dump(data, fp)
 
 
@@ -21,7 +21,7 @@ def minor_processing(month, day):
     from pandas.io.json import json_normalize
     import pickle
 
-    with open('daily_raw/raw_{0}_{1}'.format(month, day), 'rb') as fp:
+    with open('../../data/daily_raw/raw_{0}_{1}'.format(month, day), 'rb') as fp:
         data = pickle.load(fp)
 
     baseball_data = []
@@ -36,4 +36,4 @@ def minor_processing(month, day):
                                            ['league.alias', 'league.date', 'league.id', 'league.name'])
 
     data = json_normalize(baseball_normal.iloc[0, 0])
-    data.to_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+    data.to_csv('../../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')

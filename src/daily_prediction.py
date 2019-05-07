@@ -153,7 +153,7 @@ def get_predicted_runs(data, month, day):
                       'game.home.probable_pitcher.id',
                       'game.broadcast.network'], axis=1)
 
-    with open('model_data', 'rb') as fp:
+    with open('../../data/model_data', 'rb') as fp:
         model_data = pickle.load(fp)  # Load up the 2018 modeling data
 
     model_predict_today = data

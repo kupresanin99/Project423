@@ -116,10 +116,10 @@ while run_main_menu:
                                 if month == 0:
                                     pass
                                 else:
-                                    data = pd.read_csv('./daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+                                    data = pd.read_csv('../../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
                                     today = get_predicted_runs(data, month, day)
                                     today = admin_input_lines(today)
-                                    today.to_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                                    today.to_csv('../../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
                                     print(today)
 
                             elif admin_menu_choice == 3:
@@ -131,9 +131,9 @@ while run_main_menu:
                                     pass
                                 else:
                                     print("Enter game results for ", month, "/", day, sep="")
-                                    today = pd.read_csv('./daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                                    today = pd.read_csv('../../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
                                     today = admin_input_results(today)
-                                    today.to_csv('./daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                                    today.to_csv('../../data/daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
                                     print("Daily results for ", month, "/", day, sep="")
                                     print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
                                                       'predicted.bookie.rank', 'betting.opportunity'], axis=1))
