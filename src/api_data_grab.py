@@ -2,6 +2,7 @@ def api_pull(month, day):
 
     import http.client
     import pickle
+    import boto3
 
     conn = http.client.HTTPSConnection("api.sportradar.us")
 
@@ -10,9 +11,13 @@ def api_pull(month, day):
                  "json?api_key=bw84ac36vu34rdk5vkkh4psx".format(month, day))
 
     res = conn.getresponse()
-    data = res.read()
+    data = res.read() 
+
     with open('../data/daily_raw/raw_{0}_{1}'.format(month, day), 'wb') as fp:
         pickle.dump(data, fp)
+
+    s3 = boto3.resource("s3")
+    s3.meta.client.upload_file("../data/daily_raw/raw_{0}_{1}".format(month, day), "kupebaseball", "data/daily_raw/raw_{0}_{1}".format(month,day))
 
 
 def minor_processing(month, day):
