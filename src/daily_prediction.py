@@ -6,6 +6,7 @@ def get_predicted_runs(data, month, day):
     import pandas as pd
     from sklearn.model_selection import RandomizedSearchCV
     import math
+    import boto3
 
     data['home.win.pct'] = data['game.home.win'] / (data['game.home.win'] + data['game.home.loss'])
     data['away.win.pct'] = data['game.away.win'] / (data['game.away.win'] + data['game.away.loss'])
@@ -152,9 +153,11 @@ def get_predicted_runs(data, month, day):
                       'game.away.probable_pitcher.id',
                       'game.home.probable_pitcher.id',
                       'game.broadcast.network'], axis=1)
-
+    
+    s3 = boto3.resource("s3")
+    s3.meta.client.download_file('kupebaseball', 'model_data', '../data/model_data')
     with open('../data/model_data', 'rb') as fp:
-        model_data = pickle.load(fp)  # Load up the 2018 modeling data
+        model_data = pickle.load(fp)
 
     model_predict_today = data
 
