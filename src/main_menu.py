@@ -5,6 +5,8 @@ from reports import run_yearly_reports, display_gambling_picks, run_daily_report
 import pandas as pd
 from time import sleep
 from datetime import datetime
+import boto3
+import os
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -116,11 +118,18 @@ while run_main_menu:
                                 if month == 0:
                                     pass
                                 else:
+                                    s3 = boto3.resource("s3")
+                                    s3.meta.client.download_file('kupebaseball', 'data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), '../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))
                                     data = pd.read_csv('../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
+                                    if os.path.exists('../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day)):
+                                        os.remove('../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))
                                     today = get_predicted_runs(data, month, day)
                                     today = admin_input_lines(today)
                                     today.to_csv('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
                                     print(today)
+                                    s3.meta.client.upload_file('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                                    if os.path.exists('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
+                                            os.remove('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
 
                             elif admin_menu_choice == 3:
                                 print()
@@ -131,12 +140,17 @@ while run_main_menu:
                                     pass
                                 else:
                                     print("Enter game results for ", month, "/", day, sep="")
+                                    s3 = boto3.resource("s3")
+                                    s3.meta.client.download_file('kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), '../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
                                     today = pd.read_csv('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                                    if os.path.exists('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
+                                        os.remove('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
                                     today = admin_input_results(today)
                                     today.to_csv('../data/daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
                                     print("Daily results for ", month, "/", day, sep="")
                                     print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
                                                       'predicted.bookie.rank', 'betting.opportunity'], axis=1))
+                                    s3.meta.client.upload_file('../data/daily_results/results_{0}_{1}.csv'.format(month, day), 'kupebaseball', 'data/daily_results/results_{0}_{1}.csv'.format(month,day))
 
                             elif admin_menu_choice == 4:
                                 print()
