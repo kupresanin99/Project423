@@ -25,6 +25,10 @@ def minor_processing(month, day):
     import json
     from pandas.io.json import json_normalize
     import pickle
+    import boto3
+
+    s3 = boto3.resource("s3")
+    s3.meta.client.download_file('kupebaseball', 'data/daily_raw/raw_{0}_{1}'.format(month, day), '../data/daily_raw/raw_{0}_{1}'.format(month, day))
 
     with open('../data/daily_raw/raw_{0}_{1}'.format(month, day), 'rb') as fp:
         data = pickle.load(fp)
