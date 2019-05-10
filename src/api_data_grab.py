@@ -9,7 +9,7 @@ def api_pull(month, day):
 
     conn.request("GET",
                  "/mlb/trial/v6.5/en/games/2019/{0}/{1}/boxscore."
-                 "json?api_key=bw84ac36vu34rdk5vkkh4psx".format(month, day))
+                 "json?api_key=92jge9phm7k8x746vdj39w83".format(month, day))
 
     res = conn.getresponse()
     data = res.read() 
