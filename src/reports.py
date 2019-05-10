@@ -67,15 +67,24 @@ def run_yearly_reports():
 
 def display_gambling_picks(month, day):
     import pandas as pd
+    import os
+    import boto3
+
     try:
+        s3 = boto3.resource("s3")
+        s3.meta.client.download_file('kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), '../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks = pd.read_csv('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
         gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(gambling_picks)
+        if os.path.exists("../data/daily_predictions/predictions_{0}_{1}.csv".format(month, day)):
+            os.remove("../data/daily_predictions/predictions_{0}_{1}.csv".format(month, day))
     except FileNotFoundError:
         print("Picks for ", month, "/", day, " not in yet.", sep="")
+    except:
+        print("Required data not on S3 yet.")
 
 
 def run_daily_report(month, day):
