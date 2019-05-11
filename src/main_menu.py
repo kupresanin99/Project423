@@ -7,6 +7,7 @@ from time import sleep
 from datetime import datetime
 import boto3
 import os
+import glob
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -151,6 +152,19 @@ while run_main_menu:
                                     print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
                                                       'predicted.bookie.rank', 'betting.opportunity'], axis=1))
                                     s3.meta.client.upload_file('../data/daily_results/results_{0}_{1}.csv'.format(month, day), 'kupebaseball', 'data/daily_results/results_{0}_{1}.csv'.format(month,day))
+                                    path = '../data/daily_results'
+                                    all_files = glob.glob(path + "/*.csv")
+
+                                    results = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
+
+                                    results.drop(results.columns[0], axis=1, inplace=True)
+                                    results['year'] = datetime.now().year
+                                    results['date'] = pd.to_datetime(results[['year', 'month', 'day']])
+                                    results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
+                                    results.to_csv('../data/results.csv', encoding='utf-8')
+                                    s3.meta.client.upload_file('../data/results.csv', 'kupebaseball', 'data/daily_results/results.csv')
+                                    if os.path.exists('../data/results.csv'):
+                                        os.remove('../data/results.csv')
 
                             elif admin_menu_choice == 4:
                                 print()

@@ -16,16 +16,12 @@ def run_yearly_reports():
                  'PIT': 'Pittsburgh Pirates', 'STL': 'St. Louis Cardinals', 'CHC': 'Chicago Cubs',
                  'CIN': 'Cincinnati Reds', 'LAD': 'Los Angeles Dodgers', 'SD': 'San Diego Padres',
                  'ARI': 'Arizona Diamondbacks', 'SF': 'San Francisco Giants', 'COL': 'Colorado Rockies'}
-
-    path = '../data/daily_results'
-    all_files = glob.glob(path + "/*.csv")
-
-    results = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
-
-    results.drop(results.columns[0], axis=1, inplace=True)
-    results['year'] = datetime.now().year
-    results['date'] = pd.to_datetime(results[['year', 'month', 'day']])
-    results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)    
+   
+    s3 = boto3.resource("s3")
+    s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
+    results = pd.read_csv('results.csv')
+    if os.path.exists('results.csv'):
+        os.remove('results.csv')
     print()
     print("Profit / Loss Report for the 2019 season:")
     print("(Each bet is $100)")
