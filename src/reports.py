@@ -3,6 +3,8 @@ def run_yearly_reports():
     from datetime import datetime
     import glob
     from time import sleep
+    import os
+    import boto3
 
     team_dict = {'TB': 'Tampa Bay Rays', 'NYY': 'New York Yankees', 'TOR': 'Toronto Blue Jays',
                  'BAL': 'Baltimore Orioles', 'BOS': 'Boston Red Sox', 'CLE': 'Cleveland Indians',
@@ -23,8 +25,7 @@ def run_yearly_reports():
     results.drop(results.columns[0], axis=1, inplace=True)
     results['year'] = datetime.now().year
     results['date'] = pd.to_datetime(results[['year', 'month', 'day']])
-    results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
-
+    results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)    
     print()
     print("Profit / Loss Report for the 2019 season:")
     print("(Each bet is $100)")
@@ -67,25 +68,41 @@ def run_yearly_reports():
 
 def display_gambling_picks(month, day):
     import pandas as pd
+    import os
+    import boto3
+
     try:
+        s3 = boto3.resource("s3")
+        s3.meta.client.download_file('kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), '../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks = pd.read_csv('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
         gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(gambling_picks)
+        if os.path.exists('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
+            os.remove('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
     except FileNotFoundError:
         print("Picks for ", month, "/", day, " not in yet.", sep="")
-
+    except:
+        print("Data not in S3 yet.  Patience, hermano.")
 
 def run_daily_report(month, day):
     import pandas as pd
+    import boto3
+    import os
     try:
+        s3 = boto3.resource("s3")
+        s3.meta.client.download_file('kupebaseball', 'data/daily_results/results_{0}_{1}.csv'.format(month, day), '../data/daily_results/results_{0}_{1}.csv'.format(month, day))
         daily_report = pd.read_csv('../data/daily_results/results_{0}_{1}.csv'.format(month, day))
         daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
         daily_report.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(daily_report)
+       # if os.path.exists('../data/daily_results/results_{0}_{1}.csv'.format(month, day)):
+        #    os.remove('../data/daily_results/results_{0}_{1}.csv'.format(month, day))
     except FileNotFoundError:
         print("Results for ", month, "/", day, " not in yet.", sep="")
+    except:
+        print("Data not in S3 yet.  Patience, hermano.")
