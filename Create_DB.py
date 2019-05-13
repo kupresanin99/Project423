@@ -1,19 +1,12 @@
-from numpy import genfromtxt
-from time import time
-from datetime import datetime
 from sqlalchemy import Column, Integer, String, Float, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import boto3
 import pandas as pd
+import os
 
 Base = declarative_base()
-
-
-#app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///joe.db'
-#db = SQLAlchemy(app)
 
 
 class Predictions(Base):
@@ -80,10 +73,8 @@ class Reports(Base):
 
 
 if __name__ == "__main__":
-    # s3 = boto3.resource("s3")
-    # s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
-
-    t = time()
+    s3 = boto3.resource("s3")
+    s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
 
     engine = create_engine('sqlite:///joe_test.db')
     Base.metadata.drop_all(engine)
@@ -107,5 +98,6 @@ if __name__ == "__main__":
 
     finally:
         s.close()
+        if os.path.exists("results.csv"):
+            os.remove("results.csv")
 
-    print("Time elapsed: " + str(time() - t) + " seconds.")
