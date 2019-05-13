@@ -6,10 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import boto3
-
-def Load_Data(file_name):
-    data = genfromtxt(file_name, delimiter=',', skip_header=1)
-    return data.tolist()
+import pandas as pd
 
 Base = declarative_base()
 
@@ -67,27 +64,29 @@ class Reports(Base):
     __table_args__={'sqlite_autoincrement': True}
     id = Column(Integer, primary_key=True)
     game = Column(Integer)
-    away = Column(String(3))
+    away = Column(String(10))
     bet_result = Column(Integer)
     betting_opportunity = Column(Float)
     bookie = Column(Float)
-    game_result = Column(String(5))
-    home = Column(String(3))
+    game_result = Column(String(10))
+    home = Column(String(10))
     outcome = Column(Float)
     predicted_runs = Column(Float)
-    bet = Column(String(5))
-    date = Column(Date)
+    bet = Column(String(10))
+    date = Column(String(20))
 
     def __repr__(self):
         return f"(Reports('{self.away}', '{self.home}', '{self.date}')"
 
+
 if __name__ == "__main__":
-    s3 = boto3.resource("s3")
-    s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
+    # s3 = boto3.resource("s3")
+    # s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
 
     t = time()
 
     engine = create_engine('sqlite:///joe_test.db')
+    Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
 
     session = sessionmaker()
@@ -95,18 +94,18 @@ if __name__ == "__main__":
     s = session()
 
     try:
-        file_name = 'results.csv'
-        data = Load_Data(file_name)
+        results_df = pd.read_csv('results.csv', skiprows=1)
+        results_df.columns = ['game', 'away', 'bet_result', 'betting_opportunity', 'bookie', 'game_result', 'home',
+                              'outcome', 'predicted_runs', 'bet', 'date']
 
-        for i in data:
-            record = Reports(**{'game': i[0], 'away': i[1], 'bet_result': i[2], 'betting_opportunity': i[3], 'bookie': i[4], 'game_result': i[5], 'home': i[6], 'outcome': i[7], 'predicted_runs': i[8], 'bet': i[9], 'date': i[10]})
-            s.add(record)
+        s.bulk_insert_mappings(Reports, results_df.to_dict(orient="records"))
         s.commit()
-    
+
     except:
         s.rollback()
+        print("exception occurred!")
 
     finally:
         s.close()
-    
+
     print("Time elapsed: " + str(time() - t) + " seconds.")
