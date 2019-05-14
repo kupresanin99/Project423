@@ -76,8 +76,15 @@ if __name__ == "__main__":
     s3 = boto3.resource("s3")
     s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
 
-    engine = create_engine('sqlite:///sqlite.db')
-
+    conn_type = "mysql+pymysql"
+    user = os.environ.get("MYSQL_USER")
+    password = os.environ.get("MYSQL_PASSWORD")
+    host = os.environ.get("MYSQL_HOST")
+    port = os.environ.get("MYSQL_PORT")
+    DATABASE_NAME = 'msia423'
+    engine_string = "{}://{}:{}@{}:{}/{}".\
+    format(conn_type, user, password, host, port, DATABASE_NAME)
+    engine = create_engine(engine_string)
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
 
