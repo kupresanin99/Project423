@@ -113,19 +113,5 @@ Additional variables will require table joins and additional API pulls, which ca
 
 2.2.a.  Adding additional variables to the model for performance improvement (placeholder, not sure if time) (icebox).  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+For midproject PR
 
