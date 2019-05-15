@@ -66,7 +66,7 @@ class Reports(Base):
     outcome = Column(Float)
     predicted_runs = Column(Float)
     bet = Column(String(10))
-    date = Column(String(20))
+    date = Column(Date)
 
     def __repr__(self):
         return f"(Reports('{self.away}', '{self.home}', '{self.date}')"
