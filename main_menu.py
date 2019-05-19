@@ -1,7 +1,7 @@
-from api_data_grab import api_pull, minor_processing
-from daily_prediction import get_predicted_runs, \
-    admin_input_results, admin_input_lines
-from reports import run_yearly_reports, display_gambling_picks, run_daily_report
+from src.api_data_grab import api_pull, minor_processing
+from src.daily_prediction import get_predicted_runs
+from src.daily_prediction import admin_input_results, admin_input_lines
+from src.reports import run_yearly_reports, display_gambling_picks, run_daily_report
 import pandas as pd
 from time import sleep
 from datetime import datetime
@@ -76,7 +76,7 @@ def print_choice_menu():
             return 0, 0
 
     except ValueError:
-        print("Jesus, learn how to enter months and dates, OK?")
+        print("User Error")
         sleep(2)
         return 0, 0
 
@@ -251,7 +251,7 @@ while run_main_menu:
 
             else:
                 print()
-                print("How about a valid menu choice, douche bag?")
+                print("User Error")
                 sleep(2)
 
         except ValueError:
