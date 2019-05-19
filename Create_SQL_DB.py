@@ -74,7 +74,7 @@ class Reports(Base):
 
 if __name__ == "__main__":
 
-    local_results = 'data/daily_results/results_{0}_{1}.csv'
+    local_results = 'data/daily_results/results.csv'
     local_csv = 'results.csv'
     s3 = boto3.resource("s3")
     s3.meta.client.download_file(config.my_bucket, local_results, local_csv)
