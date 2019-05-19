@@ -8,6 +8,7 @@ from datetime import datetime
 import boto3
 import os
 import glob
+import config
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -120,7 +121,7 @@ while run_main_menu:
                                     pass
                                 else:
                                     s3 = boto3.resource("s3")
-                                    s3.meta.client.download_file('kupebaseball', 'data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), 'data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))
+                                    s3.meta.client.download_file(config.my_bucket, 'data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), 'data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))
                                     data = pd.read_csv('data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
                                     if os.path.exists('data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day)):
                                         os.remove('data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))

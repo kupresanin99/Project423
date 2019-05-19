@@ -4,6 +4,7 @@ def api_pull(month, day):
     import pickle
     import boto3
     import os
+    import config
 
     conn = http.client.HTTPSConnection("api.sportradar.us")
 
@@ -18,7 +19,7 @@ def api_pull(month, day):
         pickle.dump(data, fp)
 
     s3 = boto3.resource("s3")
-    s3.meta.client.upload_file("data/daily_raw/raw_{0}_{1}".format(month, day), "kupebaseball", "data/daily_raw/raw_{0}_{1}".format(month,day))
+    s3.meta.client.upload_file("data/daily_raw/raw_{0}_{1}".format(month, day), config.my_bucket, "data/daily_raw/raw_{0}_{1}".format(month,day))
 
     if os.path.exists("data/daily_raw/raw_{0}_{1}".format(month, day)):
         os.remove("data/daily_raw/raw_{0}_{1}".format(month, day))
