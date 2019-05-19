@@ -156,12 +156,12 @@ def get_predicted_runs(data, month, day):
                       'game.broadcast.network'], axis=1)
     
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file('kupebaseball', 'model_data', '../data/model_data')
-    with open('../data/model_data', 'rb') as fp:
+    s3.meta.client.download_file('kupebaseball', 'model_data', 'data/model_data')
+    with open('data/model_data', 'rb') as fp:
         model_data = pickle.load(fp)
 
-    if os.path.exists("../data/model_data"):
-        os.remove("../data/model_data")
+    if os.path.exists("data/model_data"):
+        os.remove("data/model_data")
 
     model_predict_today = data
 

@@ -69,15 +69,15 @@ def display_gambling_picks(month, day):
 
     try:
         s3 = boto3.resource("s3")
-        s3.meta.client.download_file('kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), '../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-        gambling_picks = pd.read_csv('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        s3.meta.client.download_file('kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        gambling_picks = pd.read_csv('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
         gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(gambling_picks)
-        if os.path.exists('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
-            os.remove('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        if os.path.exists('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
+            os.remove('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
     except FileNotFoundError:
         print("Picks for ", month, "/", day, " not in yet.", sep="")
     except:
@@ -89,15 +89,15 @@ def run_daily_report(month, day):
     import os
     try:
         s3 = boto3.resource("s3")
-        s3.meta.client.download_file('kupebaseball', 'data/daily_results/results_{0}_{1}.csv'.format(month, day), '../data/daily_results/results_{0}_{1}.csv'.format(month, day))
-        daily_report = pd.read_csv('../data/daily_results/results_{0}_{1}.csv'.format(month, day))
+        s3.meta.client.download_file('kupebaseball', 'data/daily_results/results_{0}_{1}.csv'.format(month, day), 'data/daily_results/results_{0}_{1}.csv'.format(month, day))
+        daily_report = pd.read_csv('data/daily_results/results_{0}_{1}.csv'.format(month, day))
         daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
         daily_report.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(daily_report)
-       # if os.path.exists('../data/daily_results/results_{0}_{1}.csv'.format(month, day)):
-        #    os.remove('../data/daily_results/results_{0}_{1}.csv'.format(month, day))
+       # if os.path.exists('data/daily_results/results_{0}_{1}.csv'.format(month, day)):
+        #    os.remove('data/daily_results/results_{0}_{1}.csv'.format(month, day))
     except FileNotFoundError:
         print("Results for ", month, "/", day, " not in yet.", sep="")
     except:
