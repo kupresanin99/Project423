@@ -11,3 +11,5 @@ password = os.environ.get("MYSQL_PASSWORD")
 host = os.environ.get("MYSQL_HOST")
 port = os.environ.get("MYSQL_PORT")
 DATABASE_NAME = 'msia423'
+local_results = 'data/daily_results/results.csv'
+local_csv = 'results.csv'
