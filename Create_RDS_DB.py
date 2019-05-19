@@ -10,47 +10,47 @@ import config
 Base = declarative_base()
 
 
-class Predictions(Base):
-    __tablename__='Predictions'
-    __table_args__={'sqlite_autoincrement': True}
-    id = Column(Integer, primary_key=True)
-    game = Column(Integer)
-    away = Column(String(3))
-    home = Column(String(3))
-    month = Column(Integer)
-    day = Column(Integer)
-    predicted_runs = Column(Float)
-    bookie = Column(Float)
-    predicted_run_rank = Column(Float)
-    predicted_bookie_rank = Column(Float)
-    bet = Column(String(5))
-    betting_opportunity = Column(Float)
-
-    def __repr__(self):
-        return f"Predictions('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}')"
-
-
-class Results(Base):
-    __tablename__='Results'
-    __table_args__={'sqlite_autoincrement': True}
-    id = Column(Integer, primary_key=True)
-    game = Column(Integer)
-    away = Column(String(3))
-    home = Column(String(3))
-    month = Column(Integer)
-    day = Column(Integer)
-    predicted_runs = Column(Float)
-    bookie = Column(Float)
-    predicted_run_rank = Column(Float)
-    predicted_bookie_rank = Column(Float)
-    bet = Column(String(5))
-    betting_opportunity = Column(Float)
-    outcome = Column(Float)
-    game_result = Column(String(5))
-    bet_result = Column(Integer)
-
-    def __repr__(self):
-        return f"(Results('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}', '{self.bet_result}')"
+# class Predictions(Base):
+#     __tablename__='Predictions'
+#     __table_args__={'sqlite_autoincrement': True}
+#     id = Column(Integer, primary_key=True)
+#     game = Column(Integer)
+#     away = Column(String(3))
+#     home = Column(String(3))
+#     month = Column(Integer)
+#     day = Column(Integer)
+#     predicted_runs = Column(Float)
+#     bookie = Column(Float)
+#     predicted_run_rank = Column(Float)
+#     predicted_bookie_rank = Column(Float)
+#     bet = Column(String(5))
+#     betting_opportunity = Column(Float)
+#
+#     def __repr__(self):
+#         return f"Predictions('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}')"
+#
+#
+# class Results(Base):
+#     __tablename__='Results'
+#     __table_args__={'sqlite_autoincrement': True}
+#     id = Column(Integer, primary_key=True)
+#     game = Column(Integer)
+#     away = Column(String(3))
+#     home = Column(String(3))
+#     month = Column(Integer)
+#     day = Column(Integer)
+#     predicted_runs = Column(Float)
+#     bookie = Column(Float)
+#     predicted_run_rank = Column(Float)
+#     predicted_bookie_rank = Column(Float)
+#     bet = Column(String(5))
+#     betting_opportunity = Column(Float)
+#     outcome = Column(Float)
+#     game_result = Column(String(5))
+#     bet_result = Column(Integer)
+#
+#     def __repr__(self):
+#         return f"(Results('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}', '{self.bet_result}')"
 
 
 class Reports(Base):
@@ -73,18 +73,16 @@ class Reports(Base):
         return f"(Reports('{self.away}', '{self.home}', '{self.date}')"
 
 
-if __name__ == "__main__":
+def create_RDS(conn_type):
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file(config.my_bucket, 'data/daily_results/results.csv', 'results.csv')
-
-    conn_type = "mysql+pymysql"
+    s3.meta.client.download_file(config.my_bucket, local_results, local_csv)
+    #conn_type = "mysql+pymysql"
     user = os.environ.get("MYSQL_USER")
     password = os.environ.get("MYSQL_PASSWORD")
     host = os.environ.get("MYSQL_HOST")
     port = os.environ.get("MYSQL_PORT")
     DATABASE_NAME = 'msia423'
-    engine_string = "{}://{}:{}@{}:{}/{}".\
-    format(conn_type, user, password, host, port, DATABASE_NAME)
+    engine_string = "{}://{}:{}@{}:{}/{}".format(conn_type, user, password, host, port, DATABASE_NAME)
     engine = create_engine(engine_string)
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
@@ -107,6 +105,12 @@ if __name__ == "__main__":
 
     finally:
         s.close()
-        if os.path.exists("results.csv"):
-            os.remove("results.csv")
+        if os.path.exists(local_csv):
+            os.remove(local_csv)
+
+
+if __name__ == "__main__":
+    local_results = 'data/daily_results/results.csv'
+    local_csv = 'results.csv'
+    create_RDS(config.conn_type)
 

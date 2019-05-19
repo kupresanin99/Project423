@@ -3,3 +3,4 @@ my_bucket = "kupebaseball"
 
 local_db = 'sqlite:///sqlite.db'
 
+conn_type = "mysql+pymysql"
