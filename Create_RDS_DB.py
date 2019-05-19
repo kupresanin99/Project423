@@ -74,7 +74,7 @@ class Reports(Base):
 
 
 def create_RDS(conn_type, user):
-    import os
+    #import os
     s3 = boto3.resource("s3")
     s3.meta.client.download_file(config.my_bucket, local_results, local_csv)
     #conn_type = "mysql+pymysql"
