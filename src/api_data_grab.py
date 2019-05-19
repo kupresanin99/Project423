@@ -18,25 +18,24 @@ def api_pull(month, day, bucket, key):
         pickle.dump(data, fp)
 
     s3 = boto3.resource("s3")
-    s3.meta.client.upload_file(local_raw.format(month, day), bucket, local_raw.format(month,day))
+    s3.meta.client.upload_file(local_raw.format(month, day), bucket, local_raw.format(month, day))
 
     if os.path.exists(local_raw.format(month, day)):
         os.remove(local_raw.format(month, day))
 
 
-def minor_processing(month, day):
+def minor_processing(month, day, bucket):
 
     import json
     from pandas.io.json import json_normalize
     import pickle
     import boto3
     import os
-    import config
 
     s3 = boto3.resource("s3")
     local_raw = 'data/daily_raw/raw_{0}_{1}'
     local_data = 'data/daily_data/outfile_{0}_{1}_pre.csv'
-    s3.meta.client.download_file(config.my_bucket, 'data/daily_raw/raw_{0}_{1}'.format(month, day), local_raw.format(month, day))
+    s3.meta.client.download_file(bucket, local_raw.format(month, day), local_raw.format(month, day))
 
     with open(local_raw.format(month, day), 'rb') as fp:
         data = pickle.load(fp)
@@ -58,7 +57,7 @@ def minor_processing(month, day):
     data = json_normalize(baseball_normal.iloc[0, 0])
     data.to_csv(local_data.format(month, day), encoding='utf-8')
 
-    s3.meta.client.upload_file(local_data.format(month, day), config.my_bucket, "data/daily_data/outfile_{0}_{1}_pre.csv".format(month, day))
+    s3.meta.client.upload_file(local_data.format(month, day), bucket, local_data.format(month, day))
 
     if os.path.exists(local_data.format(month, day)):
         os.remove(local_data.format(month, day))
