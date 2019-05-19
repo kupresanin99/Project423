@@ -73,11 +73,11 @@ class Reports(Base):
         return f"(Reports('{self.away}', '{self.home}', '{self.date}')"
 
 
-def create_RDS(conn_type):
+def create_RDS(conn_type, user):
     s3 = boto3.resource("s3")
     s3.meta.client.download_file(config.my_bucket, local_results, local_csv)
     #conn_type = "mysql+pymysql"
-    user = os.environ.get("MYSQL_USER")
+    #user = os.environ.get("MYSQL_USER")
     password = os.environ.get("MYSQL_PASSWORD")
     host = os.environ.get("MYSQL_HOST")
     port = os.environ.get("MYSQL_PORT")
@@ -112,5 +112,6 @@ def create_RDS(conn_type):
 if __name__ == "__main__":
     local_results = 'data/daily_results/results.csv'
     local_csv = 'results.csv'
-    create_RDS(config.conn_type)
+    create_RDS(config.conn_type,
+               config.user)
 
