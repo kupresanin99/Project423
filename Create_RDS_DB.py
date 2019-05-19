@@ -73,16 +73,16 @@ class Reports(Base):
         return f"(Reports('{self.away}', '{self.home}', '{self.date}')"
 
 
-def create_RDS(conn_type, user):
+def create_RDS(conn_type, user, password, host, port, DATABASE_NAME):
     #import os
     s3 = boto3.resource("s3")
     s3.meta.client.download_file(config.my_bucket, local_results, local_csv)
     #conn_type = "mysql+pymysql"
     #user = os.environ.get("MYSQL_USER")
-    password = os.environ.get("MYSQL_PASSWORD")
-    host = os.environ.get("MYSQL_HOST")
-    port = os.environ.get("MYSQL_PORT")
-    DATABASE_NAME = 'msia423'
+    #password = os.environ.get("MYSQL_PASSWORD")
+    #host = os.environ.get("MYSQL_HOST")
+    #port = os.environ.get("MYSQL_PORT")
+    #DATABASE_NAME = 'msia423'
     engine_string = "{}://{}:{}@{}:{}/{}".format(conn_type, user, password, host, port, DATABASE_NAME)
     engine = create_engine(engine_string)
     Base.metadata.drop_all(engine)
@@ -114,5 +114,9 @@ if __name__ == "__main__":
     local_results = 'data/daily_results/results.csv'
     local_csv = 'results.csv'
     create_RDS(config.conn_type,
-               config.user)
+               config.user,
+               config.password,
+               config.host,
+               config.port,
+               config.DATABASE_NAME)
 
