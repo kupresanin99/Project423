@@ -32,9 +32,10 @@ def minor_processing(month, day):
     import pickle
     import boto3
     import os
+    import config
 
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file('kupebaseball', 'data/daily_raw/raw_{0}_{1}'.format(month, day), 'data/daily_raw/raw_{0}_{1}'.format(month, day))
+    s3.meta.client.download_file(config.my_bucket, 'data/daily_raw/raw_{0}_{1}'.format(month, day), 'data/daily_raw/raw_{0}_{1}'.format(month, day))
 
     with open('data/daily_raw/raw_{0}_{1}'.format(month, day), 'rb') as fp:
         data = pickle.load(fp)
@@ -56,7 +57,7 @@ def minor_processing(month, day):
     data = json_normalize(baseball_normal.iloc[0, 0])
     data.to_csv('data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
 
-    s3.meta.client.upload_file("data/daily_data/outfile_{0}_{1}_pre.csv".format(month, day), "kupebaseball", "data/daily_data/outfile_{0}_{1}_pre.csv".format(month, day))
+    s3.meta.client.upload_file("data/daily_data/outfile_{0}_{1}_pre.csv".format(month, day), config.my_bucket, "data/daily_data/outfile_{0}_{1}_pre.csv".format(month, day))
 
     if os.path.exists("data/daily_data/outfile_{0}_{1}_pre.csv".format(month, day)):
         os.remove("data/daily_data/outfile_{0}_{1}_pre.csv".format(month, day))

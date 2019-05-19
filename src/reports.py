@@ -5,6 +5,7 @@ def run_yearly_reports():
     from time import sleep
     import os
     import boto3
+    import config
 
     team_dict = {'TB': 'Tampa Bay Rays', 'NYY': 'New York Yankees', 'TOR': 'Toronto Blue Jays',
                  'BAL': 'Baltimore Orioles', 'BOS': 'Boston Red Sox', 'CLE': 'Cleveland Indians',
@@ -18,7 +19,7 @@ def run_yearly_reports():
                  'ARI': 'Arizona Diamondbacks', 'SF': 'San Francisco Giants', 'COL': 'Colorado Rockies'}
    
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
+    s3.meta.client.download_file(config.my_bucket, 'data/daily_results/results.csv', 'results.csv')
     results = pd.read_csv('results.csv')
     if os.path.exists('results.csv'):
         os.remove('results.csv')
@@ -66,10 +67,11 @@ def display_gambling_picks(month, day):
     import pandas as pd
     import os
     import boto3
+    import config
 
     try:
         s3 = boto3.resource("s3")
-        s3.meta.client.download_file('kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        s3.meta.client.download_file(config.my_bucket, 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks = pd.read_csv('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
         gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
@@ -87,9 +89,11 @@ def run_daily_report(month, day):
     import pandas as pd
     import boto3
     import os
+    import config
+
     try:
         s3 = boto3.resource("s3")
-        s3.meta.client.download_file('kupebaseball', 'data/daily_results/results_{0}_{1}.csv'.format(month, day), 'data/daily_results/results_{0}_{1}.csv'.format(month, day))
+        s3.meta.client.download_file(config.my_bucket, 'data/daily_results/results_{0}_{1}.csv'.format(month, day), 'data/daily_results/results_{0}_{1}.csv'.format(month, day))
         daily_report = pd.read_csv('data/daily_results/results_{0}_{1}.csv'.format(month, day))
         daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
         daily_report.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',

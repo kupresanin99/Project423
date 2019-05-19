@@ -5,6 +5,7 @@ from sqlalchemy.orm import sessionmaker
 import boto3
 import pandas as pd
 import os
+import config
 
 Base = declarative_base()
 
@@ -74,7 +75,7 @@ class Reports(Base):
 
 if __name__ == "__main__":
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
+    s3.meta.client.download_file(config.my_bucket, 'data/daily_results/results.csv', 'results.csv')
 
     engine = create_engine('sqlite:///sqlite.db')
 
