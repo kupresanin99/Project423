@@ -82,6 +82,10 @@ def print_choice_menu():
         return 0, 0
 
 
+local_data = 'data/daily_data/outfile_{0}_{1}_pre.csv'
+local_pred = 'data/daily_predictions/predictions_{0}_{1}.csv'
+local_results = 'data/daily_results/results_{0}_{1}.csv'
+
 run_main_menu = True
 
 while run_main_menu:
@@ -121,17 +125,17 @@ while run_main_menu:
                                     pass
                                 else:
                                     s3 = boto3.resource("s3")
-                                    s3.meta.client.download_file(config.my_bucket, 'data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), 'data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))
-                                    data = pd.read_csv('data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
-                                    if os.path.exists('data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day)):
-                                        os.remove('data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))
-                                    today = get_predicted_runs(data, month, day)
+                                    s3.meta.client.download_file(config.my_bucket, local_data.format(month, day), local_data.format(month, day))
+                                    data = pd.read_csv(local_data.format(month, day), encoding='utf-8')
+                                    if os.path.exists(local_data.format(month, day)):
+                                        os.remove(local_data.format(month, day))
+                                    today = get_predicted_runs(data, month, day, config.my_bucket)
                                     today = admin_input_lines(today)
-                                    today.to_csv('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                                    today.to_csv(local_pred.format(month, day), encoding='utf-8')
                                     print(today)
-                                    s3.meta.client.upload_file('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), config.my_bucket, 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-                                    if os.path.exists('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
-                                            os.remove('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                                    s3.meta.client.upload_file(local_pred.format(month, day), config.my_bucket, local_pred.format(month, day))
+                                    if os.path.exists(local_pred.format(month, day)):
+                                            os.remove(local_pred.format(month, day))
 
                             elif admin_menu_choice == 3:
                                 print()
@@ -143,16 +147,16 @@ while run_main_menu:
                                 else:
                                     print("Enter game results for ", month, "/", day, sep="")
                                     s3 = boto3.resource("s3")
-                                    s3.meta.client.download_file(config.my_bucket, 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-                                    today = pd.read_csv('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-                                    if os.path.exists('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
-                                        os.remove('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                                    s3.meta.client.download_file(config.my_bucket, local_pred.format(month, day), local_pred.format(month, day))
+                                    today = pd.read_csv(local_pred.format(month, day))
+                                    if os.path.exists(local_pred.format(month, day)):
+                                        os.remove(local_pred.format(month, day))
                                     today = admin_input_results(today)
-                                    today.to_csv('data/daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                                    today.to_csv(local_results.format(month, day), encoding='utf-8')
                                     print("Daily results for ", month, "/", day, sep="")
                                     print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
                                                       'predicted.bookie.rank', 'betting.opportunity'], axis=1))
-                                    s3.meta.client.upload_file('data/daily_results/results_{0}_{1}.csv'.format(month, day), config.my_bucket, 'data/daily_results/results_{0}_{1}.csv'.format(month,day))
+                                    s3.meta.client.upload_file(local_results.format(month, day), config.my_bucket, local_results.format(month,day))
                                     path = 'data/daily_results'
                                     all_files = glob.glob(path + "/*.csv")
 

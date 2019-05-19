@@ -1,4 +1,4 @@
-def get_predicted_runs(data, month, day):
+def get_predicted_runs(data, month, day, bucket):
 
     from sklearn.ensemble import RandomForestRegressor
     import numpy as np
@@ -8,7 +8,6 @@ def get_predicted_runs(data, month, day):
     import math
     import boto3
     import os
-    import config
 
     data['home.win.pct'] = data['game.home.win'] / (data['game.home.win'] + data['game.home.loss'])
     data['away.win.pct'] = data['game.away.win'] / (data['game.away.win'] + data['game.away.loss'])
@@ -157,7 +156,7 @@ def get_predicted_runs(data, month, day):
                       'game.broadcast.network'], axis=1)
     
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file(config.my_bucket, 'model_data', 'data/model_data')
+    s3.meta.client.download_file(bucket, 'model_data', 'data/model_data')
     with open('data/model_data', 'rb') as fp:
         model_data = pickle.load(fp)
 
