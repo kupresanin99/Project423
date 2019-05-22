@@ -74,7 +74,7 @@ def display_gambling_picks(month, day):
         s3.meta.client.download_file(config.my_bucket, 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks = pd.read_csv('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
-        gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
+        gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',  # Show betting opportunity Joe
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(gambling_picks)

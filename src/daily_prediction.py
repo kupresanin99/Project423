@@ -221,7 +221,7 @@ def get_predicted_runs(data, month, day, bucket):
     rf = RandomForestRegressor()  # Random search of parameters, using 5 fold cross validation
     rf_random = RandomizedSearchCV(estimator=rf,
                                    param_distributions=random_grid,
-                                   n_iter=49, cv=5, verbose=0,
+                                   n_iter=2, cv=5, verbose=0,
                                    n_jobs=-1)
     # Fit the random search model
     rf_random.fit(features, labels)
