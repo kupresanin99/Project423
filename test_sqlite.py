@@ -1,6 +1,6 @@
 import sqlalchemy as db
 
-engine = db.create_engine('sqlite:///joe_test.db')
+engine = db.create_engine('sqlite:///sqlite.db')
 connection = engine.connect()
 metadata = db.MetaData()
 reports = db.Table('Reports', metadata, autoload=True, autoload_with=engine)

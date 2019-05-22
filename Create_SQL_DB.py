@@ -76,7 +76,8 @@ if __name__ == "__main__":
     s3 = boto3.resource("s3")
     s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
 
-    engine = create_engine('sqlite:///joe_test.db')
+    engine = create_engine('sqlite:///sqlite.db')
+
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
 
