@@ -72,9 +72,9 @@ class Reports(Base):
         return f"(Reports('{self.away}', '{self.home}', '{self.date}')"
 
 
-def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, local_results, local_csv):
+def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, s3_results_file, local_results_file):
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file(config.my_bucket, local_results, local_csv)
+    s3.meta.client.download_file(config.my_bucket, s3_results_file, local_results_file)
     engine_string = "{}://{}:{}@{}:{}/{}".format(conn_type, user, password, host, port, DATABASE_NAME)
     engine = create_engine(engine_string)
     Base.metadata.drop_all(engine)
@@ -97,19 +97,19 @@ def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, local_resul
 
     finally:
         s.close()
-        if os.path.exists(local_csv):
-            os.remove(local_csv)
+        if os.path.exists(local_results_file):
+            os.remove(local_results_file)
 
 
 if __name__ == "__main__":
-    local_results = 'data/daily_results/results.csv'
-    local_csv = 'results.csv'
+    s3_results_file = 'results.csv'
+    local_results_file = 'results.csv'
     create_RDS(config.conn_type,
                config.user,
                config.password,
                config.host,
                config.port,
                config.DATABASE_NAME,
-               config.local_results,
-               config.local_csv)
+               config.s3_results_file,
+               config.local_results_file)
 
