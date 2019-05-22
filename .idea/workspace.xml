@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/s3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-    </list>
+    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/s3.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
@@ -96,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="506">
@@ -483,14 +479,7 @@
       <workItem from="1558276542387" duration="1327000" />
       <workItem from="1558281851348" duration="1811000" />
       <workItem from="1558481463965" duration="10629000" />
-      <workItem from="1558525672751" duration="415000" />
-    </task>
-    <task id="LOCAL-00039" summary="I think it's working as needed.">
-      <created>1556026407734</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1556026407734</updated>
+      <workItem from="1558525672751" duration="636000" />
     </task>
     <task id="LOCAL-00040" summary="Sourcing early April data for a complete set.">
       <created>1556026437117</created>
@@ -828,11 +817,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558495067771</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Added S3 bucket grab function from Max.">
+      <created>1558526224569</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1558526224569</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165825000" />
+    <option name="totallyTimeSpent" value="166046000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -899,7 +895,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Result input for April 25." />
     <MESSAGE value="Data pull for April 26." />
     <MESSAGE value="All menus error-free." />
     <MESSAGE value="April 27 results." />
@@ -924,7 +919,8 @@
     <MESSAGE value="RDS Fixed?" />
     <MESSAGE value="Try to remove S3 file structure." />
     <MESSAGE value="Reset RF to 49 models." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reset RF to 49 models." />
+    <MESSAGE value="Added S3 bucket grab function from Max." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added S3 bucket grab function from Max." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Baseball$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1557232646418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
@@ -1118,6 +1114,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/s3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1125,13 +1128,6 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>

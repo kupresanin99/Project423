@@ -19,7 +19,7 @@ def run_yearly_reports():
                  'ARI': 'Arizona Diamondbacks', 'SF': 'San Francisco Giants', 'COL': 'Colorado Rockies'}
    
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file(config.my_bucket, 'data/daily_results/results.csv', 'results.csv')
+    s3.meta.client.download_file(config.my_bucket, 'results.csv', 'results.csv')
     results = pd.read_csv('results.csv')
     if os.path.exists('results.csv'):
         os.remove('results.csv')
