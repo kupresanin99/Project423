@@ -176,7 +176,7 @@ while run_main_menu:
                                     results.drop(results.columns[0], axis=1, inplace=True)
                                     results['year'] = datetime.now().year
                                     results['date'] = pd.to_datetime(results[['year', 'month', 'day']])
-                                    results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
+                                    #results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
                                     results.to_csv('data/results.csv', encoding='utf-8')
                                     s3.meta.client.upload_file('data/results.csv', config.my_bucket, 'results.csv')
                                     # if os.path.exists('data/results.csv'):
