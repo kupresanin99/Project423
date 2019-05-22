@@ -6,7 +6,7 @@ def api_pull(month, day, bucket, key):
     import os
 
     conn = http.client.HTTPSConnection("api.sportradar.us")
-    local_raw = 'data/daily_raw/raw_{0}_{1}'
+    local_raw = 'raw_{0}_{1}'
     conn.request("GET",
                  "/mlb/trial/v6.5/en/games/2019/{0}/{1}/boxscore."
                  "json?api_key={2}".format(month, day, key))
@@ -33,8 +33,8 @@ def minor_processing(month, day, bucket):
     import os
 
     s3 = boto3.resource("s3")
-    local_raw = 'data/daily_raw/raw_{0}_{1}'
-    local_data = 'data/daily_data/outfile_{0}_{1}_pre.csv'
+    local_raw = 'raw_{0}_{1}'
+    local_data = 'outfile_{0}_{1}_pre.csv'
     s3.meta.client.download_file(bucket, local_raw.format(month, day), local_raw.format(month, day))
 
     with open(local_raw.format(month, day), 'rb') as fp:

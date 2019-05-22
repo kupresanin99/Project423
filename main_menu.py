@@ -82,7 +82,7 @@ def print_choice_menu():
         return 0, 0
 
 
-local_data = 'data/daily_data/outfile_{0}_{1}_pre.csv'
+local_data = 'outfile_{0}_{1}_pre.csv'
 local_pred = 'data/daily_predictions/predictions_{0}_{1}.csv'
 local_results = 'data/daily_results/results_{0}_{1}.csv'
 
