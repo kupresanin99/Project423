@@ -3,6 +3,11 @@ import os
 my_api_key = "92jge9phm7k8x746vdj39w83"
 my_bucket = "kupebaseball"
 
+DEST_BUCKET = "...user must enter an S3 bucket for file dump..."
+DEST_KEY_1 = "model_data"  # Not recommended to change
+DEST_KEY_2 = "predictions.csv"  # Not recomended to change
+DEST_KEY_3 = "results.csv"  # Not recommended to change
+
 local_db = 'sqlite:///sqlite.db'
 
 conn_type = "mysql+pymysql"
