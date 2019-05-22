@@ -134,19 +134,11 @@ while run_main_menu:
                                     today.to_csv(local_pred.format(month, day), encoding='utf-8')
                                     print(today)
                                     s3.meta.client.upload_file(local_pred.format(month, day), config.my_bucket, local_pred.format(month, day))
-
-
-
                                     path = 'data/daily_predictions'
                                     all_files = glob.glob(path + "/*.csv")
                                     predictions = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
-                                    predictions.to_csv('data/daily_predictions/predictions.csv', encoding='utf-8')
+                                    predictions.to_csv('data/predictions.csv', encoding='utf-8')
                                     s3.meta.client.upload_file('data/predictions.csv', config.my_bucket, 'predictions.csv')
-
-
-
-                                    # if os.path.exists(local_pred.format(month, day)):
-                                    #         os.remove(local_pred.format(month, day))
 
                             elif admin_menu_choice == 3:
                                 print()
@@ -170,17 +162,12 @@ while run_main_menu:
                                     s3.meta.client.upload_file(local_results.format(month, day), config.my_bucket, local_results.format(month,day))
                                     path = 'data/daily_results'
                                     all_files = glob.glob(path + "/*.csv")
-
                                     results = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
-
                                     results.drop(results.columns[0], axis=1, inplace=True)
                                     results['year'] = datetime.now().year
                                     results['date'] = pd.to_datetime(results[['year', 'month', 'day']])
-                                    #results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
                                     results.to_csv('data/results.csv', encoding='utf-8')
                                     s3.meta.client.upload_file('data/results.csv', config.my_bucket, 'results.csv')
-                                    # if os.path.exists('data/results.csv'):
-                                    #     os.remove('data/results.csv')
 
                             elif admin_menu_choice == 4:
                                 print()
