@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Create_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/Create_DB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joe_test.db" beforeDir="false" afterPath="$PROJECT_DIR$/joe_test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,56 +24,70 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="joe_test" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="joe_test" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="joe_test" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="joe_test" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="Reports: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="joe_test" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="Results: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="joe_test" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+        <entry file="file://$PROJECT_DIR$/src/reports.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="1914">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/main_menu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2354">
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api_data_grab.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4950">
+              <caret line="225" column="33" selection-start-line="225" selection-start-column="33" selection-end-line="225" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/s3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,71 +95,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="506">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Create_DB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="82" selection-start-line="82" selection-end-line="83" selection-end-column="99" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Reports">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true">
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Predictions">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true">
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Results">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true">
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -168,7 +115,22 @@
       <find>daily_data</find>
       <find>daily</find>
       <find>model_data</find>
+      <find>../data</find>
+      <find>local</find>
+      <find>&quot;kupebaseball&quot;</find>
+      <find>'kupebaseball'</find>
+      <find>&quot;data/daily_predictions/predictions_{0}_{1}.csv&quot;</find>
+      <find>'data/daily_results/results_{0}_{1}.csv'</find>
+      <find>local_resu</find>
+      <find>33</find>
     </findStrings>
+    <replaceStrings>
+      <replace>data</replace>
+      <replace>local_raw</replace>
+      <replace>config.my_bucket</replace>
+      <replace>local_pred</replace>
+      <replace>local_results</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -195,43 +157,46 @@
         <option value="$PROJECT_DIR$/notebooks/datapull/mlb_gamble.py" />
         <option value="$PROJECT_DIR$/notebooks/datapull/api_data_grab.py" />
         <option value="$PROJECT_DIR$/notebooks/datapull/main_menu.py" />
-        <option value="$PROJECT_DIR$/src/api_data_grab.py" />
         <option value="$PROJECT_DIR$/src/main_menu.py" />
-        <option value="$PROJECT_DIR$/src/reports.py" />
-        <option value="$PROJECT_DIR$/src/daily_prediction.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Create_DB.py" />
+        <option value="$PROJECT_DIR$/Create_SQL_DB.py" />
+        <option value="$PROJECT_DIR$/Create_RDS_DB.py" />
+        <option value="$PROJECT_DIR$/src/api_data_grab.py" />
+        <option value="$PROJECT_DIR$/main_menu.py" />
+        <option value="$PROJECT_DIR$/src/reports.py" />
+        <option value="$PROJECT_DIR$/src/daily_prediction.py" />
+        <option value="$PROJECT_DIR$/s3.py" />
+        <option value="$PROJECT_DIR$/config.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1680" />
     <option name="y" value="-306" />
     <option name="width" value="2560" />
     <option name="height" value="1417" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Project423Yeah" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project423Yeah" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project423Yeah" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project423Yeah" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project423" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,11 +212,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/notebooks/datapull/daily_raw" />
       <recent name="$PROJECT_DIR$/notebooks/datapull/prelim_model_building" />
-      <recent name="$PROJECT_DIR$/notebooks/datapull" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -266,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Create_DB">
+  <component name="RunManager" selected="Python.main_menu">
     <configuration name="Create_DB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project423" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -346,7 +311,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main_menu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_menu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -402,8 +367,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Create_DB" />
         <item itemvalue="Python.main_menu" />
+        <item itemvalue="Python.Create_DB" />
         <item itemvalue="Python.daily_prediction" />
         <item itemvalue="Python.reports" />
         <item itemvalue="Python.api_data_grab" />
@@ -508,174 +473,13 @@
       <workItem from="1557228355814" duration="2707000" />
       <workItem from="1557231163676" duration="2541000" />
       <workItem from="1557784775367" duration="2986000" />
-    </task>
-    <task id="LOCAL-00016" summary="Getting April data to build results table.">
-      <created>1555639784298</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1555639784298</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Getting April data to build results table.">
-      <created>1555639817218</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1555639817218</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Getting April data to build results table.">
-      <created>1555640284330</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1555640284330</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Added April 18 results.">
-      <created>1555673965475</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1555673965475</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Renamed main program to mlb_gamble">
-      <created>1555684948212</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1555684948212</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Data collection, April 19.">
-      <created>1555765981353</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1555765981353</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Data collection, April 19.">
-      <created>1555855032412</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1555855032412</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Added daily hyperparameter tuning.">
-      <created>1555895029817</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1555895029817</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Added daily hyperparameter tuning.">
-      <created>1555896420725</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1555896420725</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Added daily hyperparameter tuning.">
-      <created>1555897085953</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1555897085953</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Added daily hyperparameter tuning.">
-      <created>1555898804850</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1555898804850</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Refined the reporting.">
-      <created>1555903604604</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1555903604604</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Refined the reporting.">
-      <created>1555903751708</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1555903751708</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Refined the reporting.">
-      <created>1555905977751</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1555905977751</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Refined the reporting.">
-      <created>1555906062019</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1555906062019</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Main menu needs an update.">
-      <created>1555935122302</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1555935122302</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Main menu needs an update.">
-      <created>1555946188537</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1555946188537</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Main menu needs an update.">
-      <created>1555962955763</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1555962955763</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Main menu updated pretty good.">
-      <created>1555977227055</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1555977227055</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Main menu updated pretty good.">
-      <created>1555978085046</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1555978085046</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Gigantic changes to structure of program.">
-      <created>1555985949967</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1555985949968</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Getting Deep.">
-      <created>1555986818695</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1555986818695</updated>
-    </task>
-    <task id="LOCAL-00038" summary="I think it's working as needed.">
-      <created>1555987264431</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1555987264431</updated>
-    </task>
-    <task id="LOCAL-00039" summary="I think it's working as needed.">
-      <created>1556026407734</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1556026407734</updated>
+      <workItem from="1558117220905" duration="2688000" />
+      <workItem from="1558218999764" duration="6000" />
+      <workItem from="1558271114596" duration="4932000" />
+      <workItem from="1558276542387" duration="1327000" />
+      <workItem from="1558281851348" duration="1811000" />
+      <workItem from="1558481463965" duration="10629000" />
+      <workItem from="1558525672751" duration="636000" />
     </task>
     <task id="LOCAL-00040" summary="Sourcing early April data for a complete set.">
       <created>1556026437117</created>
@@ -852,11 +656,179 @@
       <option name="project" value="LOCAL" />
       <updated>1557233090105</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="New directory, moved scripts and data to better places.">
+      <created>1558271741009</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1558271741010</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Moved main_menu to top directory, fixed paths.">
+      <created>1558272250100</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1558272250100</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Trying for configs to work.">
+      <created>1558273338559</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1558273338559</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Find / Replace kupebaseball to my_bucket">
+      <created>1558273917970</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1558273917970</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Find / Replace kupebaseball to my_bucket">
+      <created>1558274567066</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1558274567066</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Add variable names for paths in api_data_grab">
+      <created>1558275063438</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1558275063438</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Add variable names for paths in api_data_grab">
+      <created>1558275446421</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1558275446421</updated>
+    </task>
+    <task id="LOCAL-00072" summary="More reformating.">
+      <created>1558277074822</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1558277074823</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Local SQLite upgraded.">
+      <created>1558282288876</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1558282288876</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Fixed bug.">
+      <created>1558282939382</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1558282939382</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Try to config RDS DB settings.">
+      <created>1558283406647</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1558283406647</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Try to config RDS DB settings for user.">
+      <created>1558283526811</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1558283526812</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Try to config RDS DB settings for user.">
+      <created>1558283564780</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1558283564780</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Try to config RDS DB settings for user.">
+      <created>1558283616622</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1558283616622</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Needed to get the predictions for the database.">
+      <created>1558485116647</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1558485116647</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Needed to get the predictions for the database.">
+      <created>1558486154362</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1558486154362</updated>
+    </task>
+    <task id="LOCAL-00081" summary="See if DB still works.">
+      <created>1558486795280</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1558486795280</updated>
+    </task>
+    <task id="LOCAL-00082" summary="See if RDS DB still really works.">
+      <created>1558487846575</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1558487846575</updated>
+    </task>
+    <task id="LOCAL-00083" summary="See if RDS DB still really works.">
+      <created>1558488829511</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1558488829511</updated>
+    </task>
+    <task id="LOCAL-00084" summary="See if RDS DB still really works.">
+      <created>1558489837021</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1558489837021</updated>
+    </task>
+    <task id="LOCAL-00085" summary="RDS Fixed?">
+      <created>1558492107739</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1558492107740</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Try to remove S3 file structure.">
+      <created>1558494034328</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1558494034328</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Reset RF to 49 models.">
+      <created>1558495067771</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1558495067771</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Added S3 bucket grab function from Max.">
+      <created>1558526224569</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1558526224569</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144017000" />
+    <option name="totallyTimeSpent" value="166046000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -868,16 +840,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="-306" width="2560" height="1349" extended-state="6" />
+    <frame x="1680" y="-306" width="2560" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07934609" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12161084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.35298622" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281027" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19063005" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17335244" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -888,57 +859,42 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.20684735" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.6219686" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.35298622" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.31020734" />
+      <window_info anchor="right" id="Database" order="4" weight="0.036682617" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07934609" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23405103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.35298622" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3281027" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.50995404" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.26105565" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3266762" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.20684735" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.6219686" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3281027" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17335244" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.26105565" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3266762" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.20684735" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.6219686" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.35298622" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.31020734" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.036682617" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added daily hyperparameter tuning." />
-    <MESSAGE value="Refined the reporting." />
-    <MESSAGE value="Main menu needs an update." />
-    <MESSAGE value="Main menu updated pretty good." />
-    <MESSAGE value="Gigantic changes to structure of program." />
-    <MESSAGE value="Getting Deep." />
-    <MESSAGE value="I think it's working as needed." />
-    <MESSAGE value="Sourcing early April data for a complete set." />
-    <MESSAGE value="All data collected to date." />
-    <MESSAGE value="Working on menu bugs for invalid input." />
-    <MESSAGE value="Working on valid date inputs for menus." />
-    <MESSAGE value="Menu logic and error checking working." />
-    <MESSAGE value="Menus, valid input, good to go." />
-    <MESSAGE value="Daily reporting input errors prevented." />
-    <MESSAGE value="Ran prelims for April 25" />
-    <MESSAGE value="Result input for April 25." />
     <MESSAGE value="Data pull for April 26." />
     <MESSAGE value="All menus error-free." />
     <MESSAGE value="April 27 results." />
@@ -948,13 +904,31 @@
     <MESSAGE value="May 4 results." />
     <MESSAGE value="May 6 data." />
     <MESSAGE value="New directory, moved scripts and data to better places." />
-    <option name="LAST_COMMIT_MESSAGE" value="New directory, moved scripts and data to better places." />
+    <MESSAGE value="Moved main_menu to top directory, fixed paths." />
+    <MESSAGE value="Trying for configs to work." />
+    <MESSAGE value="Find / Replace kupebaseball to my_bucket" />
+    <MESSAGE value="Add variable names for paths in api_data_grab" />
+    <MESSAGE value="More reformating." />
+    <MESSAGE value="Local SQLite upgraded." />
+    <MESSAGE value="Fixed bug." />
+    <MESSAGE value="Try to config RDS DB settings." />
+    <MESSAGE value="Try to config RDS DB settings for user." />
+    <MESSAGE value="Needed to get the predictions for the database." />
+    <MESSAGE value="See if DB still works." />
+    <MESSAGE value="See if RDS DB still really works." />
+    <MESSAGE value="RDS Fixed?" />
+    <MESSAGE value="Try to remove S3 file structure." />
+    <MESSAGE value="Reset RF to 49 models." />
+    <MESSAGE value="Added S3 bucket grab function from Max." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added S3 bucket grab function from Max." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Baseball$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1557232646418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$april12_pull.coverage" NAME="april12_pull Coverage Results" MODIFIED="1555214513072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$mlb_gamble.coverage" NAME="mlb_gamble Coverage Results" MODIFIED="1557186948414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+    <SUITE FILE_PATH="coverage/Project423$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1558117412136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Project423$api_data_grab.coverage" NAME="api_data_grab Coverage Results" MODIFIED="1555365349697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
+    <SUITE FILE_PATH="coverage/Project423$Create_DB.coverage" NAME="Create_DB Coverage Results" MODIFIED="1558117379309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project423Yeah$Create_DB.coverage" NAME="Create_DB Coverage Results" MODIFIED="1557787659006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project423$pull_historical_data.coverage" NAME="pull_historical_data Coverage Results" MODIFIED="1555329257105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
     <SUITE FILE_PATH="coverage/Baseball$daily_prediction.coverage" NAME="daily_prediction Coverage Results" MODIFIED="1557231065743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
@@ -967,46 +941,8 @@
     <SUITE FILE_PATH="coverage/Baseball$reports.coverage" NAME="reports Coverage Results" MODIFIED="1557231056184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/notebooks/datapull/prelim_model_building/daily_scrub.py" />
-    <entry file="file://$PROJECT_DIR$/notebooks/datapull/prelim_model_building/Result_Puller.py" />
-    <entry file="file://$PROJECT_DIR$/notebooks/datapull/prelim_model_building/pull_historical_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/datapull/prelim_model_building/clean_historical_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../msia423hw1/aqua_helper.py" />
-    <entry file="file://$PROJECT_DIR$/notebooks/environment.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/daily_data/outfile_4_22_pre.csv" />
-    <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions_4_21.csv" />
-    <entry file="file://$PROJECT_DIR$/notebooks/datapull/prelim_model_building/initial_model.py" />
-    <entry file="file://$PROJECT_DIR$/data/daily_raw/raw_5_1" />
-    <entry file="file://$USER_HOME$/MSIA/MSIA432/HW1/assignment1-FinalCodeFor5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1328">
-          <caret line="254" column="9" selection-start-line="254" selection-start-column="9" selection-end-line="254" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/daily_results/results_5_4.csv">
       <provider editor-type-id="text-editor" />
-      <provider editor-type-id="csv-text-editor" />
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -1025,31 +961,14 @@
           <column index="13" width="100" />
         </state>
       </provider>
+      <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/basic.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/error.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logging/local.conf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/basic.css" />
+    <entry file="file://$PROJECT_DIR$/app/templates/error.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/app/models.py" />
+    <entry file="file://$PROJECT_DIR$/config/logging/local.conf" />
     <entry file="file://$PROJECT_DIR$/notebooks/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1059,17 +978,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/Makefile" />
-    <entry file="file://$PROJECT_DIR$/test/test_helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_helpers.py" />
+    <entry file="file://$PROJECT_DIR$/test/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/src/__init__.py" />
     <entry file="file://$PROJECT_DIR$/src/add_songs.py" />
     <entry file="file://$PROJECT_DIR$/src/evaluate_model.py" />
     <entry file="file://$PROJECT_DIR$/src/generate_features.py" />
@@ -1080,66 +991,24 @@
     <entry file="file://$PROJECT_DIR$/data/daily_data/outfile_5_6_pre.csv" />
     <entry file="file://$PROJECT_DIR$/data/daily_data/outfile_5_5_pre.csv" />
     <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions_5_6.csv" />
-    <entry file="file://$PROJECT_DIR$/src/helpers/helpers.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/helpers.py" />
     <entry file="file://$PROJECT_DIR$/data/sample/README.md" />
     <entry file="file://$PROJECT_DIR$/data/.gitkeep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/model_data" />
-    <entry file="file://$PROJECT_DIR$/src/api_data_grab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reports.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6556">
-          <caret line="298" column="16" lean-forward="true" selection-start-line="298" selection-start-column="16" selection-end-line="298" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py" />
+    <entry file="file://$PROJECT_DIR$/app.py" />
+    <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Results" />
+    <entry file="file://$PROJECT_DIR$/Create_DB.py" />
+    <entry file="file://$PROJECT_DIR$/results.csv" />
+    <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Reports" />
+    <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Predictions" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1150,50 +1019,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Predictions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
+    <entry file="file://$PROJECT_DIR$/test_sqlite.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions_5_19.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Results">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
+    <entry file="file://$PROJECT_DIR$/data/daily_results/results_4_25.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Create_DB.py">
+    <entry file="file://$PROJECT_DIR$/data/daily_results/results_5_11.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/results.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Create_SQL_DB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="82" selection-start-line="82" selection-end-line="83" selection-end-column="99" />
+        <state relative-caret-position="525">
+          <caret line="76" selection-start-line="76" selection-end-line="77" selection-end-column="29" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results.csv">
+    <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions.csv" />
+    <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions_4_2.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/predictions.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="298">
-          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        <state relative-caret-position="-2339">
+          <caret line="336" column="37" selection-start-line="336" selection-start-column="35" selection-end-line="336" selection-end-column="37" />
         </state>
       </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="das://4b79d77b-bd01-4a8f-a44c-ff2d31ca4b91/schema/main/table/Reports">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
+    <entry file="file://$PROJECT_DIR$/src/reports.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2354">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api_data_grab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4950">
+          <caret line="225" column="33" selection-start-line="225" selection-start-column="33" selection-end-line="225" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

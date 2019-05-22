@@ -1,13 +1,14 @@
-from api_data_grab import api_pull, minor_processing
-from daily_prediction import get_predicted_runs, \
-    admin_input_results, admin_input_lines
-from reports import run_yearly_reports, display_gambling_picks, run_daily_report
+from src.api_data_grab import api_pull, minor_processing
+from src.daily_prediction import get_predicted_runs
+from src.daily_prediction import admin_input_results, admin_input_lines
+from src.reports import run_yearly_reports, display_gambling_picks, run_daily_report
 import pandas as pd
 from time import sleep
 from datetime import datetime
 import boto3
 import os
 import glob
+import config
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -76,10 +77,14 @@ def print_choice_menu():
             return 0, 0
 
     except ValueError:
-        print("Jesus, learn how to enter months and dates, OK?")
+        print("User Error")
         sleep(2)
         return 0, 0
 
+
+local_data = 'outfile_{0}_{1}_pre.csv'
+local_pred = 'data/daily_predictions/predictions_{0}_{1}.csv'
+local_results = 'data/daily_results/results_{0}_{1}.csv'
 
 run_main_menu = True
 
@@ -104,10 +109,10 @@ while run_main_menu:
                                 if month == 0:
                                     pass
                                 else:
-                                    api_pull(month, day)
+                                    api_pull(month, day, config.my_bucket, config.my_api_key)
                                     print("Attempted API Pull")
                                     sleep(2)
-                                    minor_processing(month, day)
+                                    minor_processing(month, day, config.my_bucket)
                                     print("Performed minor processing")
                                     sleep(2)
 
@@ -120,17 +125,20 @@ while run_main_menu:
                                     pass
                                 else:
                                     s3 = boto3.resource("s3")
-                                    s3.meta.client.download_file('kupebaseball', 'data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), '../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))
-                                    data = pd.read_csv('../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day), encoding='utf-8')
-                                    if os.path.exists('../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day)):
-                                        os.remove('../data/daily_data/outfile_{0}_{1}_pre.csv'.format(month, day))
-                                    today = get_predicted_runs(data, month, day)
+                                    s3.meta.client.download_file(config.my_bucket, local_data.format(month, day), local_data.format(month, day))
+                                    data = pd.read_csv(local_data.format(month, day), encoding='utf-8')
+                                    if os.path.exists(local_data.format(month, day)):
+                                        os.remove(local_data.format(month, day))
+                                    today = get_predicted_runs(data, month, day, config.my_bucket)
                                     today = admin_input_lines(today)
-                                    today.to_csv('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                                    today.to_csv(local_pred.format(month, day), encoding='utf-8')
                                     print(today)
-                                    s3.meta.client.upload_file('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-                                    if os.path.exists('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
-                                            os.remove('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                                    s3.meta.client.upload_file(local_pred.format(month, day), config.my_bucket, local_pred.format(month, day))
+                                    path = 'data/daily_predictions'
+                                    all_files = glob.glob(path + "/*.csv")
+                                    predictions = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
+                                    predictions.to_csv('data/predictions.csv', encoding='utf-8')
+                                    s3.meta.client.upload_file('data/predictions.csv', config.my_bucket, 'predictions.csv')
 
                             elif admin_menu_choice == 3:
                                 print()
@@ -142,29 +150,24 @@ while run_main_menu:
                                 else:
                                     print("Enter game results for ", month, "/", day, sep="")
                                     s3 = boto3.resource("s3")
-                                    s3.meta.client.download_file('kupebaseball', 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), '../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-                                    today = pd.read_csv('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-                                    if os.path.exists('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
-                                        os.remove('../data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+                                    s3.meta.client.download_file(config.my_bucket, local_pred.format(month, day), local_pred.format(month, day))
+                                    today = pd.read_csv(local_pred.format(month, day))
+                                    if os.path.exists(local_pred.format(month, day)):
+                                        os.remove(local_pred.format(month, day))
                                     today = admin_input_results(today)
-                                    today.to_csv('../data/daily_results/results_{0}_{1}.csv'.format(month, day), encoding='utf-8')
+                                    today.to_csv(local_results.format(month, day), encoding='utf-8')
                                     print("Daily results for ", month, "/", day, sep="")
                                     print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
                                                       'predicted.bookie.rank', 'betting.opportunity'], axis=1))
-                                    s3.meta.client.upload_file('../data/daily_results/results_{0}_{1}.csv'.format(month, day), 'kupebaseball', 'data/daily_results/results_{0}_{1}.csv'.format(month,day))
-                                    path = '../data/daily_results'
+                                    s3.meta.client.upload_file(local_results.format(month, day), config.my_bucket, local_results.format(month,day))
+                                    path = 'data/daily_results'
                                     all_files = glob.glob(path + "/*.csv")
-
                                     results = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
-
                                     results.drop(results.columns[0], axis=1, inplace=True)
                                     results['year'] = datetime.now().year
                                     results['date'] = pd.to_datetime(results[['year', 'month', 'day']])
-                                    results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
-                                    results.to_csv('../data/results.csv', encoding='utf-8')
-                                    s3.meta.client.upload_file('../data/results.csv', 'kupebaseball', 'data/daily_results/results.csv')
-                                    if os.path.exists('../data/results.csv'):
-                                        os.remove('../data/results.csv')
+                                    results.to_csv('data/results.csv', encoding='utf-8')
+                                    s3.meta.client.upload_file('data/results.csv', config.my_bucket, 'results.csv')
 
                             elif admin_menu_choice == 4:
                                 print()
@@ -251,7 +254,7 @@ while run_main_menu:
 
             else:
                 print()
-                print("How about a valid menu choice, douche bag?")
+                print("User Error")
                 sleep(2)
 
         except ValueError:

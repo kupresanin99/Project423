@@ -5,56 +5,56 @@ from sqlalchemy.orm import sessionmaker
 import boto3
 import pandas as pd
 import os
+import config
 
 Base = declarative_base()
 
-
-class Predictions(Base):
-    __tablename__='Predictions'
-    __table_args__={'sqlite_autoincrement': True}
-    id = Column(Integer, primary_key=True)
-    game = Column(Integer)
-    away = Column(String(3))
-    home = Column(String(3))
-    month = Column(Integer)
-    day = Column(Integer)
-    predicted_runs = Column(Float)
-    bookie = Column(Float)
-    predicted_run_rank = Column(Float)
-    predicted_bookie_rank = Column(Float)
-    bet = Column(String(5))
-    betting_opportunity = Column(Float)
-
-    def __repr__(self):
-        return f"Predictions('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}')"
-
-
-class Results(Base):
-    __tablename__='Results'
-    __table_args__={'sqlite_autoincrement': True}
-    id = Column(Integer, primary_key=True)
-    game = Column(Integer)
-    away = Column(String(3))
-    home = Column(String(3))
-    month = Column(Integer)
-    day = Column(Integer)
-    predicted_runs = Column(Float)
-    bookie = Column(Float)
-    predicted_run_rank = Column(Float)
-    predicted_bookie_rank = Column(Float)
-    bet = Column(String(5))
-    betting_opportunity = Column(Float)
-    outcome = Column(Float)
-    game_result = Column(String(5))
-    bet_result = Column(Integer)
-
-    def __repr__(self):
-        return f"(Results('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}', '{self.bet_result}')"
+# class Predictions(Base):
+#     __tablename__='Predictions'
+#     __table_args__={'sqlite_autoincrement': True}
+#     id = Column(Integer, primary_key=True)
+#     game = Column(Integer)
+#     away = Column(String(3))
+#     home = Column(String(3))
+#     month = Column(Integer)
+#     day = Column(Integer)
+#     predicted_runs = Column(Float)
+#     bookie = Column(Float)
+#     predicted_run_rank = Column(Float)
+#     predicted_bookie_rank = Column(Float)
+#     bet = Column(String(5))
+#     betting_opportunity = Column(Float)
+#
+#     def __repr__(self):
+#         return f"Predictions('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}')"
+#
+#
+# class Results(Base):
+#     __tablename__='Results'
+#     __table_args__={'sqlite_autoincrement': True}
+#     id = Column(Integer, primary_key=True)
+#     game = Column(Integer)
+#     away = Column(String(3))
+#     home = Column(String(3))
+#     month = Column(Integer)
+#     day = Column(Integer)
+#     predicted_runs = Column(Float)
+#     bookie = Column(Float)
+#     predicted_run_rank = Column(Float)
+#     predicted_bookie_rank = Column(Float)
+#     bet = Column(String(5))
+#     betting_opportunity = Column(Float)
+#     outcome = Column(Float)
+#     game_result = Column(String(5))
+#     bet_result = Column(Integer)
+#
+#     def __repr__(self):
+#         return f"(Results('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}', '{self.bet_result}')"
 
 
 class Reports(Base):
-    __tablename__="Reports"
-    __table_args__={'sqlite_autoincrement': True}
+    __tablename__ = "Reports"
+    __table_args__ = {'sqlite_autoincrement': True}
     id = Column(Integer, primary_key=True)
     game = Column(Integer)
     away = Column(String(10))
@@ -73,20 +73,20 @@ class Reports(Base):
 
 
 if __name__ == "__main__":
+
+    local_results = 'data/daily_results/results.csv'
+    local_csv = 'results.csv'
     s3 = boto3.resource("s3")
-    s3.meta.client.download_file('kupebaseball', 'data/daily_results/results.csv', 'results.csv')
-
-    engine = create_engine('sqlite:///sqlite.db')
-
+    s3.meta.client.download_file(config.my_bucket, local_results, local_csv)
+    engine = create_engine(config.local_db)
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
-
     session = sessionmaker()
     session.configure(bind=engine)
     s = session()
 
     try:
-        results_df = pd.read_csv('results.csv', skiprows=1)
+        results_df = pd.read_csv(local_csv, skiprows=1)
         results_df.columns = ['game', 'away', 'bet_result', 'betting_opportunity', 'bookie', 'game_result', 'home',
                               'outcome', 'predicted_runs', 'bet', 'date']
 
@@ -99,6 +99,5 @@ if __name__ == "__main__":
 
     finally:
         s.close()
-        if os.path.exists("results.csv"):
-            os.remove("results.csv")
-
+        if os.path.exists(local_csv):
+            os.remove(local_csv)
