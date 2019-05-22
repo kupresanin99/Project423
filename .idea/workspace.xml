@@ -4,7 +4,6 @@
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Create_RDS_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/Create_RDS_DB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,29 +31,12 @@
     <select />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="3">
       <content type="file-editors">
         <state>
           <leaf>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/config.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="396">
-                    <caret line="18" selection-start-line="18" selection-end-line="18" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/data/results.csv">
-                <provider editor-type-id="csv-table-editor">
-                  <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-                </provider>
-                <provider selected="true" editor-type-id="csv-text-editor" />
-              </entry>
-            </file>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/data/predictions.csv">
+              <entry file="file://$PROJECT_DIR$/data/results.csv">
                 <provider editor-type-id="csv-table-editor">
                   <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
                 </provider>
@@ -71,25 +53,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reports.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="2171">
+              <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions_5_19.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="155" column="46" lean-forward="true" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
+            <state relative-caret-position="623">
+              <caret line="178" column="37" selection-start-line="178" selection-start-column="37" selection-end-line="178" selection-end-column="37" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -121,14 +95,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="113" column="38" lean-forward="true" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
+            <state relative-caret-position="1672">
+              <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
-                <element signature="e#1801#2354#0" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/predictions.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
     </leaf>
@@ -193,8 +174,8 @@
         <option value="$PROJECT_DIR$/Create_SQL_DB.py" />
         <option value="$PROJECT_DIR$/src/reports.py" />
         <option value="$PROJECT_DIR$/src/daily_prediction.py" />
-        <option value="$PROJECT_DIR$/main_menu.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/main_menu.py" />
         <option value="$PROJECT_DIR$/Create_RDS_DB.py" />
       </list>
     </option>
@@ -516,21 +497,7 @@
       <workItem from="1558271114596" duration="4932000" />
       <workItem from="1558276542387" duration="1327000" />
       <workItem from="1558281851348" duration="1811000" />
-      <workItem from="1558481463965" duration="4279000" />
-    </task>
-    <task id="LOCAL-00033" summary="Main menu needs an update.">
-      <created>1555962955763</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1555962955763</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Main menu updated pretty good.">
-      <created>1555977227055</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1555977227055</updated>
+      <workItem from="1558481463965" duration="6120000" />
     </task>
     <task id="LOCAL-00035" summary="Main menu updated pretty good.">
       <created>1555978085046</created>
@@ -861,11 +828,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558486795280</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="See if RDS DB still really works.">
+      <created>1558487846575</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1558487846575</updated>
+    </task>
+    <task id="LOCAL-00083" summary="See if RDS DB still really works.">
+      <created>1558488829511</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1558488829511</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159060000" />
+    <option name="totallyTimeSpent" value="160901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,7 +861,31 @@
     <frame x="1680" y="-306" width="2560" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.059011165" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120414674" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3281027" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17335244" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.26105565" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3266762" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.20684735" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.6219686" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.35298622" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.036682617" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23405103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -902,37 +907,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" visible="true" weight="0.036682617" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07934609" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.35298622" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3281027" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.50995404" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.26105565" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3266762" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.20684735" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.6219686" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.31020734" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Menu logic and error checking working." />
     <MESSAGE value="Menus, valid input, good to go." />
     <MESSAGE value="Daily reporting input errors prevented." />
     <MESSAGE value="Ran prelims for April 25" />
@@ -957,7 +937,8 @@
     <MESSAGE value="Try to config RDS DB settings for user." />
     <MESSAGE value="Needed to get the predictions for the database." />
     <MESSAGE value="See if DB still works." />
-    <option name="LAST_COMMIT_MESSAGE" value="See if DB still works." />
+    <MESSAGE value="See if RDS DB still really works." />
+    <option name="LAST_COMMIT_MESSAGE" value="See if RDS DB still really works." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Baseball$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1557232646418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
@@ -978,7 +959,6 @@
     <SUITE FILE_PATH="coverage/Baseball$reports.coverage" NAME="reports Coverage Results" MODIFIED="1557231056184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions_4_21.csv" />
     <entry file="file://$PROJECT_DIR$/notebooks/datapull/prelim_model_building/initial_model.py" />
     <entry file="file://$PROJECT_DIR$/data/daily_raw/raw_5_1" />
     <entry file="file://$USER_HOME$/MSIA/MSIA432/HW1/assignment1-FinalCodeFor5.py">
@@ -1088,16 +1068,6 @@
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="155" column="46" lean-forward="true" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3831">
@@ -1115,13 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reports.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1129,11 +1092,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/results.csv">
+    <entry file="file://$PROJECT_DIR$/src/reports.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2171">
+          <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/daily_results/results_5_11.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="178" column="37" selection-start-line="178" selection-start-column="37" selection-end-line="178" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/predictions.csv">
       <provider editor-type-id="csv-table-editor">
@@ -1141,13 +1121,18 @@
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/results.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="113" column="38" lean-forward="true" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
+        <state relative-caret-position="1672">
+          <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
-            <element signature="e#1801#2354#0" />
           </folding>
         </state>
       </provider>

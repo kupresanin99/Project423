@@ -9,28 +9,6 @@ import config
 
 Base = declarative_base()
 
-# class Results(Base):
-#     __tablename__='Results'
-#     __table_args__={'sqlite_autoincrement': True}
-#     id = Column(Integer, primary_key=True)
-#     game = Column(Integer)
-#     away = Column(String(3))
-#     home = Column(String(3))
-#     month = Column(Integer)
-#     day = Column(Integer)
-#     predicted_runs = Column(Float)
-#     bookie = Column(Float)
-#     predicted_run_rank = Column(Float)
-#     predicted_bookie_rank = Column(Float)
-#     bet = Column(String(5))
-#     betting_opportunity = Column(Float)
-#     outcome = Column(Float)
-#     game_result = Column(String(5))
-#     bet_result = Column(Integer)
-#
-#     def __repr__(self):
-#         return f"(Results('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}', '{self.bet_result}')"
-
 
 class Predictions(Base):
     __tablename__='Predictions'
@@ -62,11 +40,16 @@ class Reports(Base):
     bet_result = Column(Integer)
     betting_opportunity = Column(Float)
     bookie = Column(Float)
+    day = Column(Integer)
     game_result = Column(String(10))
     home = Column(String(10))
+    month = Column(Integer)
     outcome = Column(Float)
+    predicted_bookie_rank = Column(Float)
+    predicted_run_rank = Column(Float)
     predicted_runs = Column(Float)
     bet = Column(String(10))
+    year = Column(Integer)
     date = Column(Date)
 
     def __repr__(self):
@@ -87,13 +70,15 @@ def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, s3_results_
 
     try:
         results_df = pd.read_csv('results.csv', skiprows=1)
-        results_df.columns = ['game', 'away', 'bet_result', 'betting_opportunity', 'bookie', 'game_result', 'home',
-                              'outcome', 'predicted_runs', 'bet', 'date']
+        results_df.columns = ['game', 'away', 'bet_result', 'betting_opportunity', 'bookie', 'day', 'game_result',
+                              'home', 'month', 'outcome', 'predicted_bookie_rank', 'predicted_run_rank',
+                              'predicted_runs', 'bet', 'year', 'date']
         s.bulk_insert_mappings(Reports, results_df.to_dict(orient="records"))
         s.commit()
 
         predictions_df = pd.read_csv('predictions.csv', skiprows=1)
-        predictions_df.columns = ['game', 'nonsense', 'away', 'betting_opportunity', 'bookie', 'day', 'home', 'month', 'predicted_bookie_rank', 'predicted_run_rank', 'predicted_runs', 'bet']
+        predictions_df.columns = ['game', 'nonsense', 'away', 'betting_opportunity', 'bookie', 'day', 'home', 'month',
+                                  'predicted_bookie_rank', 'predicted_run_rank', 'predicted_runs', 'bet']
         s.bulk_insert_mappings(Predictions, predictions_df.to_dict(orient="records"))
         s.commit()
 
