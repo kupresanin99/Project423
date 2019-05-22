@@ -85,10 +85,10 @@ def display_gambling_picks(month, day):
     except:
         print("Data not in S3 yet.  Patience, hermano.")
 
+
 def run_daily_report(month, day):
     import pandas as pd
     import boto3
-    import os
     import config
 
     try:
@@ -100,8 +100,6 @@ def run_daily_report(month, day):
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(daily_report)
-       # if os.path.exists('data/daily_results/results_{0}_{1}.csv'.format(month, day)):
-        #    os.remove('data/daily_results/results_{0}_{1}.csv'.format(month, day))
     except FileNotFoundError:
         print("Results for ", month, "/", day, " not in yet.", sep="")
     except:
