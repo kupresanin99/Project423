@@ -37,16 +37,17 @@ class Predictions(Base):
     __table_args__={'sqlite_autoincrement': True}
     id = Column(Integer, primary_key=True)
     game = Column(Integer)
+    nonsense = Column(Integer)
     away = Column(String(3))
+    betting_opportunity = Column(Float)
+    bookie = Column(Float)
+    day = Column(Integer)
     home = Column(String(3))
     month = Column(Integer)
-    day = Column(Integer)
-    predicted_runs = Column(Float)
-    bookie = Column(Float)
-    predicted_run_rank = Column(Float)
     predicted_bookie_rank = Column(Float)
+    predicted_run_rank = Column(Float)
+    predicted_runs = Column(Float)
     bet = Column(String(5))
-    betting_opportunity = Column(Float)
 
     def __repr__(self):
         return f"Predictions('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}')"
@@ -72,9 +73,10 @@ class Reports(Base):
         return f"(Reports('{self.away}', '{self.home}', '{self.date}')"
 
 
-def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, s3_results_file, local_results_file):
+def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, s3_results_file, local_results_file, s3_predictions_file, local_predictions_file):
     s3 = boto3.resource("s3")
     s3.meta.client.download_file(config.my_bucket, s3_results_file, local_results_file)
+    s3.meta.client.download_file(config.my_bucket, s3_predictions_file, local_predictions_file)
     engine_string = "{}://{}:{}@{}:{}/{}".format(conn_type, user, password, host, port, DATABASE_NAME)
     engine = create_engine(engine_string)
     Base.metadata.drop_all(engine)
@@ -87,8 +89,12 @@ def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, s3_results_
         results_df = pd.read_csv('results.csv', skiprows=1)
         results_df.columns = ['game', 'away', 'bet_result', 'betting_opportunity', 'bookie', 'game_result', 'home',
                               'outcome', 'predicted_runs', 'bet', 'date']
-
         s.bulk_insert_mappings(Reports, results_df.to_dict(orient="records"))
+        s.commit()
+
+        predictions_df = pd.read_csv('predictions.csv', skiprows=1)
+        predictions_df.columns = ['game', 'nonsense', 'away', 'betting_opportunity', 'bookie', 'day', 'home', 'month', 'predicted_bookie_rank', 'predicted_run_rank', 'predicted_runs', 'bet']
+        s.bulk_insert_mappings(Predictions, predictions_df.to_dict(orient="records"))
         s.commit()
 
     except:
@@ -99,11 +105,15 @@ def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, s3_results_
         s.close()
         if os.path.exists(local_results_file):
             os.remove(local_results_file)
+        if os.path.exists(local_predictions_file):
+            os.remove(local_predictions_file)
 
 
 if __name__ == "__main__":
     s3_results_file = 'results.csv'
     local_results_file = 'results.csv'
+    s3_predictions_file = 'predictions.csv'
+    local_predictions_file = 'predictions.csv'
     create_RDS(config.conn_type,
                config.user,
                config.password,
@@ -111,5 +121,7 @@ if __name__ == "__main__":
                config.port,
                config.DATABASE_NAME,
                config.s3_results_file,
-               config.local_results_file)
+               config.local_results_file,
+               config.s3_predictions_file,
+               config.local_predictions_file)
 

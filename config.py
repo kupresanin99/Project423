@@ -14,3 +14,5 @@ DATABASE_NAME = 'msia423'
 
 s3_results_file = 'results.csv'
 local_results_file = 'results.csv'
+s3_predictions_file = 'predictions.csv'
+local_predictions_file = 'predictions.csv'
