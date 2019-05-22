@@ -141,7 +141,7 @@ while run_main_menu:
                                     all_files = glob.glob(path + "/*.csv")
                                     predictions = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
                                     predictions.to_csv('data/daily_predictions/predictions.csv', encoding='utf-8')
-                                    s3.meta.client.upload_file('data/predictions.csv', config.my_bucket, 'data/predictions.csv')
+                                    s3.meta.client.upload_file('data/predictions.csv', config.my_bucket, 'predictions.csv')
 
 
 
@@ -178,7 +178,7 @@ while run_main_menu:
                                     results['date'] = pd.to_datetime(results[['year', 'month', 'day']])
                                     results.drop(['month', 'day', 'year', 'predicted.run.rank', 'predicted.bookie.rank'], axis=1, inplace=True)
                                     results.to_csv('data/results.csv', encoding='utf-8')
-                                    s3.meta.client.upload_file('data/results.csv', config.my_bucket, 'data/daily_results/results.csv')
+                                    s3.meta.client.upload_file('data/results.csv', config.my_bucket, 'results.csv')
                                     # if os.path.exists('data/results.csv'):
                                     #     os.remove('data/results.csv')
 

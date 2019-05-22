@@ -9,27 +9,6 @@ import config
 
 Base = declarative_base()
 
-
-# class Predictions(Base):
-#     __tablename__='Predictions'
-#     __table_args__={'sqlite_autoincrement': True}
-#     id = Column(Integer, primary_key=True)
-#     game = Column(Integer)
-#     away = Column(String(3))
-#     home = Column(String(3))
-#     month = Column(Integer)
-#     day = Column(Integer)
-#     predicted_runs = Column(Float)
-#     bookie = Column(Float)
-#     predicted_run_rank = Column(Float)
-#     predicted_bookie_rank = Column(Float)
-#     bet = Column(String(5))
-#     betting_opportunity = Column(Float)
-#
-#     def __repr__(self):
-#         return f"Predictions('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}')"
-#
-#
 # class Results(Base):
 #     __tablename__='Results'
 #     __table_args__={'sqlite_autoincrement': True}
@@ -51,6 +30,26 @@ Base = declarative_base()
 #
 #     def __repr__(self):
 #         return f"(Results('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}', '{self.bet_result}')"
+
+
+class Predictions(Base):
+    __tablename__='Predictions'
+    __table_args__={'sqlite_autoincrement': True}
+    id = Column(Integer, primary_key=True)
+    game = Column(Integer)
+    away = Column(String(3))
+    home = Column(String(3))
+    month = Column(Integer)
+    day = Column(Integer)
+    predicted_runs = Column(Float)
+    bookie = Column(Float)
+    predicted_run_rank = Column(Float)
+    predicted_bookie_rank = Column(Float)
+    bet = Column(String(5))
+    betting_opportunity = Column(Float)
+
+    def __repr__(self):
+        return f"Predictions('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}')"
 
 
 class Reports(Base):
