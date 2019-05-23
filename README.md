@@ -151,7 +151,7 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 		c.  "results.csv"
 		
 
-** 4. Initialize the database in RDS**
+**4. Initialize the database in RDS**
 
 	1.  Set your MYSQL environment variables by running the following commands, all must be in quotes
 		export MYSQL_USER="" 
