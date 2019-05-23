@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="" />
+    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reports.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,20 +32,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reports.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+            <state relative-caret-position="290">
+              <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1936">
-              <caret line="155" column="82" lean-forward="true" selection-start-line="155" selection-start-column="82" selection-end-line="155" selection-end-column="82" />
+            <state relative-caret-position="581">
+              <caret line="155" column="82" selection-start-line="155" selection-start-column="82" selection-end-line="155" selection-end-column="82" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -53,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api_data_grab.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
+            <state relative-caret-position="581">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
@@ -62,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2036">
+            <state relative-caret-position="581">
               <caret line="214" column="58" selection-start-line="214" selection-start-column="58" selection-end-line="214" selection-end-column="58" />
             </state>
           </provider>
@@ -71,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="-517">
               <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
@@ -96,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -166,8 +169,8 @@
         <option value="$PROJECT_DIR$/src/daily_prediction.py" />
         <option value="$PROJECT_DIR$/s3.py" />
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/src/reports.py" />
         <option value="$PROJECT_DIR$/main_menu.py" />
+        <option value="$PROJECT_DIR$/src/reports.py" />
       </list>
     </option>
   </component>
@@ -196,18 +199,6 @@
               <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project423" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project423" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="daily_predictions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project423" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="daily_results" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -499,6 +490,8 @@
       <workItem from="1558527568500" duration="276000" />
       <workItem from="1558612460101" duration="748000" />
       <workItem from="1558622357254" duration="1070000" />
+      <workItem from="1558627175715" duration="92000" />
+      <workItem from="1558638786348" duration="549000" />
     </task>
     <task id="LOCAL-00042" summary="Sourcing early April data for a complete set.">
       <created>1556037924510</created>
@@ -847,7 +840,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168140000" />
+    <option name="totallyTimeSpent" value="168781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -862,7 +855,7 @@
     <frame x="0" y="23" width="1440" height="809" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35230547" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22622478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -961,8 +954,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/daily_results/results_5_4.csv">
-      <provider editor-type-id="csv-text-editor" />
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -981,6 +972,8 @@
           <column index="13" width="100" />
         </state>
       </provider>
+      <provider editor-type-id="csv-text-editor" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/static/basic.css" />
     <entry file="file://$PROJECT_DIR$/app/templates/error.html" />
@@ -1042,28 +1035,28 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions_5_19.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/daily_results/results_4_25.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/daily_results/results_5_11.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/results.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Create_SQL_DB.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1077,42 +1070,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions.csv" />
     <entry file="file://$PROJECT_DIR$/data/daily_predictions/predictions_4_2.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/predictions.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="-979">
           <caret line="361" column="56" lean-forward="true" selection-start-line="361" selection-start-column="56" selection-end-line="361" selection-end-column="56" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reports.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api_data_grab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1129,24 +1098,48 @@
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2036">
+        <state relative-caret-position="581">
           <caret line="214" column="58" selection-start-line="214" selection-start-column="58" selection-end-line="214" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api_data_grab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1936">
-          <caret line="155" column="82" lean-forward="true" selection-start-line="155" selection-start-column="82" selection-end-line="155" selection-end-column="82" />
+        <state relative-caret-position="581">
+          <caret line="155" column="82" selection-start-line="155" selection-start-column="82" selection-end-line="155" selection-end-column="82" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-517">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reports.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
         </state>
       </provider>
     </entry>
