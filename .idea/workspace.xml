@@ -173,9 +173,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1680" />
-    <option name="y" value="-306" />
+    <option name="y" value="402" />
     <option name="width" value="2560" />
-    <option name="height" value="1417" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -358,12 +358,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Flask server.Project423" />
       <item itemvalue="Python.Create_DB" />
       <item itemvalue="Python.api_data_grab" />
       <item itemvalue="Python.daily_prediction" />
       <item itemvalue="Python.main_menu" />
       <item itemvalue="Python.reports" />
-      <item itemvalue="Flask server.Project423" />
     </list>
     <recent_temporary>
       <list>

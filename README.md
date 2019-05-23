@@ -1,10 +1,13 @@
 # Joe Kupresanin Project Repository
 # Max Holiber is QA
 
+Instructions to run app in another environment at the bottom of this page. 
+
 <!-- toc -->
 
 - [Project Charter](#project-charter)
 - [Backlog](#backlog)
+- [Instructions](#Instructions)
 
 <!-- tocstop -->
 
@@ -113,5 +116,76 @@ Additional variables will require table joins and additional API pulls, which ca
 
 2.2.a.  Adding additional variables to the model for performance improvement (placeholder, not sure if time) (icebox).  
 
-For midproject PR
+## Instructions
+
+**1. Clone the Master branch of the GitHub repo.  In terminal, cd into project directory.**
+
+**2. Create a conda environment, my_env = name of your new environment**
+
+	
+	```
+	conda create --name my_env python=3.7
+	conda activate my_env
+	pip install -r requirements.txt
+
+
+**3.  Move three data files from Joe's S3 bucket to your S3 bucket**
+
+File 1 - All baseball data from 2018 season
+File 2 - All predictions from 2019 season: Beginning of 2019 season until until day this project is cloned
+File 3 - All gambling results from 2019 season: Beginning of 2019 season until day this project is cloned.
+
+	1.  From the terminal, set your AWS environment variable:
+		a.  export AWS_ACCESS_KEY_ID=
+		b.  export AWS_SECRET_ACCESS_KEY=
+	
+	2.  From the terminal, edit the config.py and update the following:
+		a. `DEST_BUCKET`  (Your S3 bucket name)
+	
+	3.  Run `python s3.py` in the terminal from the project directory
+	4.  Navigate to S3 to see if three files have been transferred to your bucket:
+		a.  "model_data"
+		b.  "predictions.csv"
+		c.  "results.csv"
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
