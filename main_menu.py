@@ -152,8 +152,8 @@ while run_main_menu:
                                     s3 = boto3.resource("s3")
                                     s3.meta.client.download_file(config.my_bucket, local_pred.format(month, day), local_pred.format(month, day))
                                     today = pd.read_csv(local_pred.format(month, day))
-                                    if os.path.exists(local_pred.format(month, day)):
-                                        os.remove(local_pred.format(month, day))
+                                    # if os.path.exists(local_pred.format(month, day)):
+                                    #     os.remove(local_pred.format(month, day))
                                     today = admin_input_results(today)
                                     today.to_csv(local_results.format(month, day), encoding='utf-8')
                                     print("Daily results for ", month, "/", day, sep="")
