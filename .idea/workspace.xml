@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reports.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+            <state relative-caret-position="259">
+              <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -74,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-517">
+            <state relative-caret-position="-1531">
               <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
@@ -491,14 +491,7 @@
       <workItem from="1558612460101" duration="748000" />
       <workItem from="1558622357254" duration="1070000" />
       <workItem from="1558627175715" duration="92000" />
-      <workItem from="1558638786348" duration="549000" />
-    </task>
-    <task id="LOCAL-00042" summary="Sourcing early April data for a complete set.">
-      <created>1556037924510</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1556037924510</updated>
+      <workItem from="1558638786348" duration="1123000" />
     </task>
     <task id="LOCAL-00043" summary="Sourcing early April data for a complete set.">
       <created>1556042938684</created>
@@ -836,11 +829,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558622810200</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Oh Boy - Query the DB?">
+      <created>1558639666359</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1558639666359</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168781000" />
+    <option name="totallyTimeSpent" value="169355000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -907,7 +907,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="April 27 results." />
     <MESSAGE value="April 28, 29 data input." />
     <MESSAGE value="April 30 data input." />
     <MESSAGE value="May 2 input." />
@@ -932,7 +931,8 @@
     <MESSAGE value="Added S3 bucket grab function from Max." />
     <MESSAGE value="Fixed reports.csv bug" />
     <MESSAGE value="Fixed the bug?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the bug?" />
+    <MESSAGE value="Oh Boy - Query the DB?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oh Boy - Query the DB?" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Baseball$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1557232646418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
@@ -1128,7 +1128,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-517">
+        <state relative-caret-position="-1531">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
@@ -1138,8 +1138,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reports.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        <state relative-caret-position="259">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
         </state>
       </provider>
     </entry>

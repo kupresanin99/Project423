@@ -30,7 +30,7 @@ def run_yearly_reports():
     password = os.environ.get("MYSQL_PASSWORD")
     host = os.environ.get("MYSQL_HOST")
     port = os.environ.get("MYSQL_PORT")
-    engine_string = "{}://{}:{}@{}:{}/DATABASE_NAME". \
+    engine_string = "{}://{}:{}@{}:{}/msia423". \
         format(conn_type, user, password, host, port)
     engine = sql.create_engine(engine_string)
     Session = sessionmaker(bind=engine)
