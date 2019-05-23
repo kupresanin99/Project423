@@ -1,13 +1,7 @@
 def run_yearly_reports():
     import pandas as pd
-    from datetime import datetime
-    import glob
     from time import sleep
-    import sqlalchemy as sql
     import os
-    import boto3
-    import config
-    from sqlalchemy.orm import sessionmaker
     import sqlalchemy as sql
 
     team_dict = {'TB': 'Tampa Bay Rays', 'NYY': 'New York Yankees', 'TOR': 'Toronto Blue Jays',
@@ -20,10 +14,6 @@ def run_yearly_reports():
                  'PIT': 'Pittsburgh Pirates', 'STL': 'St. Louis Cardinals', 'CHC': 'Chicago Cubs',
                  'CIN': 'Cincinnati Reds', 'LAD': 'Los Angeles Dodgers', 'SD': 'San Diego Padres',
                  'ARI': 'Arizona Diamondbacks', 'SF': 'San Francisco Giants', 'COL': 'Colorado Rockies'}
-   
-    #s3 = boto3.resource("s3")
-    #s3.meta.client.download_file(config.my_bucket, 'results.csv', 'results.csv')
-    #results = pd.read_csv('results.csv')
 
     conn_type = "mysql+pymysql"
     user = os.environ.get("MYSQL_USER")
@@ -33,17 +23,8 @@ def run_yearly_reports():
     engine_string = "{}://{}:{}@{}:{}/msia423". \
         format(conn_type, user, password, host, port)
     engine = sql.create_engine(engine_string)
-    #Session = sessionmaker(bind=engine)
-    #session = Session()
     results = pd.read_sql('SELECT * FROM Reports', con=engine)
-    #results = session.query(Reports.record)
 
-
-
-
-
-    # if os.path.exists('results.csv'):
-    #     os.remove('results.csv')
     print()
     print("Profit / Loss Report for the 2019 season:")
     print("(Each bet is $100)")
