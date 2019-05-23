@@ -118,6 +118,8 @@ Additional variables will require table joins and additional API pulls, which ca
 
 ## Instructions
 
+**0. Connect to your EC2 instance on AWS**
+
 **1. Clone the Master branch of the GitHub repo.  In terminal, cd into project directory.**
 
 **2. Create a conda environment, my_env = name of your new environment**
@@ -131,9 +133,9 @@ Additional variables will require table joins and additional API pulls, which ca
 
 **3.  Move three data files from Joe's S3 bucket to your S3 bucket**
 
-File 1 - All baseball data from 2018 season
-File 2 - All predictions from 2019 season: Beginning of 2019 season until until day this project is cloned
-File 3 - All gambling results from 2019 season: Beginning of 2019 season until day this project is cloned.
+File 1 - All baseball data from 2018 season  
+File 2 - All predictions from 2019 season: Beginning of 2019 season until until day this project is cloned  
+File 3 - All gambling results from 2019 season: Beginning of 2019 season until day this project is cloned  
 
 	1.  From the terminal, set your AWS environment variable:
 		a.  export AWS_ACCESS_KEY_ID=
@@ -149,43 +151,14 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 		c.  "results.csv"
 		
 
+** 4. Initialize the database in RDS**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	1.  Set your MYSQL environment variables by running the following commands, all must be in quotes
+		export MYSQL_USER="" 
+		export MYSQL_PASSWORD=""
+		export MYSQL_HOST="" 
+		export MYSQL_PORT=""
+	
+	2.  Run `python Create_RDS_DS.py` to create the MySQL database in S3
+		Populated tables Predictions and Reports will exist with MLB model results from the 2019 season
+	
