@@ -70,28 +70,41 @@ def display_gambling_picks(month, day):
     import os
     import boto3
     import config
+    import sqlalchemy as sql
+
+    conn_type = "mysql+pymysql"
+    user = os.environ.get("MYSQL_USER")
+    password = os.environ.get("MYSQL_PASSWORD")
+    host = os.environ.get("MYSQL_HOST")
+    port = os.environ.get("MYSQL_PORT")
+    engine_string = "{}://{}:{}@{}:{}/msia423". \
+        format(conn_type, user, password, host, port)
+    engine = sql.create_engine(engine_string)
 
     try:
-        s3 = boto3.resource("s3")
-        s3.meta.client.download_file(config.my_bucket, 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-        gambling_picks = pd.read_csv('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        #s3 = boto3.resource("s3")
+        #s3.meta.client.download_file(config.my_bucket, 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day), 'data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        #gambling_picks = pd.read_csv('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+        gambling_picks = pd.read_sql('SELECT * FROM Predictions WHERE month=month AND day=day', con=engine)
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
-        gambling_picks.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',  # Show betting opportunity Joe
+        gambling_picks.drop(['predicted_runs', 'predicted_run_rank', 'predicted_bookie_rank', #'betting_opportunity',  # Show betting opportunity Joe
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(gambling_picks)
-        if os.path.exists('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
-            os.remove('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
-    except FileNotFoundError:
-        print("Picks for ", month, "/", day, " not in yet.", sep="")
+        # if os.path.exists('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day)):
+        #     os.remove('data/daily_predictions/predictions_{0}_{1}.csv'.format(month, day))
+    # except FileNotFoundError:
+    #     print("Picks for ", month, "/", day, " not in yet.", sep="")
     except:
-        print("Data not in S3 yet.  Patience, hermano.")
+        print("Data not in RDS yet.  Patience, hermano / hermana.")
 
 
 def run_daily_report(month, day):
     import pandas as pd
+    import os
     import boto3
     import config
+    import sqlalchemy as sql
 
     try:
         s3 = boto3.resource("s3")
@@ -102,7 +115,7 @@ def run_daily_report(month, day):
                              'month', 'day'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(daily_report)
-    except FileNotFoundError:
-        print("Results for ", month, "/", day, " not in yet.", sep="")
+    # except FileNotFoundError:
+    #     print("Results for ", month, "/", day, " not in yet.", sep="")
     except:
-        print("Data not in S3 yet.  Patience, hermano.")
+        print("Data not in RDS yet.  Patience, hermano / hermana.")
