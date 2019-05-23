@@ -50,19 +50,19 @@ def run_yearly_reports():
 
     # Report 1:  Running total of just betting the best daily bet
     print()
-    report1 = results.groupby('date').apply(lambda t: t[t['betting.opportunity'] == t['betting.opportunity'].max()])
-    print("Only bet the 10-star pick each day: $", report1['bet.result'].sum(), sep="")
-    print("Total Bets: ", report1['bet.result'].count(), sep='')
-    print("Winning Percentage: ", round(100 * report1['bet.result'].value_counts()[100] / (report1['bet.result'].value_counts()[100] +
-                                                       report1['bet.result'].value_counts()[-100]), 2), "%", sep="")
+    report1 = results.groupby('date').apply(lambda t: t[t['betting_opportunity'] == t['betting_opportunity'].max()])
+    print("Only bet the 10-star pick each day: $", report1['bet_result'].sum(), sep="")
+    print("Total Bets: ", report1['bet_result'].count(), sep='')
+    print("Winning Percentage: ", round(100 * report1['bet_result'].value_counts()[100] / (report1['bet_result'].value_counts()[100] +
+                                                       report1['bet_result'].value_counts()[-100]), 2), "%", sep="")
     sleep(3)
     print()
 
     # Report 2:  Running total of betting every game for which we have data
-    print("Bet every single game every day: $", results['bet.result'].sum(), sep="")
-    print("Total Bets: ", results['bet.result'].count(), sep='')
-    print("Winning Percentage: ", round(100 * results['bet.result'].value_counts()[100] / (results['bet.result'].value_counts()[100] +
-                                                       results['bet.result'].value_counts()[-100]), 2), "%", sep="")
+    print("Bet every single game every day: $", results['bet_result'].sum(), sep="")
+    print("Total Bets: ", results['bet_result'].count(), sep='')
+    print("Winning Percentage: ", round(100 * results['bet_result'].value_counts()[100] / (results['bet_result'].value_counts()[100] +
+                                                       results['bet_result'].value_counts()[-100]), 2), "%", sep="")
     sleep(3)
     print()
 
@@ -72,16 +72,16 @@ def run_yearly_reports():
     best_team = 'XXX'
     for team in team_list:
         report3 = results[(results['home'] == team) | (results['away'] == team)]
-        if report3['bet.result'].sum() > max_win:
-            max_win = report3['bet.result'].sum()
+        if report3['bet_result'].sum() > max_win:
+            max_win = report3['bet_result'].sum()
             best_team = team
 
     report3 = results[(results['home'] == best_team) | (results['away'] == best_team)]
     print("The best team to bet on has been the", team_dict[best_team])
-    print("Bet only the ", team_dict[best_team], " games: $", report3['bet.result'].sum(), sep="")
-    print("Total Bets: ", report3['bet.result'].count(), sep='')
-    print("Winning Percentage: ", round(100 * report3['bet.result'].value_counts()[100] / (report3['bet.result'].value_counts()[100] +
-                                                       report3['bet.result'].value_counts()[-100]), 2), "%", sep="")
+    print("Bet only the ", team_dict[best_team], " games: $", report3['bet_result'].sum(), sep="")
+    print("Total Bets: ", report3['bet_result'].count(), sep='')
+    print("Winning Percentage: ", round(100 * report3['bet_result'].value_counts()[100] / (report3['bet_result'].value_counts()[100] +
+                                                       report3['bet_result'].value_counts()[-100]), 2), "%", sep="")
 
 
 def display_gambling_picks(month, day):
