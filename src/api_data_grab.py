@@ -1,5 +1,5 @@
 def api_pull(month, day, bucket, key):
-
+    """Takes date, AWS bucket from user, calls API and saves raw data to S3"""
     import http.client
     import pickle
     import boto3
@@ -25,7 +25,7 @@ def api_pull(month, day, bucket, key):
 
 
 def minor_processing(month, day, bucket):
-
+    """Calls S3 to get raw daily data, jsonifies it, cleans it slightly, pops it back to S3"""
     import json
     from pandas.io.json import json_normalize
     import pickle
