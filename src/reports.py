@@ -33,10 +33,10 @@ def run_yearly_reports():
     engine_string = "{}://{}:{}@{}:{}/msia423". \
         format(conn_type, user, password, host, port)
     engine = sql.create_engine(engine_string)
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    #results = pd.read_sql('SELECT * FROM table_name', con=db_connection)
-    results = session.query(Reports.record)
+    #Session = sessionmaker(bind=engine)
+    #session = Session()
+    results = pd.read_sql('SELECT * FROM Reports', con=engine)
+    #results = session.query(Reports.record)
 
 
 
