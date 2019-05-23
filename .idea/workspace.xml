@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reports.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="89" column="67" lean-forward="true" selection-start-line="89" selection-start-column="67" selection-end-line="89" selection-end-column="67" />
+            <state relative-caret-position="361">
+              <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -74,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="-77">
               <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
@@ -491,28 +491,7 @@
       <workItem from="1558612460101" duration="748000" />
       <workItem from="1558622357254" duration="1070000" />
       <workItem from="1558627175715" duration="92000" />
-      <workItem from="1558638786348" duration="2965000" />
-    </task>
-    <task id="LOCAL-00048" summary="Menu logic and error checking working.">
-      <created>1556123350964</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1556123350964</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Menus, valid input, good to go.">
-      <created>1556133221091</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1556133221091</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Menus, valid input, good to go.">
-      <created>1556156385171</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1556156385172</updated>
+      <workItem from="1558638786348" duration="3923000" />
     </task>
     <task id="LOCAL-00051" summary="Daily reporting input errors prevented.">
       <created>1556198413263</created>
@@ -836,11 +815,32 @@
       <option name="project" value="LOCAL" />
       <updated>1558641813712</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Querying DB hermano">
+      <created>1558642160779</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1558642160779</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Querying DB hermano">
+      <created>1558642282838</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1558642282838</updated>
+    </task>
+    <task id="LOCAL-00099" summary="Querying DB hermano">
+      <created>1558642909738</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1558642909738</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171197000" />
+    <option name="totallyTimeSpent" value="172155000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -855,7 +855,7 @@
     <frame x="0" y="23" width="1440" height="809" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22622478" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15706052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1128,7 +1128,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="-77">
           <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
@@ -1138,8 +1138,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reports.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="89" column="67" lean-forward="true" selection-start-line="89" selection-start-column="67" selection-end-line="89" selection-end-column="67" />
+        <state relative-caret-position="361">
+          <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
         </state>
       </provider>
     </entry>

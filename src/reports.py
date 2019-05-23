@@ -112,7 +112,7 @@ def run_daily_report(month, day):
         daily_report = pd.read_sql('SELECT * FROM Reports WHERE month={0} AND day={1}'.format(month, day), con=engine)
         daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
         daily_report.drop(['predicted_runs', 'predicted_run_rank', 'predicted_bookie_rank', 'betting_opportunity',
-                             'month', 'day', 'game', 'nonsense'], axis=1, inplace=True)
+                             'month', 'day', 'game'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(daily_report)
     except:
