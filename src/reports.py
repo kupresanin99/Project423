@@ -3,6 +3,7 @@ def run_yearly_reports():
     from time import sleep
     import os
     import sqlalchemy as sql
+    import config
 
     team_dict = {'TB': 'Tampa Bay Rays', 'NYY': 'New York Yankees', 'TOR': 'Toronto Blue Jays',
                  'BAL': 'Baltimore Orioles', 'BOS': 'Boston Red Sox', 'CLE': 'Cleveland Indians',
@@ -69,6 +70,7 @@ def display_gambling_picks(month, day):
     import pandas as pd
     import os
     import sqlalchemy as sql
+    import config
 
     conn_type = "mysql+pymysql"
     user = os.environ.get("MYSQL_USER")
@@ -88,25 +90,31 @@ def display_gambling_picks(month, day):
         print(gambling_picks)
     except:
         print("Data not in RDS yet.  Patience, hermano / hermana.")
+        print("Or user error, OK?")
 
 
 def run_daily_report(month, day):
     import pandas as pd
     import os
-    import boto3
     import config
     import sqlalchemy as sql
 
     try:
-        s3 = boto3.resource("s3")
-        s3.meta.client.download_file(config.my_bucket, 'data/daily_results/results_{0}_{1}.csv'.format(month, day), 'data/daily_results/results_{0}_{1}.csv'.format(month, day))
-        daily_report = pd.read_csv('data/daily_results/results_{0}_{1}.csv'.format(month, day))
+        conn_type = "mysql+pymysql"
+        user = os.environ.get("MYSQL_USER")
+        password = os.environ.get("MYSQL_PASSWORD")
+        host = os.environ.get("MYSQL_HOST")
+        port = os.environ.get("MYSQL_PORT")
+        engine_string = "{}://{}:{}@{}:{}/msia423". \
+            format(conn_type, user, password, host, port)
+        engine = sql.create_engine(engine_string)
+
+        daily_report = pd.read_sql('SELECT * FROM Reports WHERE month={0} AND day={1}'.format(month, day), con=engine)
         daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
-        daily_report.drop(['predicted.runs', 'predicted.run.rank', 'predicted.bookie.rank', 'betting.opportunity',
-                             'month', 'day'], axis=1, inplace=True)
+        daily_report.drop(['predicted_runs', 'predicted_run_rank', 'predicted_bookie_rank', 'betting_opportunity',
+                             'month', 'day', 'game', 'nonsense'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(daily_report)
-    # except FileNotFoundError:
-    #     print("Results for ", month, "/", day, " not in yet.", sep="")
     except:
         print("Data not in RDS yet.  Patience, hermano / hermana.")
+        print("Or user error, OK?")
