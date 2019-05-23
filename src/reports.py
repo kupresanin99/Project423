@@ -80,7 +80,7 @@ def display_gambling_picks(month, day):
     engine = sql.create_engine(engine_string)
 
     try:
-        gambling_picks = pd.read_sql('SELECT * FROM Predictions WHERE month=5 AND day=21', con=engine)
+        gambling_picks = pd.read_sql('SELECT * FROM Predictions WHERE month={0} AND day={1}'.format(month, day), con=engine)
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
         gambling_picks.drop(['predicted_runs', 'predicted_run_rank', 'predicted_bookie_rank',
                              'month', 'day', 'game', 'nonsense'], axis=1, inplace=True)
