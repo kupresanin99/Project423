@@ -109,10 +109,10 @@ while run_main_menu:
                                 if month == 0:
                                     pass
                                 else:
-                                    api_pull(month, day, config.api_bucket, config.my_api_key)
+                                    api_pull(month, day, config.DEST_BUCKET, config.my_api_key)
                                     print("Attempted API Pull")
                                     sleep(2)
-                                    minor_processing(month, day, config.my_bucket)
+                                    minor_processing(month, day, config.DEST_BUCKET)
                                     print("Performed minor processing")
                                     sleep(2)
 
