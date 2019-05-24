@@ -143,7 +143,6 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 	
 	2.  From the terminal, edit the config.py and update the following:
 		a. `DEST_BUCKET`  (Your S3 bucket name)
-		b.  api_bucket = (Your S3 bucket name) (Needed if runnnig model)
 	
 	3.  Run `python s3.py` in the terminal from the project directory
 	4.  Navigate to S3 to see if three files have been transferred to your bucket:
