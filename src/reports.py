@@ -22,7 +22,7 @@ def run_yearly_reports():
     #host = os.environ.get("MYSQL_HOST")
     #port = os.environ.get("MYSQL_PORT")
     engine_string = "{}://{}:{}@{}:{}/{}". \
-        format(config.conn_type, config.user, config.password, config.host, config.port. config.DATABASE_NAME)
+        format(config.conn_type, config.user, config.password, config.host, config.port, config.DATABASE_NAME)
     engine = sql.create_engine(engine_string)
 
     results = pd.read_sql('SELECT * FROM Reports', con=engine)
@@ -79,7 +79,7 @@ def display_gambling_picks(month, day):
     #host = os.environ.get("MYSQL_HOST")
     #port = os.environ.get("MYSQL_PORT")
     engine_string = "{}://{}:{}@{}:{}/{}". \
-        format(config.conn_type, config.user, config.password, config.host, config.port. config.DATABASE_NAME)
+        format(config.conn_type, config.user, config.password, config.host, config.port, config.DATABASE_NAME)
     engine = sql.create_engine(engine_string)
 
     try:
@@ -107,7 +107,7 @@ def run_daily_report(month, day):
         # host = os.environ.get("MYSQL_HOST")
         # port = os.environ.get("MYSQL_PORT")
         engine_string = "{}://{}:{}@{}:{}/{}". \
-            format(config.conn_type, config.user, config.password, config.host, config.port.config.DATABASE_NAME)
+            format(config.conn_type, config.user, config.password, config.host, config.port, config.DATABASE_NAME)
         engine = sql.create_engine(engine_string)
 
         daily_report = pd.read_sql('SELECT * FROM Reports WHERE month={0} AND day={1}'.format(month, day), con=engine)
