@@ -1,7 +1,6 @@
 def run_yearly_reports():
     import pandas as pd
     from time import sleep
-    #import os
     import sqlalchemy as sql
     import config
 
@@ -16,11 +15,6 @@ def run_yearly_reports():
                  'CIN': 'Cincinnati Reds', 'LAD': 'Los Angeles Dodgers', 'SD': 'San Diego Padres',
                  'ARI': 'Arizona Diamondbacks', 'SF': 'San Francisco Giants', 'COL': 'Colorado Rockies'}
 
-    #conn_type = "mysql+pymysql"
-    #user = os.environ.get("MYSQL_USER")
-    #password = os.environ.get("MYSQL_PASSWORD")
-    #host = os.environ.get("MYSQL_HOST")
-    #port = os.environ.get("MYSQL_PORT")
     engine_string = "{}://{}:{}@{}:{}/{}". \
         format(config.conn_type, config.user, config.password, config.host, config.port, config.DATABASE_NAME)
     engine = sql.create_engine(engine_string)
@@ -34,7 +28,7 @@ def run_yearly_reports():
     # Report 1:  Running total of just betting the best daily bet
     print()
     report1 = results.groupby('date').apply(lambda t: t[t['betting_opportunity'] == t['betting_opportunity'].max()])
-    print("Only bet the 10-star pick each day: $", report1['bet_result'].sum(), sep="")
+    print("Only bet the best pick each day: $", report1['bet_result'].sum(), sep="")
     print("Total Bets: ", report1['bet_result'].count(), sep='')
     print("Winning Percentage: ", round(100 * report1['bet_result'].value_counts()[100] / (report1['bet_result'].value_counts()[100] +
                                                        report1['bet_result'].value_counts()[-100]), 2), "%", sep="")
@@ -67,17 +61,21 @@ def run_yearly_reports():
                                                        report3['bet_result'].value_counts()[-100]), 2), "%", sep="")
 
 
+def should_bet(x):
+    if x > 9.5:
+        return 'Huge'
+    elif x > 6:
+        return 'Good'
+    elif x > 3:
+        return 'Mediocre'
+    else:
+        return 'Avoid'
+
+
 def display_gambling_picks(month, day):
     import pandas as pd
-    #import os
     import sqlalchemy as sql
     import config
-
-    #conn_type = "mysql+pymysql"
-    #user = os.environ.get("MYSQL_USER")
-    #password = os.environ.get("MYSQL_PASSWORD")
-    #host = os.environ.get("MYSQL_HOST")
-    #port = os.environ.get("MYSQL_PORT")
     engine_string = "{}://{}:{}@{}:{}/{}". \
         format(config.conn_type, config.user, config.password, config.host, config.port, config.DATABASE_NAME)
     engine = sql.create_engine(engine_string)
@@ -87,8 +85,10 @@ def display_gambling_picks(month, day):
         gambling_picks.drop(gambling_picks.columns[0], axis=1, inplace=True)
         gambling_picks.drop(['predicted_runs', 'predicted_run_rank', 'predicted_bookie_rank',
                              'month', 'day', 'game', 'nonsense'], axis=1, inplace=True)
+        gambling_picks['betting_opportunity'] = gambling_picks['betting_opportunity'].apply(should_bet)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(gambling_picks)
+
     except:
         print("Data not in RDS yet.  Patience, hermano / hermana.")
         print("Or user error, OK?")
@@ -96,26 +96,20 @@ def display_gambling_picks(month, day):
 
 def run_daily_report(month, day):
     import pandas as pd
-    #import os
     import config
     import sqlalchemy as sql
 
     try:
-        # conn_type = "mysql+pymysql"
-        # user = os.environ.get("MYSQL_USER")
-        # password = os.environ.get("MYSQL_PASSWORD")
-        # host = os.environ.get("MYSQL_HOST")
-        # port = os.environ.get("MYSQL_PORT")
         engine_string = "{}://{}:{}@{}:{}/{}". \
             format(config.conn_type, config.user, config.password, config.host, config.port, config.DATABASE_NAME)
         engine = sql.create_engine(engine_string)
-
         daily_report = pd.read_sql('SELECT * FROM Reports WHERE month={0} AND day={1}'.format(month, day), con=engine)
         daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
         daily_report.drop(['predicted_runs', 'predicted_run_rank', 'predicted_bookie_rank', 'betting_opportunity',
                              'month', 'day', 'game', 'year', 'date'], axis=1, inplace=True)
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(daily_report)
+
     except:
         print("Data not in RDS yet.  Patience, hermano / hermana.")
         print("Or user error, OK?")
