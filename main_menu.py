@@ -9,6 +9,7 @@ import boto3
 import os
 import glob
 import config
+import Create_RDS_DB
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -143,7 +144,7 @@ while run_main_menu:
                                     predictions = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
                                     predictions.to_csv('data/predictions.csv', encoding='utf-8')
                                     s3.meta.client.upload_file('data/predictions.csv', config.my_bucket, 'predictions.csv')
-                                    exec(Create_RDS_DB.py)
+                                    exec(Create_RDS_DB)
 
                             elif admin_menu_choice == 3:
                                 print()
