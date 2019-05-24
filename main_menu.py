@@ -137,7 +137,6 @@ while run_main_menu:
                                     today = get_predicted_runs(data, month, day, config.my_bucket)
                                     today = admin_input_lines(today)
                                     today.to_csv(local_pred.format(month, day), encoding='utf-8')
-                                    #today.drop(today.columns[0], axis=1, inplace=True)
                                     today.drop(
                                         ['month', 'day', 'predicted.run.rank', 'predicted.bookie.rank'],
                                         axis=1, inplace=True)
@@ -168,7 +167,9 @@ while run_main_menu:
                                     today = pd.read_csv(local_pred.format(month, day))
                                     today = admin_input_results(today)
                                     today.to_csv(local_results.format(month, day), encoding='utf-8')
-                                    print("Daily results for ", month, "/", day, sep="")
+                                    today = today[['home', 'away', 'bookie', 'the.bet', 'outcome', 'game.result', 'bet.result']]
+                                    today.columns = ['Home', 'Away', 'Line', 'Bet', 'Runs Scored', 'Game Result', 'Bet Result']
+                                    print("\nDaily results for ", month, "/", day, sep="")
                                     print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
                                                       'predicted.bookie.rank', 'betting.opportunity'], axis=1))
                                     s3.meta.client.upload_file(local_results.format(month, day), config.my_bucket, local_results.format(month,day))
