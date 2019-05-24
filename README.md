@@ -1,5 +1,5 @@
-# Joe Kupresanin Project Repository
-# Max Holiber is QA
+# Developer: Joe Kupresanin
+# QA: Max Holiber
 
 Instructions to run app in another environment at the bottom of this page. 
 
@@ -144,7 +144,8 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 	2.  From the terminal, edit the config.py and update the following:
 		a. `DEST_BUCKET`  (Your S3 bucket name)
 	
-	3.  Run `python s3.py` in the terminal from the project directory
+	3.  Run `python s3.py` in the terminal from the project directory  
+	
 	4.  Navigate to S3 to see if three files have been transferred to your bucket:
 		a.  "model_data"
 		b.  "predictions.csv"
