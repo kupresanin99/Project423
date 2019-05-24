@@ -137,13 +137,12 @@ while run_main_menu:
                                     today = get_predicted_runs(data, month, day, config.my_bucket)
                                     today = admin_input_lines(today)
                                     today.to_csv(local_pred.format(month, day), encoding='utf-8')
-                                    today.drop(today.columns[0], axis=1, inplace=True)
+                                    #today.drop(today.columns[0], axis=1, inplace=True)
                                     today.drop(
                                         ['month', 'day', 'predicted.run.rank', 'predicted.bookie.rank'],
                                         axis=1, inplace=True)
                                     today['betting.opportunity'] = today['betting.opportunity'].apply(should_bet)
-                                    today = today[
-                                        ['home', 'away', 'predicted.runs', 'bookie', 'the.bet', 'betting.opportunity']]
+                                    today = today[['home', 'away', 'predicted.runs', 'bookie', 'the.bet', 'betting.opportunity']]
                                     today.columns = ['Home', 'Away', 'Predicted Runs', 'Line', 'Bet', 'Opportunity']
                                     print("Sorted from best to worst for ", month, "/", day, sep="")
                                     print(today)
