@@ -62,11 +62,11 @@ def run_yearly_reports():
 
 
 def should_bet(x):
-    if x > 9.5:
+    if x > 8:
         return 'Huge'
     elif x > 6:
         return 'Good'
-    elif x > 3:
+    elif x > 4:
         return 'Mediocre'
     else:
         return 'Avoid'
