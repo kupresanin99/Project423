@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/daily_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/daily_prediction.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +31,25 @@
     </expand>
     <select />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/config_model.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="286">
+                    <caret line="13" selection-start-line="13" selection-end-line="13" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
@@ -41,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2354">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="945">
+              <caret line="173" column="73" selection-start-line="173" selection-start-column="73" selection-end-line="173" selection-end-column="73" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -65,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="329" column="105" selection-start-line="329" selection-start-column="105" selection-end-line="329" selection-end-column="105" />
+            <state relative-caret-position="459">
+              <caret line="335" lean-forward="true" selection-start-line="335" selection-end-line="335" />
             </state>
           </provider>
         </entry>
@@ -89,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state>
+              <caret selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -162,8 +182,9 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/Create_RDS_DB.py" />
         <option value="$PROJECT_DIR$/src/reports.py" />
-        <option value="$PROJECT_DIR$/src/daily_prediction.py" />
         <option value="$PROJECT_DIR$/main_menu.py" />
+        <option value="$PROJECT_DIR$/src/daily_prediction.py" />
+        <option value="$PROJECT_DIR$/config_model.py" />
       </list>
     </option>
   </component>
@@ -187,11 +208,6 @@
             <path>
               <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project423" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project423" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -492,21 +508,7 @@
       <workItem from="1558664148907" duration="4307000" />
       <workItem from="1558669226947" duration="237000" />
       <workItem from="1558703412908" duration="19000" />
-      <workItem from="1558703443072" duration="3363000" />
-    </task>
-    <task id="LOCAL-00068" summary="Find / Replace kupebaseball to my_bucket">
-      <created>1558273917970</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1558273917970</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Find / Replace kupebaseball to my_bucket">
-      <created>1558274567066</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1558274567066</updated>
+      <workItem from="1558703443072" duration="5603000" />
     </task>
     <task id="LOCAL-00070" summary="Add variable names for paths in api_data_grab">
       <created>1558275063438</created>
@@ -837,11 +839,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558707991902</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Trying to update DB after predctions.">
+      <created>1558708194456</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1558708194456</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Trying to update DB after predctions and results.">
+      <created>1558708369729</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1558708369729</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181087000" />
+    <option name="totallyTimeSpent" value="183327000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -908,7 +924,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add variable names for paths in api_data_grab" />
     <MESSAGE value="More reformating." />
     <MESSAGE value="Local SQLite upgraded." />
     <MESSAGE value="Fixed bug." />
@@ -933,7 +948,8 @@
     <MESSAGE value="Daily results output format" />
     <MESSAGE value="DocStrings created for all functions, bub." />
     <MESSAGE value="Trying to update DB after predctions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to update DB after predctions." />
+    <MESSAGE value="Trying to update DB after predctions and results." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to update DB after predctions and results." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Baseball$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1557232646418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
@@ -954,7 +970,6 @@
     <SUITE FILE_PATH="coverage/Baseball$reports.coverage" NAME="reports Coverage Results" MODIFIED="1557231056184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/static/basic.css" />
     <entry file="file://$PROJECT_DIR$/app/templates/error.html" />
     <entry file="file://$PROJECT_DIR$/app/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/app/__init__.py" />
@@ -1066,13 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reports.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
@@ -1085,13 +1093,6 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="329" column="105" selection-start-line="329" selection-start-column="105" selection-end-line="329" selection-end-column="105" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/s3.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1115,11 +1116,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2354">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="945">
+          <caret line="173" column="73" selection-start-line="173" selection-start-column="73" selection-end-line="173" selection-end-column="73" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="335" lean-forward="true" selection-start-line="335" selection-end-line="335" />
         </state>
       </provider>
     </entry>

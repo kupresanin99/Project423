@@ -31,6 +31,7 @@ def get_predicted_runs(data, month, day, bucket):
     import math
     import boto3
     import os
+    import config_model
 
     data['home.win.pct'] = data['game.home.win'] / (data['game.home.win'] + data['game.home.loss'])
     data['away.win.pct'] = data['game.away.win'] / (data['game.away.win'] + data['game.away.loss'])
@@ -223,16 +224,22 @@ def get_predicted_runs(data, month, day, bucket):
     features = model_data.drop('total.runs', axis=1)
     features = np.array(features)
 
-    # Get good set of hyperparameters (daily tuning)
+    # Get good set of hyperparameters (daily tuning, adjust in config_model.py if you wish)
 
-    n_estimators = [int(x) for x in np.linspace(start=200, stop=3000, num=10)]  # Number of trees in random forest
-    max_features = ['auto', 'sqrt']    # Number of features to consider at every split
-    max_depth = [int(x) for x in np.linspace(10, 110, num=11)]      # Maximum number of levels in tree
+    n_estimators = [int(x) for x in np.linspace(start=config_model.tree_start,
+                                                stop=config_model.tree_stop,
+                                                num=config_model.tree_jump)]
+
+    max_features = config_model.max_features
+    max_depth = [int(x) for x in np.linspace(start=config_model.depth_start,
+                                             stop=config_model.depth_stop,
+                                             num=config_model.depth_num)]
     max_depth.append(None)
-    min_samples_split = [2, 3, 5, 7, 9, 11]    # Minimum number of samples required to split a node
-    min_samples_leaf = [1, 2, 3, 4, 5]    # Minimum number of samples required at each leaf node
-    bootstrap = [True, False]    # Method of selecting samples for training each tree
-    random_grid = {'n_estimators': n_estimators,    # Create the random grid
+    min_samples_split = config_model.min_samples_split
+    min_samples_leaf = config_model.min_samples_leaf
+    bootstrap = [True, False]
+
+    random_grid = {'n_estimators': n_estimators,
                    'max_features': max_features,
                    'max_depth': max_depth,
                    'min_samples_split': min_samples_split,
@@ -241,12 +248,14 @@ def get_predicted_runs(data, month, day, bucket):
 
     print("Serving up today's model, so wait about 10 minutes, OK?")
     print()
-    rf = RandomForestRegressor()  # Random search of parameters, using 5 fold cross validation
+    rf = RandomForestRegressor()
     rf_random = RandomizedSearchCV(estimator=rf,
                                    param_distributions=random_grid,
-                                   n_iter=2, cv=5, verbose=0,
-                                   n_jobs=-1)
-    # Fit the random search model
+                                   n_iter=config_model.n_iter,
+                                   cv=config_model.cross_val,
+                                   verbose=config_model.verbose,
+                                   n_jobs=config_model.n_jobs)
+
     rf_random.fit(features, labels)
     print("Today's random forest model parameters: ")
     print("Number of Estimators: ", rf_random.best_params_['n_estimators'])

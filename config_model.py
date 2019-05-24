@@ -1,0 +1,13 @@
+tree_start = 200
+tree_stop = 3000
+tree_jump = 10
+max_features = ['auto', 'sqrt']
+depth_start = 10
+depth_stop = 110
+depth_num = 11
+min_samples_split = [2, 3, 5, 7, 9, 11]
+min_samples_leaf = [1, 2, 3, 4, 5]
+n_iter = 2
+cross_val = 5
+verbose = 0
+n_jobs = -1
