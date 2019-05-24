@@ -109,6 +109,8 @@ def run_daily_report(month, day):
         daily_report.drop(daily_report.columns[0], axis=1, inplace=True)
         daily_report.drop(['predicted_runs', 'predicted_run_rank', 'predicted_bookie_rank', 'betting_opportunity',
                              'month', 'day', 'game', 'year', 'date'], axis=1, inplace=True)
+        daily_report = daily_report[['home', 'away', 'bookie', 'bet', 'outcome', 'game_result', 'bet_result']]
+        daily_report.columns = ['Home', 'Away', 'Line', 'Bet', 'Runs Scored', 'Game Result', 'Bet Result', ]
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(daily_report)
 
