@@ -1,4 +1,5 @@
 def run_yearly_reports():
+    """Pulls all gambling results from RDS for 2019 season and creates user reports to be served on Flask"""
     import pandas as pd
     from time import sleep
     import sqlalchemy as sql
@@ -62,6 +63,7 @@ def run_yearly_reports():
 
 
 def should_bet(x):
+    """For betting predictions, classifies each game in terms of how good the betting opportunity is - (arbitrary)"""
     if x > 8:
         return 'Huge'
     elif x > 6:
@@ -73,6 +75,7 @@ def should_bet(x):
 
 
 def display_gambling_picks(month, day):
+    """For a given date, returns the gambling predictions for the slate of MLB games.  To be served on Flask."""
     import pandas as pd
     import sqlalchemy as sql
     import config
@@ -97,6 +100,7 @@ def display_gambling_picks(month, day):
 
 
 def run_daily_report(month, day):
+    """For a given date, returns the gambling results for the slate of MLB games.  To be served on Flask."""
     import pandas as pd
     import config
     import sqlalchemy as sql

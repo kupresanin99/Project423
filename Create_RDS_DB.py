@@ -11,6 +11,7 @@ Base = declarative_base()
 
 
 class Predictions(Base):
+    """This table houses daily predictions of 2019 MLB game runs.  It lives on RDS"""
     __tablename__='Predictions'
     __table_args__={'sqlite_autoincrement': True}
     id = Column(Integer, primary_key=True)
@@ -32,6 +33,7 @@ class Predictions(Base):
 
 
 class Reports(Base):
+    """This table houses daily gambling results of 2019 MLB games.  It lives on RDS"""
     __tablename__="Reports"
     __table_args__={'sqlite_autoincrement': True}
     id = Column(Integer, primary_key=True)
@@ -57,6 +59,7 @@ class Reports(Base):
 
 
 def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, s3_results_file, local_results_file, s3_predictions_file, local_predictions_file):
+    """Creates the RDS MySQL DB from scratch when run.  OK to run daily, will wipe and repopulate in 0.5 seconds."""
     s3 = boto3.resource("s3")
     s3.meta.client.download_file(config.my_bucket, s3_results_file, local_results_file)
     s3.meta.client.download_file(config.my_bucket, s3_predictions_file, local_predictions_file)

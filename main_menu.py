@@ -15,6 +15,7 @@ pd.set_option('display.max_rows', None)
 
 
 def print_main_menu():
+    """Main menu cooker-upper"""
     print()
     print("Baseball Gambling Tool Main Menu")
     print()
@@ -25,6 +26,7 @@ def print_main_menu():
 
 
 def print_admin_menu():
+    """Admin menu cooker-upper"""
     print()
     print("Enter 1 for API Pull (Only Do This Once Per Day)")
     print("Enter 2 to Input Today's Betting Lines (And Runs Random Forest)")
@@ -35,6 +37,7 @@ def print_admin_menu():
 
 
 def print_user_menu():
+    """User menu cooker-upper"""
     print()
     print("Enter 1 for Today's Picks")
     print("Enter 2 for 2019 Profit Reports")
@@ -45,6 +48,7 @@ def print_user_menu():
 
 
 def print_choice_menu():
+    """Choice menu cooker-upper.  Error handing handled."""
     month1 = input("Give the month as 4, 5, 6, 7, 8, or 9: ")
     print()
     day1 = input("Give the day as 1, 2, ..., 29, 30, or 31: ")

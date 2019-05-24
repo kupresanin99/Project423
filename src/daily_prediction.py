@@ -1,4 +1,27 @@
 def get_predicted_runs(data, month, day, bucket):
+    """Webmaster sends in a given day and random forest model is run to predict total runs for each MLB game
+
+        Inputs:
+        data = From an API pull, all the MLB information for a given day
+        month = 4, 5, 6, 7, 8, 9
+        day = 1, 2, ..., 31
+        bucket = S3 bucket where the 2018 season-long modeling data lives
+
+        Output:
+        Returns a DF that includes the day's MLB runs predictions
+        During daily processing, 49 random forest models are run on EC2 2XL instance
+        The runs predictions are served up to the webmaster, but not the end-user.
+        The end-user is only interested in gambling, so we treat the modeling aspect as a black box.
+        We provide our gambling recommendations based on the model results to Flask.
+
+        Details:
+        This function takes about 10 minutes to run on an EC2 instance and requires some input by the webmaster.
+        The user functionality is hosted on Flask and the models / results have a daily update.
+        The model is dynamic in the sense that each day, a new random forest is run for today's games.
+        The season-long gambling predictions and betting outcomes are hosted on Flask for the user.
+        To view those results requires no on-the-fly model building.
+        Model-building takes place each day before the MLB games get going.
+        """
 
     from sklearn.ensemble import RandomForestRegressor
     import numpy as np
@@ -261,6 +284,8 @@ def get_predicted_runs(data, month, day, bucket):
 
 
 def admin_input_results(today):
+    """This function takes a DF for a given date and the webmaster inputs the baseball game results.
+        The baseball game results are manually inputted by the webmaster as this is not part of the modeling."""
 
     import numpy as np
     today.drop(today.columns[0], axis=1, inplace=True)
@@ -301,6 +326,9 @@ def admin_input_results(today):
 
 
 def admin_input_lines(today):
+    """This function takes a DF for a given date and the webmaster inputs the gambling lines.
+        The gambling lines are manually inputted by the webmaster as this is not part of the modeling."""
+    This
     import numpy as np
     bookie = []
     print(today)
