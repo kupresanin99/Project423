@@ -1,7 +1,7 @@
 def run_yearly_reports():
     import pandas as pd
     from time import sleep
-    import os
+    #import os
     import sqlalchemy as sql
     import config
 
@@ -16,14 +16,15 @@ def run_yearly_reports():
                  'CIN': 'Cincinnati Reds', 'LAD': 'Los Angeles Dodgers', 'SD': 'San Diego Padres',
                  'ARI': 'Arizona Diamondbacks', 'SF': 'San Francisco Giants', 'COL': 'Colorado Rockies'}
 
-    conn_type = "mysql+pymysql"
-    user = os.environ.get("MYSQL_USER")
-    password = os.environ.get("MYSQL_PASSWORD")
-    host = os.environ.get("MYSQL_HOST")
-    port = os.environ.get("MYSQL_PORT")
-    engine_string = "{}://{}:{}@{}:{}/msia423". \
-        format(conn_type, user, password, host, port)
+    #conn_type = "mysql+pymysql"
+    #user = os.environ.get("MYSQL_USER")
+    #password = os.environ.get("MYSQL_PASSWORD")
+    #host = os.environ.get("MYSQL_HOST")
+    #port = os.environ.get("MYSQL_PORT")
+    engine_string = "{}://{}:{}@{}:{}/config.DATABASE_NAME". \
+        format(config.conn_type, config.user, config.password, config.host, config.port)
     engine = sql.create_engine(engine_string)
+
     results = pd.read_sql('SELECT * FROM Reports', con=engine)
 
     print()
@@ -68,17 +69,17 @@ def run_yearly_reports():
 
 def display_gambling_picks(month, day):
     import pandas as pd
-    import os
+    #import os
     import sqlalchemy as sql
     import config
 
-    conn_type = "mysql+pymysql"
-    user = os.environ.get("MYSQL_USER")
-    password = os.environ.get("MYSQL_PASSWORD")
-    host = os.environ.get("MYSQL_HOST")
-    port = os.environ.get("MYSQL_PORT")
-    engine_string = "{}://{}:{}@{}:{}/msia423". \
-        format(conn_type, user, password, host, port)
+    #conn_type = "mysql+pymysql"
+    #user = os.environ.get("MYSQL_USER")
+    #password = os.environ.get("MYSQL_PASSWORD")
+    #host = os.environ.get("MYSQL_HOST")
+    #port = os.environ.get("MYSQL_PORT")
+    engine_string = "{}://{}:{}@{}:{}/config.DATABASE_NAME". \
+        format(config.conn_type, config.user, config.password, config.host, config.port)
     engine = sql.create_engine(engine_string)
 
     try:
@@ -95,18 +96,18 @@ def display_gambling_picks(month, day):
 
 def run_daily_report(month, day):
     import pandas as pd
-    import os
+    #import os
     import config
     import sqlalchemy as sql
 
     try:
-        conn_type = "mysql+pymysql"
-        user = os.environ.get("MYSQL_USER")
-        password = os.environ.get("MYSQL_PASSWORD")
-        host = os.environ.get("MYSQL_HOST")
-        port = os.environ.get("MYSQL_PORT")
-        engine_string = "{}://{}:{}@{}:{}/msia423". \
-            format(conn_type, user, password, host, port)
+        # conn_type = "mysql+pymysql"
+        # user = os.environ.get("MYSQL_USER")
+        # password = os.environ.get("MYSQL_PASSWORD")
+        # host = os.environ.get("MYSQL_HOST")
+        # port = os.environ.get("MYSQL_PORT")
+        engine_string = "{}://{}:{}@{}:{}/config.DATABASE_NAME". \
+            format(config.conn_type, config.user, config.password, config.host, config.port)
         engine = sql.create_engine(engine_string)
 
         daily_report = pd.read_sql('SELECT * FROM Reports WHERE month={0} AND day={1}'.format(month, day), con=engine)
