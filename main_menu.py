@@ -144,7 +144,7 @@ while run_main_menu:
                                     today['betting.opportunity'] = today['betting.opportunity'].apply(should_bet)
                                     today = today[['home', 'away', 'predicted.runs', 'bookie', 'the.bet', 'betting.opportunity']]
                                     today.columns = ['Home', 'Away', 'Predicted Runs', 'Line', 'Bet', 'Opportunity']
-                                    print("Sorted from best to worst for ", month, "/", day, sep="")
+                                    print("\nSorted from best to worst for ", month, "/", day, sep="")
                                     print(today)
                                     s3.meta.client.upload_file(local_pred.format(month, day), config.my_bucket, local_pred.format(month, day))
                                     path = 'data/daily_predictions'
