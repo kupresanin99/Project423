@@ -86,6 +86,8 @@ def display_gambling_picks(month, day):
         gambling_picks.drop(['predicted_runs', 'predicted_run_rank', 'predicted_bookie_rank',
                              'month', 'day', 'game', 'nonsense'], axis=1, inplace=True)
         gambling_picks['betting_opportunity'] = gambling_picks['betting_opportunity'].apply(should_bet)
+        gambling_picks = gambling_picks[['home', 'away', 'bookie', 'bet', 'betting_opportunity']]
+        gambling_picks.columns = ['Home', 'Away', 'Line', 'Bet', 'Opportunity']
         print("Sorted from best to worst for ", month, "/", day, sep="")
         print(gambling_picks)
 
