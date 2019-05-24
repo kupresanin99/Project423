@@ -328,7 +328,6 @@ def admin_input_results(today):
 def admin_input_lines(today):
     """This function takes a DF for a given date and the webmaster inputs the gambling lines.
         The gambling lines are manually inputted by the webmaster as this is not part of the modeling."""
-    This
     import numpy as np
     bookie = []
     print(today)
