@@ -9,6 +9,7 @@ import boto3
 import os
 import glob
 import config
+import src.reports.should_bet as should_bet
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -136,6 +137,12 @@ while run_main_menu:
                                     today = get_predicted_runs(data, month, day, config.my_bucket)
                                     today = admin_input_lines(today)
                                     today.to_csv(local_pred.format(month, day), encoding='utf-8')
+                                    today.drop(today.columns[0, 3, 4, 7, 8], axis=1, inplace=True)
+                                    today['betting.opportunity'] = today['betting.opportunity'].apply(should_bet)
+                                    today = today[
+                                        ['home', 'away', 'predicted.runs', 'bookie', 'the.bet', 'betting.opportunity']]
+                                    today.columns = ['Home', 'Away', 'Predicted Runs', 'Line', 'Bet', 'Opportunity']
+                                    print("Sorted from best to worst for ", month, "/", day, sep="")
                                     print(today)
                                     s3.meta.client.upload_file(local_pred.format(month, day), config.my_bucket, local_pred.format(month, day))
                                     path = 'data/daily_predictions'
