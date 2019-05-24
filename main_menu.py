@@ -167,11 +167,12 @@ while run_main_menu:
                                     today = pd.read_csv(local_pred.format(month, day))
                                     today = admin_input_results(today)
                                     today.to_csv(local_results.format(month, day), encoding='utf-8')
-                                    today = today[['home', 'away', 'bookie', 'the.bet', 'outcome', 'game.result', 'bet.result']]
-                                    today.columns = ['Home', 'Away', 'Line', 'Bet', 'Runs Scored', 'Game Result', 'Bet Result']
+                                    today = today[['home', 'away', 'bookie', 'the.bet',
+                                                   'outcome', 'game.result', 'bet.result']]
+                                    today.columns = ['Home', 'Away', 'Line', 'Bet', 'Runs Scored',
+                                                     'Game Result', 'Bet Result']
                                     print("\nDaily results for ", month, "/", day, sep="")
-                                    print(today.drop(['month', 'day', 'predicted.runs', 'predicted.run.rank',
-                                                      'predicted.bookie.rank', 'betting.opportunity'], axis=1))
+                                    print(today)
                                     s3.meta.client.upload_file(local_results.format(month, day), config.my_bucket, local_results.format(month,day))
                                     path = 'data/daily_results'
                                     all_files = glob.glob(path + "/*.csv")
