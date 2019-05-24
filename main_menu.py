@@ -9,7 +9,7 @@ import boto3
 import os
 import glob
 import config
-import src.reports.should_bet as should_bet
+from src.reports import should_bet
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
