@@ -171,6 +171,7 @@ while run_main_menu:
                                     results['date'] = pd.to_datetime(results[['year', 'month', 'day']])
                                     results.to_csv('data/results.csv', encoding='utf-8')
                                     s3.meta.client.upload_file('data/results.csv', config.my_bucket, 'results.csv')
+                                    exec(open("Create_RDS_DB.py").read())
 
                             elif admin_menu_choice == 4:
                                 print()
