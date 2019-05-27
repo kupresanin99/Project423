@@ -125,7 +125,6 @@ Additional variables will require table joins and additional API pulls, which ca
 **2. Create a conda environment, my_env = name of your new environment**
 
 	
-	```
 	conda create --name my_env python=3.7
 	conda activate my_env
 	pip install -r requirements.txt
