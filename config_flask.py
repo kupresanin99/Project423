@@ -2,7 +2,7 @@ import os
 
 DEBUG = True
 LOGGING_CONFIG = "config/logging/local.conf"
-PORT = 3002
+#PORT = 3000
 APP_NAME = "baseball"
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 HOST = "0.0.0.0"

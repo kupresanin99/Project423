@@ -31,7 +31,7 @@ def index():
         return render_template('index.html', predictions=predictions)
     except:
         traceback.print_exc()
-        logger.warning("Not able to display tracks, error page returned")
+        logger.warning("Hey Joe, it's Joe!")
         return render_template('error.html')
 
 
