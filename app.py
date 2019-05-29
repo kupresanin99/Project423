@@ -10,9 +10,9 @@ import config_flask as cf
 # Initialize the Flask application
 app = Flask(__name__)
 
-print(cf.HOST)
-print(cf.PORT)
-print(cf.DATABASE_NAME)
+print("host", cf.HOST)
+print('port', cf.PORT)
+print('db name', cf.DATABASE_NAME)
 
 
 
