@@ -5,7 +5,6 @@ from flask import Flask
 # from src.add_songs import Tracks
 import Create_RDS_DB
 from flask_sqlalchemy import SQLAlchemy
-import config_flask as cf
 
 # Initialize the Flask application
 app = Flask(__name__)
