@@ -15,4 +15,4 @@ password = os.environ.get("MYSQL_PASSWORD")
 HOST = os.environ.get("MYSQL_HOST")
 PORT = os.environ.get("MYSQL_PORT")
 DATABASE_NAME = 'msia423'
-SQLALCHEMY_DATABASE_URI = "{}://{}:{}@{}:{}/{}".format(conn_type, user, password, host, port, DATABASE_NAME)
+SQLALCHEMY_DATABASE_URI = "{}://{}:{}@{}:{}/{}".format(conn_type, user, password, HOST, PORT, DATABASE_NAME)
