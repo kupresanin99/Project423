@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_flask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config_flask.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
@@ -81,13 +80,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
+        <entry file="file://$PROJECT_DIR$/templates/error.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -97,6 +93,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="790">
+              <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -178,16 +186,17 @@
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/app.py" />
         <option value="$PROJECT_DIR$/config/logging/local.conf" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/config_flask.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/error.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1680" />
-    <option name="y" value="402" />
-    <option name="width" value="1280" />
-    <option name="height" value="709" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1681" />
+    <option name="y" value="-298" />
+    <option name="width" value="2561" />
+    <option name="height" value="1405" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -548,42 +557,7 @@
       <workItem from="1558990199724" duration="399000" />
       <workItem from="1559086947960" duration="5538000" />
       <workItem from="1559132300600" duration="258000" />
-      <workItem from="1559167908972" duration="1148000" />
-    </task>
-    <task id="LOCAL-00098" summary="Querying DB hermano">
-      <created>1558642282838</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1558642282838</updated>
-    </task>
-    <task id="LOCAL-00099" summary="Querying DB hermano">
-      <created>1558642909738</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1558642909738</updated>
-    </task>
-    <task id="LOCAL-00100" summary="Querying DB hermano">
-      <created>1558643078693</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1558643078693</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Querying DB hermano">
-      <created>1558643144414</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1558643144414</updated>
-    </task>
-    <task id="LOCAL-00102" summary="Couple of DocStrings, bub.">
-      <created>1558648169492</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1558648169493</updated>
+      <workItem from="1559167908972" duration="1811000" />
     </task>
     <task id="LOCAL-00103" summary="bucket error">
       <created>1558664501674</created>
@@ -893,11 +867,46 @@
       <option name="project" value="LOCAL" />
       <updated>1559167969613</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="Let's get this Flask going already!">
+      <created>1559169180130</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1559169180131</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Let's get this Flask going already!">
+      <created>1559169216329</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1559169216329</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Let's get this Flask going already!">
+      <created>1559169224267</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1559169224267</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Let's get this Flask going already!">
+      <created>1559169264476</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1559169264476</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Let's get this Flask going already!">
+      <created>1559169633146</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1559169633147</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195255000" />
+    <option name="totallyTimeSpent" value="195918000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -909,10 +918,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="402" width="1280" height="709" extended-state="0" />
+    <frame x="1680" y="-306" width="2560" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29153094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1423445" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -936,12 +945,12 @@
       <window_info anchor="right" id="Database" order="4" weight="0.036682617" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23405103" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14274321" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281027" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.17335244" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6590258" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -957,7 +966,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.036682617" />
+      <window_info anchor="right" id="Database" order="4" weight="0.036682617" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1120,13 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/results.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="4096">
@@ -1150,13 +1152,6 @@
     <entry file="file://$PROJECT_DIR$/mlb.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -1174,20 +1169,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="1208">
+          <caret line="61" column="113" selection-start-line="61" selection-start-column="113" selection-end-line="61" selection-end-column="113" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1198,13 +1186,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1208">
-          <caret line="61" column="113" selection-start-line="61" selection-start-column="113" selection-end-line="61" selection-end-column="113" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="924">
+          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1219,6 +1204,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
