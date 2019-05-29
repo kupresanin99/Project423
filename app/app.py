@@ -3,7 +3,7 @@ from flask import render_template, request, redirect, url_for
 # import logging.config
 from flask import Flask
 # from src.add_songs import Tracks
-from Create_RDS_DB import Predictions
+from ..Create_RDS_DB import Predictions
 from flask_sqlalchemy import SQLAlchemy
 
 # Initialize the Flask application
