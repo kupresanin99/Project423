@@ -5,6 +5,7 @@ from flask import Flask
 # from src.add_songs import Tracks
 import Create_RDS_DB
 from flask_sqlalchemy import SQLAlchemy
+import config_flask as cf
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -35,7 +36,7 @@ def index():
         return render_template('error.html')
 
 
-app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])
+app.run(debug=cf.DEBUG, port=cf.PORT, host=cf.HOST)
 
 # @app.route('/add', methods=['POST'])
 # def add_entry():
