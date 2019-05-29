@@ -1,10 +1,9 @@
 import traceback
 from flask import render_template, request, redirect, url_for
-# import logging.config
+import logging.config
 from flask import Flask
 # from src.add_songs import Tracks
 import Create_RDS_DB
-#import config_flask as cf
 from flask_sqlalchemy import SQLAlchemy
 
 # Initialize the Flask application
@@ -15,9 +14,9 @@ app.config.from_pyfile('config_flask.py')
 
 # Define LOGGING_CONFIG in flask_config.py - path to config file for setting
 # up the logger (e.g. config/logging/local.conf)
-# logging.config.fileConfig(app.config["LOGGING_CONFIG"])
-# logger = logging.getLogger("penny-lane")
-# logger.debug('Test log')
+logging.config.fileConfig(app.config["LOGGING_CONFIG"])
+logger = logging.getLogger("penny-lane")
+logger.debug('Test log')
 
 # Initialize the database
 db = SQLAlchemy(app)
@@ -28,11 +27,11 @@ def index():
 
     try:
         predictions = db.session.query(Create_RDS_DB.Predictions).limit(app.config["MAX_ROWS_SHOW"]).all()
-        # logger.debug("Index page accessed")
+        logger.debug("Index page accessed")
         return render_template('index.html', predictions=predictions)
     except:
         traceback.print_exc()
-        # logger.warning("Not able to display tracks, error page returned")
+        logger.warning("Not able to display tracks, error page returned")
         return render_template('error.html')
 
 
