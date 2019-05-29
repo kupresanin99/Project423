@@ -10,14 +10,6 @@ import config_flask as cf
 # Initialize the Flask application
 app = Flask(__name__)
 
-print("host", cf.HOST)
-print('port', cf.PORT)
-print('db name', cf.DATABASE_NAME)
-
-
-
-
-
 # Configure flask app from flask_config.py
 app.config.from_pyfile('config_flask.py')
 
@@ -44,7 +36,7 @@ def index():
         return render_template('error.html')
 
 
-app.run(debug=cf.DEBUG, port=cf.PORT, host=cf.HOST)
+app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])
 
 # @app.route('/add', methods=['POST'])
 # def add_entry():
