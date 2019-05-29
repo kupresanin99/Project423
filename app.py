@@ -3,7 +3,7 @@ from flask import render_template, request, redirect, url_for
 import logging.config
 from flask import Flask
 # from src.add_songs import Tracks
-import Create_RDS_DB
+from Create_RDS_DB import Predictions
 from flask_sqlalchemy import SQLAlchemy
 
 # Initialize the Flask application
@@ -26,7 +26,7 @@ db = SQLAlchemy(app)
 def index():
 
     try:
-        predictions = db.session.query(Create_RDS_DB.Predictions).limit(app.config["MAX_ROWS_SHOW"]).all()
+        predictions = db.session.query(Predictions).limit(app.config["MAX_ROWS_SHOW"]).all()
         logger.debug("Index page accessed")
         return render_template('index.html', predictions=predictions)
     except:
