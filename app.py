@@ -37,20 +37,5 @@ def index():
 
 app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])
 
-# @app.route('/add', methods=['POST'])
-# def add_entry():
-#     """View that process a POST with new song input
-#     :return: redirect to index page
-#     """
-#
-#     try:
-#         track1 = Tracks(artist=request.form['artist'], album=request.form['album'], title=request.form['title'])
-#         db.session.add(track1)
-#         db.session.commit()
-#         logger.info("New song added: %s by %s", request.form['title'], request.form['artist'])
-#         return redirect(url_for('index'))
-#     except:
-#         logger.warning("Not able to display tracks, error page returned")
-#         return render_template('error.html')
 
 
