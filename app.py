@@ -10,6 +10,14 @@ import config_flask as cf
 # Initialize the Flask application
 app = Flask(__name__)
 
+print(cf.HOST)
+print(cf.PORT)
+print(cf.DATABASE_NAME)
+
+
+
+
+
 # Configure flask app from flask_config.py
 app.config.from_pyfile('config_flask.py')
 
