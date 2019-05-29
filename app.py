@@ -35,7 +35,13 @@ def index():
         return render_template('error.html')
 
 
+print(app.config["DEBUG"])
+print(app.config["PORT"])
+print(app.config["HOST"])
+
 app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])
+
+
 
 # @app.route('/add', methods=['POST'])
 # def add_entry():
