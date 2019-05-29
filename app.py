@@ -38,6 +38,7 @@ def index():
 #print(app.config["DEBUG"])
 #print(app.config["PORT"])
 #print(app.config["HOST"])
+#
 
 app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])
 
