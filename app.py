@@ -10,7 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # Configure flask app from flask_config.py
-app.config.from_pyfile('../flask_config.py')
+app.config.from_pyfile('flask_config.py')
 
 # Define LOGGING_CONFIG in flask_config.py - path to config file for setting
 # up the logger (e.g. config/logging/local.conf)

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/basic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,10 +65,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/app.py">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="159">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -74,7 +77,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/basic.css">
+        <entry file="file://$PROJECT_DIR$/static/basic.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
@@ -83,7 +86,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/error.html">
+        <entry file="file://$PROJECT_DIR$/templates/error.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
@@ -92,7 +95,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
@@ -201,11 +204,6 @@
               <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project423" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Project423" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project423" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -228,8 +226,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/static" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app/static" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/notebooks/datapull/daily_raw" />
@@ -512,21 +510,7 @@
       <workItem from="1558731590787" duration="316000" />
       <workItem from="1558987990599" duration="1351000" />
       <workItem from="1558990199724" duration="399000" />
-      <workItem from="1559086947960" duration="1792000" />
-    </task>
-    <task id="LOCAL-00085" summary="RDS Fixed?">
-      <created>1558492107739</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1558492107740</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Try to remove S3 file structure.">
-      <created>1558494034328</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1558494034328</updated>
+      <workItem from="1559086947960" duration="2066000" />
     </task>
     <task id="LOCAL-00087" summary="Reset RF to 49 models.">
       <created>1558495067771</created>
@@ -857,11 +841,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559088711521</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Let's get this Flask going already!">
+      <created>1559088825485</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1559088825485</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Let's get this Flask going already!">
+      <created>1559088985630</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1559088985630</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190103000" />
+    <option name="totallyTimeSpent" value="190377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,7 +872,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-306" width="2560" height="1417" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14035088" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1127,27 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/basic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1253">
@@ -1172,10 +1148,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.py">
+    <entry file="file://$PROJECT_DIR$/static/basic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="154">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
