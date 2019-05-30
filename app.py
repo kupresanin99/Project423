@@ -27,11 +27,11 @@ def index():
 
     try:
         predictions = db.session.query(Predictions).filter(Predictions.day == 28).limit(app.config["MAX_ROWS_SHOW"]).all()
-        logger.debug("Index page accessed")
+        logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions)
     except:
         traceback.print_exc()
-        logger.warning("Hey Joe, it's Joe!")
+        logger.warning("Error page accessed.")
         return render_template('error.html')
 
 
