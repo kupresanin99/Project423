@@ -13,7 +13,7 @@
     <hr/>
 
         <div>
-
+        <form method="POST" action="{{ url_for('index') }}">
           <select name="dates" class="selectpicker form-control">
 
             <option>
@@ -25,6 +25,7 @@
             {% endfor %}
 
          </select>
+        </form>
     </div>
 
     <table>
