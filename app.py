@@ -26,7 +26,7 @@ db = SQLAlchemy(app)
 def index():
 
     try:
-        dates_avail = db.session.query(Predictions.date).distinct().all()
+        dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
         predictions = db.session.query(Predictions).filter(Predictions.day == 30).filter(Predictions.month == 5).all()
         logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
