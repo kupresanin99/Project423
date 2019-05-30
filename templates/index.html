@@ -40,5 +40,21 @@
             <td>{{  dates.date  }}</td>
         {% endfor %}
     </div>
+
+    <div>
+        <form method="POST" action="{{ url_for('result') }}">
+
+          <select name="pl" class="selectpicker form-control">
+
+            <option>
+            DATE
+            </option>
+
+           {% for dates in dates_avail %}
+              <option value= "{{dates.DATE}}" >{{dates.DATE}} </option>
+            {% endfor %}
+
+         </select>
+    </div>
 </body>
 </html>
