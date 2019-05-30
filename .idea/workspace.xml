@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Create_RDS_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/Create_RDS_DB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_menu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +33,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4274978">
+    <splitter split-orientation="horizontal" split-proportion="0.6504986">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file pinned="false" current-in-tab="false">
@@ -55,7 +57,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/reports.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-354">
+                <state relative-caret-position="1643">
                   <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
                 </state>
               </provider>
@@ -64,10 +66,22 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1184">
-                  <caret line="61" column="113" selection-start-line="61" selection-start-column="113" selection-end-line="61" selection-end-column="113" />
+                <state relative-caret-position="400">
+                  <caret line="85" column="119" selection-start-line="85" selection-start-column="119" selection-end-line="85" selection-end-column="119" />
                   <folding>
                     <element signature="e#0#59#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main_menu.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-17">
+                  <caret line="147" column="49" selection-start-line="147" selection-start-column="49" selection-end-line="147" selection-end-column="49" />
+                  <folding>
+                    <element signature="e#0#56#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -89,8 +103,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="283">
-                  <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+                <state relative-caret-position="418">
+                  <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
                   <folding>
                     <element signature="e#0#16#0" expanded="true" />
                   </folding>
@@ -175,10 +189,8 @@
         <option value="$PROJECT_DIR$/src/api_data_grab.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/Create_RDS_DB.py" />
         <option value="$PROJECT_DIR$/src/reports.py" />
         <option value="$PROJECT_DIR$/src/daily_prediction.py" />
-        <option value="$PROJECT_DIR$/main_menu.py" />
         <option value="$PROJECT_DIR$/config_model.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/app/basic.css" />
@@ -190,14 +202,16 @@
         <option value="$PROJECT_DIR$/templates/error.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/main_menu.py" />
+        <option value="$PROJECT_DIR$/Create_RDS_DB.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="44" />
-    <option name="y" value="47" />
-    <option name="width" value="1352" />
-    <option name="height" value="761" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1680" />
+    <option name="y" value="-306" />
+    <option name="width" value="2560" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -207,6 +221,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,7 +269,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -560,28 +574,10 @@
       <workItem from="1559132300600" duration="258000" />
       <workItem from="1559167908972" duration="4623000" />
       <workItem from="1559217141629" duration="1956000" />
-      <workItem from="1559229300325" duration="1046000" />
-    </task>
-    <task id="LOCAL-00124" summary="Better output after entering predictions.">
-      <created>1558715831134</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1558715831134</updated>
-    </task>
-    <task id="LOCAL-00125" summary="Better output after entering predictions.">
-      <created>1558715995863</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1558715995863</updated>
-    </task>
-    <task id="LOCAL-00126" summary="Better output after entering predictions.">
-      <created>1558716253752</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1558716253752</updated>
+      <workItem from="1559229300325" duration="1918000" />
+      <workItem from="1559232957509" duration="531000" />
+      <workItem from="1559238066391" duration="526000" />
+      <workItem from="1559255573615" duration="412000" />
     </task>
     <task id="LOCAL-00127" summary="Better output after entering predictions.">
       <created>1558716627040</created>
@@ -905,11 +901,32 @@
       <option name="project" value="LOCAL" />
       <updated>1559230720506</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Webpage up, now for user interface.">
+      <created>1559231063589</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1559231063589</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Webpage up, now for user interface.">
+      <created>1559231242139</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1559231242139</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Webpage up, now for user interface.">
+      <created>1559231290114</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1559231290114</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201732000" />
+    <option name="totallyTimeSpent" value="204073000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -921,10 +938,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="6" />
+    <frame x="1680" y="-306" width="2560" height="1020" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14121038" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120414674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1094,16 +1111,6 @@
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="156" column="39" selection-start-line="156" selection-start-column="39" selection-end-line="156" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/basic.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1200,10 +1207,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reports.py">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-354">
-          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        <state relative-caret-position="418">
+          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,22 +1224,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
+    <entry file="file://$PROJECT_DIR$/src/reports.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1184">
-          <caret line="61" column="113" selection-start-line="61" selection-start-column="113" selection-end-line="61" selection-end-column="113" />
+        <state relative-caret-position="1643">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="147" column="49" selection-start-line="147" selection-start-column="49" selection-end-line="147" selection-end-column="49" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/Create_RDS_DB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+        <state relative-caret-position="400">
+          <caret line="85" column="119" selection-start-line="85" selection-start-column="119" selection-end-line="85" selection-end-column="119" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>

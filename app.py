@@ -26,7 +26,7 @@ db = SQLAlchemy(app)
 def index():
 
     try:
-        predictions = db.session.query(Reports).filter(Reports.day == 29).filter(Reports.month == 5).limit(app.config["MAX_ROWS_SHOW"]).all()
+        predictions = db.session.query(Reports).filter(Reports.day == 30).filter(Reports.month == 5).limit(app.config["MAX_ROWS_SHOW"]).all()
         logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions)
     except:

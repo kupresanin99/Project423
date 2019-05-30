@@ -27,6 +27,8 @@ class Predictions(Base):
     predicted_run_rank = Column(Float)
     predicted_runs = Column(Float)
     bet = Column(String(5))
+    year = Column(Integer)
+    date = Column(Date)
 
     def __repr__(self):
         return f"Predictions('{self.away}', '{self.home}', '{self.predicted_runs}', '{self.bet}', '{self.month}', '{self.day}')"
@@ -81,7 +83,7 @@ def create_RDS(conn_type, user, password, host, port, DATABASE_NAME, s3_results_
 
         predictions_df = pd.read_csv('predictions.csv', skiprows=1)
         predictions_df.columns = ['game', 'nonsense', 'away', 'betting_opportunity', 'bookie', 'day', 'home', 'month',
-                                  'predicted_bookie_rank', 'predicted_run_rank', 'predicted_runs', 'bet']
+                                  'predicted_bookie_rank', 'predicted_run_rank', 'predicted_runs', 'bet', 'year', 'date']
         s.bulk_insert_mappings(Predictions, predictions_df.to_dict(orient="records"))
         s.commit()
 

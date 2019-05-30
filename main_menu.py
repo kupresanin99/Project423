@@ -149,6 +149,8 @@ while run_main_menu:
                                     path = 'data/daily_predictions'
                                     all_files = glob.glob(path + "/*.csv")
                                     predictions = pd.concat((pd.read_csv(f) for f in all_files), sort=True)
+                                    predictions['year'] = datetime.now().year
+                                    predictions['date'] = pd.to_datetime(predictions[['year', 'month', 'day']])
                                     predictions.to_csv('data/predictions.csv', encoding='utf-8')
                                     s3.meta.client.upload_file('data/predictions.csv', config.my_bucket, 'predictions.csv')
                                     exec(open("Create_RDS_DB.py").read())
