@@ -11,6 +11,22 @@
     </h3>
 
     <hr/>
+
+        <div>
+
+          <select name="dates" class="selectpicker form-control">
+
+            <option>
+            DATE
+            </option>
+
+           {% for dates in dates_avail %}
+              <option value="{{dates.date}}">{{dates.date}} </option>
+            {% endfor %}
+
+         </select>
+    </div>
+
     <table>
          <thead>
             <tr>
@@ -35,25 +51,7 @@
             {% endfor %}
          </tbody>
       </table>
-    <div>
-        {% for dates in dates_avail %}
-            <td>{{  dates.date  }}</td>
-        {% endfor %}
-    </div>
 
-    <div>
 
-          <select name="dates" class="selectpicker form-control">
-
-            <option>
-            DATE
-            </option>
-
-           {% for dates in dates_avail %}
-              <option value="{{dates.date}}">{{dates.date}} </option>
-            {% endfor %}
-
-         </select>
-    </div>
 </body>
 </html>
