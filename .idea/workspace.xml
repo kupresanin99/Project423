@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-    </list>
+    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +35,7 @@
             <entry file="file://$PROJECT_DIR$/config_flask.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="374">
-                  <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+                  <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -97,8 +95,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="352">
-                  <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+                <state relative-caret-position="380">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
                   <folding>
                     <element signature="e#0#16#0" expanded="true" />
                   </folding>
@@ -192,11 +190,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1680" />
-    <option name="y" value="-306" />
-    <option name="width" value="2560" />
-    <option name="height" value="1041" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="44" />
+    <option name="y" value="47" />
+    <option name="width" value="1352" />
+    <option name="height" value="761" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -558,21 +556,7 @@
       <workItem from="1559086947960" duration="5538000" />
       <workItem from="1559132300600" duration="258000" />
       <workItem from="1559167908972" duration="4623000" />
-      <workItem from="1559217141629" duration="1730000" />
-    </task>
-    <task id="LOCAL-00120" summary="Created config_model.py only.">
-      <created>1558714302589</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1558714302589</updated>
-    </task>
-    <task id="LOCAL-00121" summary="Better output after entering predictions.">
-      <created>1558715234813</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1558715234813</updated>
+      <workItem from="1559217141629" duration="1956000" />
     </task>
     <task id="LOCAL-00122" summary="Better output after entering predictions.">
       <created>1558715288168</created>
@@ -903,11 +887,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559218283237</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Webpage up, now for user interface.">
+      <created>1559219498340</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1559219498340</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Webpage up, now for user interface.">
+      <created>1559219601452</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1559219601452</updated>
+    </task>
+    <option name="localTasksCounter" value="171" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200460000" />
+    <option name="totallyTimeSpent" value="200686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1215,20 +1213,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config_flask.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="380">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config_flask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
