@@ -36,9 +36,6 @@ def index():
         return render_template('error.html')
 
 
-
-
-
 app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])
 
 
