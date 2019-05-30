@@ -14,17 +14,24 @@
     <table>
          <thead>
             <tr>
+                <th>Month</th>
+               <th>Day</th>
                <th>Home</th>
                <th>Away</th>
+               <th>Bookie Line</th>
                <th>Predicted Runs</th>
+
             </tr>
          </thead>
 
          <tbody>
             {% for prediction in predictions %}
                <tr>
+                   <td>{{ prediction.month }}</td>
+                   <td>{{ prediction.day }}</td>
                    <td>{{ prediction.home }}</td>
                    <td>{{ prediction.away }}</td>
+                   <td>{{ prediction.bookie }}</td>
                    <td>{{ prediction.predicted_runs }}</td>
                </tr>
             {% endfor %}
