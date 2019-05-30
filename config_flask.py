@@ -7,7 +7,7 @@ APP_NAME = "baseball"
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 HOST = "0.0.0.0"
 SQLALCHEMY_ECHO = False  # If true, SQL for queries made will be printed
-MAX_ROWS_SHOW = 100
+#MAX_ROWS_SHOW = 100
 
 conn_type = "mysql+pymysql"
 user = os.environ.get("MYSQL_USER")

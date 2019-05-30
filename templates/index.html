@@ -14,8 +14,7 @@
     <table>
          <thead>
             <tr>
-                <th>Month</th>
-               <th>Day</th>
+                <th>Date</th>
                <th>Home</th>
                <th>Away</th>
                <th>Bookie Line</th>
@@ -27,8 +26,7 @@
          <tbody>
             {% for prediction in predictions %}
                <tr>
-                   <td>{{ prediction.month }}</td>
-                   <td>{{ prediction.day }}</td>
+                   <td>{{ prediction.date }}</td>
                    <td>{{ prediction.home }}</td>
                    <td>{{ prediction.away }}</td>
                    <td>{{ prediction.bookie }}</td>
