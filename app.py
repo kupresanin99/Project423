@@ -21,8 +21,8 @@ def index():
 
     try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
-
-        predictions = db.session.query(Predictions).filter(Predictions.date == today).all()
+        date1 = request.form['dates2']
+        predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
         logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
     except:
@@ -31,7 +31,7 @@ def index():
         return render_template('error.html')
 
 
-@app.route('/results', methods=['GET'])
+@app.route('/results', methods=['POST'])
 def get_date():
 
     try:
