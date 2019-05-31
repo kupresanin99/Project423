@@ -14,7 +14,7 @@ logger.debug('Test log')
 db = SQLAlchemy(app)
 today = datetime.today() - timedelta(days=1)
 today = today.strftime('%Y-%m-%d')
-date1 = today
+
 
 @app.route('/')
 def index():
@@ -22,17 +22,16 @@ def index():
     try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
 
-        predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
+        predictions = db.session.query(Predictions).filter(Predictions.date == today).all()
         logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
-
     except:
         traceback.print_exc()
         logger.warning("Error page accessed.")
         return render_template('error.html')
 
 
-@app.route('/results', methods=['POST'])
+@app.route('/results', methods=['GET'])
 def get_date():
 
     try:
@@ -43,7 +42,6 @@ def get_date():
     except:
         return render_template('error.html')
 
-# Come on
 
 app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])
 
