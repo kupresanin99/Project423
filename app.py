@@ -2,7 +2,6 @@ import traceback
 from flask import render_template, request, redirect, url_for
 import logging.config
 from flask import Flask
-# from src.add_songs import Tracks
 from Create_RDS_DB import Predictions, Reports
 from flask_sqlalchemy import SQLAlchemy
 
@@ -30,6 +29,7 @@ def index():
         predictions = db.session.query(Predictions).filter(Predictions.date == "2019-05-29").all()
         logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
+
     except:
         traceback.print_exc()
         logger.warning("Error page accessed.")
