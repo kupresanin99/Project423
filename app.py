@@ -26,7 +26,7 @@ def index():
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
     except:
         traceback.print_exc()
-        logger.warning("Error page accessed bub!.")
+        logger.warning("Error page accessed.")
         return render_template('error.html')
 
 
@@ -41,6 +41,7 @@ def get_date():
         predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
         return redirect('index.html', predictions=predictions, dates_avail=dates_avail)
     except:
+        logger.warning("Error page accessed a;sdlkfja;dlsfaldsfj!.")
         return render_template('error.html')
 
 
