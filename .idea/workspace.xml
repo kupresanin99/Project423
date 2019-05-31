@@ -43,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+            <state relative-caret-position="347">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -514,21 +514,7 @@
       <workItem from="1559255573615" duration="6167000" />
       <workItem from="1559303270044" duration="1394000" />
       <workItem from="1559310784990" duration="3731000" />
-      <workItem from="1559316125171" duration="407000" />
-    </task>
-    <task id="LOCAL-00181" summary="Getting year, date into predictions df.">
-      <created>1559257814990</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1559257814990</updated>
-    </task>
-    <task id="LOCAL-00182" summary="Getting year, date into predictions df.">
-      <created>1559258111576</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1559258111576</updated>
+      <workItem from="1559316125171" duration="978000" />
     </task>
     <task id="LOCAL-00183" summary="Getting year, date into predictions df.">
       <created>1559258165564</created>
@@ -859,11 +845,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559314513014</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="Get that menu cooking, bub!">
+      <created>1559316997644</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1559316997645</updated>
+    </task>
+    <task id="LOCAL-00231" summary="Get that menu cooking, bub!">
+      <created>1559317120968</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1559317120968</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215360000" />
+    <option name="totallyTimeSpent" value="215931000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -878,7 +878,7 @@
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20893371" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15417868" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1174,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        <state relative-caret-position="347">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
