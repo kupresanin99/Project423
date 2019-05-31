@@ -21,7 +21,7 @@ def index():
 
     try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
-        predictions = db.session.query(Predictions).filter(Predictions.date == "2019-05-30").all()
+        predictions = db.session.query(Predictions).filter(Predictions.date == today).all()
         logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
 
