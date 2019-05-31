@@ -42,6 +42,7 @@ def get_date():
     except:
         return render_template('error.html')
 
+# Come on
 
 app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])
 
