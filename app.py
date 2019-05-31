@@ -14,7 +14,7 @@ logger.debug('Test log')
 db = SQLAlchemy(app)
 today = datetime.today() - timedelta(days=1)
 today = today.strftime('%Y-%m-%d')
-
+date1 = today
 
 @app.route('/')
 def index():
@@ -22,7 +22,7 @@ def index():
     try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
 
-        predictions = db.session.query(Predictions).filter(Predictions.date == today).all()
+        predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
         logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
 
