@@ -36,9 +36,10 @@ def index():
 def get_date():
 
     try:
+        dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
         date1 = request.form['dates2']
-        predictions = db.session.query(Predictions).filter(Predictions.date == "2019-04-22").all()
-        return render_template(url_for('index'), predictions=predictions)
+        predictions = db.session.query(Predictions).filter(Predictions.date == str(date1)).all()
+        return render_template(url_for('index'), predictions=predictions, dates_avail=dates_avail)
     except:
         return render_template('error.html')
 
