@@ -36,6 +36,7 @@ def get_date():
     try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
         date1 = request.form['dates2']
+        logger.warning(date1)
         predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
         return redirect('index.html', predictions=predictions, dates_avail=dates_avail)
     except:
