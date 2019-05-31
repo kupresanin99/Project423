@@ -33,14 +33,14 @@ def index():
 @app.route('/results', methods=['POST'])
 def get_date():
 
-    print(request.form.get('dates2'))
-    try:
+        print(request.form.get('dates2'))
+    #try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
         date1 = request.form.get('dates2')
         logger.debug(date1)
         predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
         return redirect('index.html', predictions=predictions, dates_avail=dates_avail)
-    except:
+    #except:
         logger.warning("Error page accessed a;sdlkfja;dlsfaldsfj!.")
         return render_template('error.html')
 
