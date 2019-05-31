@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-    </list>
+    <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -494,14 +491,7 @@
       <workItem from="1559255573615" duration="6167000" />
       <workItem from="1559303270044" duration="1394000" />
       <workItem from="1559310784990" duration="3731000" />
-      <workItem from="1559316125171" duration="4817000" />
-    </task>
-    <task id="LOCAL-00196" summary="Getting year, date into predictions df.">
-      <created>1559260330164</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1559260330164</updated>
+      <workItem from="1559316125171" duration="4830000" />
     </task>
     <task id="LOCAL-00197" summary="Getting year, date into predictions df.">
       <created>1559260370414</created>
@@ -839,11 +829,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559321183435</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary="Get that menu cooking, bub!">
+      <created>1559321641740</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1559321641740</updated>
+    </task>
+    <option name="localTasksCounter" value="246" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219770000" />
+    <option name="totallyTimeSpent" value="219783000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -856,6 +853,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2240634" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

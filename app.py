@@ -12,7 +12,7 @@ logging.config.fileConfig(app.config["LOGGING_CONFIG"])
 logger = logging.getLogger("baseball")
 logger.debug('Test log')
 db = SQLAlchemy(app)
-today = datetime.today() - timedelta(days=1)
+today = datetime.today()
 today = today.strftime('%Y-%m-%d')
 
 
