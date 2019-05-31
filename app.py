@@ -36,8 +36,8 @@ def get_date():
     try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
         date1 = request.form['dates2']
-        predictions = db.session.query(Predictions).filter(Predictions.date == str(date1)).all()
-        return render_template(url_for('results'), predictions=predictions, dates_avail=dates_avail)
+        predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
+        return redirect('index.html', predictions=predictions, dates_avail=dates_avail)
     except:
         return render_template('error.html')
 

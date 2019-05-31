@@ -6,8 +6,7 @@ PORT = 3000
 APP_NAME = "baseball"
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 HOST = "0.0.0.0"
-SQLALCHEMY_ECHO = False  # If true, SQL for queries made will be printed
-#MAX_ROWS_SHOW = 100
+SQLALCHEMY_ECHO = False
 
 conn_type = "mysql+pymysql"
 user = os.environ.get("MYSQL_USER")
