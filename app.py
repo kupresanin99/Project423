@@ -26,7 +26,7 @@ def index():
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
     except:
         traceback.print_exc()
-        logger.warning("Error page accessed.")
+        logger.warning("Error page accessed bub!.")
         return render_template('error.html')
 
 
@@ -38,7 +38,7 @@ def get_date():
         dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
         date1 = request.form.get('dates2')
         logger.debug(date1)
-        predictions = db.session.query(Predictions).filter(Predictions.date == str(date1)).all()
+        predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
         return redirect('index.html', predictions=predictions, dates_avail=dates_avail)
     except:
         return render_template('error.html')
