@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+            <state relative-caret-position="282">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -515,28 +514,7 @@
       <workItem from="1559255573615" duration="6167000" />
       <workItem from="1559303270044" duration="1394000" />
       <workItem from="1559310784990" duration="3731000" />
-      <workItem from="1559316125171" duration="2880000" />
-    </task>
-    <task id="LOCAL-00188" summary="Getting year, date into predictions df.">
-      <created>1559258861090</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1559258861090</updated>
-    </task>
-    <task id="LOCAL-00189" summary="Getting year, date into predictions df.">
-      <created>1559259017532</created>
-      <option name="number" value="00189" />
-      <option name="presentableId" value="LOCAL-00189" />
-      <option name="project" value="LOCAL" />
-      <updated>1559259017532</updated>
-    </task>
-    <task id="LOCAL-00190" summary="Getting year, date into predictions df.">
-      <created>1559259227523</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1559259227524</updated>
+      <workItem from="1559316125171" duration="3122000" />
     </task>
     <task id="LOCAL-00191" summary="Getting year, date into predictions df.">
       <created>1559259459175</created>
@@ -860,11 +838,32 @@
       <option name="project" value="LOCAL" />
       <updated>1559319271435</updated>
     </task>
-    <option name="localTasksCounter" value="237" />
+    <task id="LOCAL-00237" summary="Get that menu cooking, bub!">
+      <created>1559319478388</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1559319478388</updated>
+    </task>
+    <task id="LOCAL-00238" summary="Get that menu cooking, bub!">
+      <created>1559319566768</created>
+      <option name="number" value="00238" />
+      <option name="presentableId" value="LOCAL-00238" />
+      <option name="project" value="LOCAL" />
+      <updated>1559319566768</updated>
+    </task>
+    <task id="LOCAL-00239" summary="Get that menu cooking, bub!">
+      <created>1559319717130</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1559319717130</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217833000" />
+    <option name="totallyTimeSpent" value="218075000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1175,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        <state relative-caret-position="282">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>

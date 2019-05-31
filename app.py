@@ -39,7 +39,7 @@ def get_date():
         date1 = request.form.get('dates2')
         logger.debug(date1)
         predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
-        return redirect('index.html', predictions=predictions, dates_avail=dates_avail)
+        return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
     #except:
         logger.warning("Error page accessed a;sdlkfja;dlsfaldsfj!.")
         return render_template('error.html')
