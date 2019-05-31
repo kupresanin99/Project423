@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- CSS goes in the document HEAD or added to your external stylesheet -->
 <style type="text/css">
 table.gridtable {
 	font-family: verdana,arial,sans-serif;
@@ -27,13 +26,11 @@ table.gridtable td {
 }
 </style>
 </head>
+
 <body>
     <h3>
          <a>Baseball Predictions</a>
     </h3>
-
-    <hr/>
-
         <div>
         <form method="POST" action="{{ url_for('index') }}">
           <select name="dates2" class="selectpicker form-control">

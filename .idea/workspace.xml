@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/basic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,8 +97,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-206">
-                  <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+                <state relative-caret-position="-165">
+                  <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -108,7 +107,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="307">
@@ -116,15 +115,6 @@
                   <folding>
                     <element signature="e#0#16#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/static/basic.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="810">
-                  <caret line="461" column="1" selection-start-line="461" selection-start-column="1" selection-end-line="461" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -210,9 +200,9 @@
         <option value="$PROJECT_DIR$/main_menu.py" />
         <option value="$PROJECT_DIR$/Create_RDS_DB.py" />
         <option value="$PROJECT_DIR$/config_flask.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/static/basic.css" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -586,28 +576,7 @@
       <workItem from="1559229300325" duration="1918000" />
       <workItem from="1559232957509" duration="531000" />
       <workItem from="1559238066391" duration="526000" />
-      <workItem from="1559255573615" duration="5285000" />
-    </task>
-    <task id="LOCAL-00150" summary="Let's get this Flask going already!">
-      <created>1559169264476</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1559169264476</updated>
-    </task>
-    <task id="LOCAL-00151" summary="Let's get this Flask going already!">
-      <created>1559169633146</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1559169633147</updated>
-    </task>
-    <task id="LOCAL-00152" summary="Let's get this Flask going already!">
-      <created>1559169993608</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1559169993608</updated>
+      <workItem from="1559255573615" duration="5677000" />
     </task>
     <task id="LOCAL-00153" summary="Let's get this Flask going already!">
       <created>1559170062108</created>
@@ -931,11 +900,32 @@
       <option name="project" value="LOCAL" />
       <updated>1559260725654</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="Getting year, date into predictions df.">
+      <created>1559261185731</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1559261185731</updated>
+    </task>
+    <task id="LOCAL-00200" summary="Getting year, date into predictions df.">
+      <created>1559261376150</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1559261376150</updated>
+    </task>
+    <task id="LOCAL-00201" summary="Getting year, date into predictions df.">
+      <created>1559261489033</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1559261489033</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208946000" />
+    <option name="totallyTimeSpent" value="209338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1236,10 +1226,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/static/basic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-206">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="176">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -1253,10 +1243,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/basic.css">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="461" column="1" selection-start-line="461" selection-start-column="1" selection-end-line="461" selection-end-column="1" />
+        <state relative-caret-position="-165">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
         </state>
       </provider>
     </entry>
