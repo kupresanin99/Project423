@@ -21,8 +21,6 @@ window.onload=function(){
 	altRows('alternatecolor');
 }
 </script>
-
-<!-- CSS goes in the document HEAD or added to your external stylesheet -->
 <style type="text/css">
 table.altrowstable {
 	font-family: verdana,arial,sans-serif;
@@ -73,7 +71,6 @@ table.altrowstable td {
         </form>
     </div>
     <div><br><br</div>
-
         <table class="altrowstable" id="alternatecolor">
          <thead>
             <tr>
@@ -82,10 +79,8 @@ table.altrowstable td {
                <th>Away</th>
                <th>Bookie Line</th>
                <th>Predicted Runs</th>
-
             </tr>
          </thead>
-
          <tbody>
             {% for prediction in predictions %}
                <tr>
@@ -98,11 +93,5 @@ table.altrowstable td {
             {% endfor %}
          </tbody>
       </table>
-
-
-</body>
-
-
-
-
+    </body>
 </html>
