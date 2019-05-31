@@ -37,6 +37,7 @@ def get_date():
 
     try:
         date1 = request.form['dates2']
+        print(date1)
         predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
         return render_template(url_for('index'), predictions=predictions)
     except:
