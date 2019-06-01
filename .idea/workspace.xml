@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="811">
-              <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+            <state relative-caret-position="720">
+              <caret line="66" column="69" lean-forward="true" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -141,8 +142,8 @@
         <option value="$PROJECT_DIR$/Create_RDS_DB.py" />
         <option value="$PROJECT_DIR$/static/basic.css" />
         <option value="$PROJECT_DIR$/config_flask.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -497,21 +498,7 @@
       <workItem from="1559330658244" duration="137000" />
       <workItem from="1559331466091" duration="348000" />
       <workItem from="1559333487294" duration="658000" />
-      <workItem from="1559388838412" duration="235000" />
-    </task>
-    <task id="LOCAL-00200" summary="Getting year, date into predictions df.">
-      <created>1559261376150</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1559261376150</updated>
-    </task>
-    <task id="LOCAL-00201" summary="Getting year, date into predictions df.">
-      <created>1559261489033</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1559261489033</updated>
+      <workItem from="1559388838412" duration="756000" />
     </task>
     <task id="LOCAL-00202" summary="Getting year, date into predictions df.">
       <created>1559261610691</created>
@@ -842,11 +829,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559335417130</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="Bet with your head, not over it.">
+      <created>1559389282885</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1559389282886</updated>
+    </task>
+    <task id="LOCAL-00250" summary="Bet with your head, not over it.">
+      <created>1559389410195</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1559389410195</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221161000" />
+    <option name="totallyTimeSpent" value="221682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -916,7 +917,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Try to remove S3 file structure." />
     <MESSAGE value="Reset RF to 49 models." />
     <MESSAGE value="Added S3 bucket grab function from Max." />
     <MESSAGE value="Fixed reports.csv bug" />
@@ -941,7 +941,8 @@
     <MESSAGE value="Getting year, date into predictions df." />
     <MESSAGE value="Get that menu cooking, bub!" />
     <MESSAGE value="The app, it is a'working." />
-    <option name="LAST_COMMIT_MESSAGE" value="The app, it is a'working." />
+    <MESSAGE value="Bet with your head, not over it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bet with your head, not over it." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Baseball$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1557232646418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
@@ -1160,8 +1161,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+        <state relative-caret-position="720">
+          <caret line="66" column="69" lean-forward="true" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
         </state>
       </provider>
     </entry>
