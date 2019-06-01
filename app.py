@@ -20,7 +20,7 @@ today = today.strftime('%Y-%m-%d')
 def index():
 
     try:
-        dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
+        dates_avail = db.session.query(Predictions.date).distinct().order_by("date desc").all()
         predictions = db.session.query(Predictions).filter(Predictions.date == today).all()
         logger.debug("Index page accessed.")
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
