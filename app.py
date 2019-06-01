@@ -35,7 +35,7 @@ def index():
 def get_date():
 
     try:
-        dates_avail = db.session.query(Predictions.date).distinct().order_by("date").all()
+        dates_avail = db.session.query(Predictions.date).distinct().order_by(desc("date")).all()
         date1 = request.form.get('dates2')
         predictions = db.session.query(Predictions).filter(Predictions.date == date1).all()
         return render_template('index.html', predictions=predictions, dates_avail=dates_avail)
