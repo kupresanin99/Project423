@@ -130,7 +130,8 @@ while run_main_menu:
                                     pass
                                 else:
                                     s3 = boto3.resource("s3")
-                                    s3.meta.client.download_file(config.my_bucket, local_data.format(month, day), local_data.format(month, day))
+                                    s3.meta.client.download_file(config.my_bucket, local_data.format(month, day),
+                                                                 local_data.format(month, day))
                                     data = pd.read_csv(local_data.format(month, day), encoding='utf-8')
                                     if os.path.exists(local_data.format(month, day)):
                                         os.remove(local_data.format(month, day))

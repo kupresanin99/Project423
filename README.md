@@ -141,7 +141,9 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 		b.  export AWS_SECRET_ACCESS_KEY=
 	
 	2.  From the terminal, edit the config.py and update the following:
-		a. `DEST_BUCKET`  (Your S3 bucket name)
+		a. `my_bucket` (Your S3 bucket name)
+		b. `DEST_BUCKET`  (Your S3 bucket name, sorry, go again)
+		
 	
 	3.  Run `python s3.py` in the terminal from the project directory  
 	
