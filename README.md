@@ -122,6 +122,7 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 
 	1.  Run `python app.py` to create the public-facing webpage.
 	2.  Visit the IPv4 Public IP found on the EC2 console. Add ":3000" to your IP address to view the page.
+	3.  You should see gambling predictions through June 10th on this page.  
 	
 **6. Train the Model for Today's Games**
 
@@ -132,7 +133,7 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 	5.  Select option 1 for admin mode.
 	6.  Select option 1 for API pull.
 	7.  Select option 2 to run today's model (about 10 minutes on 2XL).
-	8.  Upon training completion, you must enter the gambling lines manually - make numbers up here.
-	9.  Once gambling lines are input, the website will be updated automatically with today's predictions.  
-	10.  Joe will update the page through 6/10. You can now see a new day of predictions hit the webpage.  
+	8.  Upon training completion, you must enter the gambling lines manually - make up numbers here.
+	9.  Once gambling lines are input, the website will be updated with today's predictions.  
+	10.  I will update the page through 6/10. You can now see a new day of predictions hit the webpage.  
 	
