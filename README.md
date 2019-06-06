@@ -77,18 +77,12 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 **1. Clone the Master branch of the GitHub repo.  In terminal, cd into project directory.**
 
 **2. Create a conda environment, my_env = name of your new environment**
-
 	
 	conda create --name my_env python=3.7
 	conda activate my_env
 	pip install -r requirements.txt
 
-
 **3.  Move three data files from Joe's S3 bucket to your S3 bucket**
-
-File 1 - All baseball data from 2018 season  
-File 2 - All predictions from 2019 season: Beginning of 2019 season until until day this project is cloned  
-File 3 - All gambling results from 2019 season: Beginning of 2019 season until day this project is cloned  
 
 	1.  From the terminal, set your AWS environment variable:
 		a.  export AWS_ACCESS_KEY_ID=
@@ -98,7 +92,6 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 		a. `my_bucket` (Your S3 bucket name)
 		b. `DEST_BUCKET`  (Your S3 bucket name, sorry, go again)
 		
-	
 	3.  Run `python s3.py` in the terminal from the project directory  
 	
 	4.  Navigate to S3 to see if three files have been transferred to your bucket:
@@ -106,7 +99,6 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 		b.  "predictions.csv"
 		c.  "results.csv"
 		
-
 **4. Initialize the database in RDS**
 
 	1.  Set your MYSQL environment variables by running the following commands, all must be in quotes
