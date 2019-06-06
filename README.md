@@ -68,53 +68,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 
 ## Backlog
 
-**Themes**:  
-  
-1.  A working app that meets the MSiA 423 criteria.  
-2.  Enough modeling predictive power to win 55 percent of bets placed.  
-
-**Epics**:  
-  
-1.1.  Source data from baseball statistics API.  (Next two weeks)  
-1.2.  Format the data from json into pandas dataframe.  (Next two weeks)  
-1.2.  Build predictive models based on historical 2018 data.  (Next two weeks)  
-1.3.  Successfully migrate data / model from API to cloud database.  
-1.4.  Implement testing / logging / QA per best practices.  
-1.5.  Automate continuous daily data collection (2019 data for today's predictions).  
-1.6.  Develop web app for user to obtain daily predictions.  
-
-2.1.  Upon functionality, begin to track if predictions can beat the bookie.  
-2.2.  Additional variables can be entered into modeling, but keeping it simple to start:  
-
-Available variables (per day):  
-Venue variables (location, stadium, surface, time, etc...)  
-Weather variables (temperature, wind, cloud coverage, etc...)  
-Matchup variables (starting pitcher record / runs given up / history and team record)  
-
-Additional variables will require table joins and additional API pulls, which can be implemented in the future.  
-
-**Stories**:  
-
-1.1.a.  Learn how to pull API data (website already selected and required variables available) (1/2 day).  
-1.1.b.  Learn where to put API data (1/2 day).  
-1.1.c.  Revisit manipulating / cleaning / transforming data in Python (1 day).  
-
-1.2.a.  Develop models using Scikit-Learn - likely regression, boosted tree, and random forest (1/2 day).  
-1.2.b.  Determine reasonable strategy for train / test split (1/4 day).  
-1.2.c.  Strategize to keep this all organized and not haphazard (1/4 day).  
-
-1.3.a.  Learn from instructors how to run things on cloud (5 days).  
-
-1.4.a.  Learn pytest (1/4 day).  
-1.4.b.  Write tests (1/4 day).  
-
-1.5.a.  Learn from instructors how to run things automatically (bash scripts, e.g.) (2 days).  
-
-1.6.a.  Learn from instructors how to create working web app (3 days).  
-
-2.1.a.  Daily tracking of model performance / gambling wins (1 hour / day).  
-
-2.2.a.  Adding additional variables to the model for performance improvement (placeholder, not sure if time) (icebox).  
+**Removed on June 6**
 
 ## Instructions
 
