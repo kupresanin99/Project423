@@ -118,3 +118,10 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 	2.  Run `python Create_RDS_DS.py` to create the MySQL database in RDS
 		Populated tables Predictions and Reports will exist with MLB model results from the 2019 season
 	
+**5. Create the Webpage**
+
+	1.  Run `python app.py` to create the public-facing webpage.
+	2.  To view the webpage, visit the IPv4 Public IP found on your EC2 console.  Add ":3000" to your IP address to view the page.
+	
+
+	
