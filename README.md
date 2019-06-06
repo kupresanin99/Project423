@@ -115,7 +115,7 @@ File 3 - All gambling results from 2019 season: Beginning of 2019 season until d
 		export MYSQL_HOST="" 
 		export MYSQL_PORT=""
 	
-	2.  Run `python Create_RDS_DS.py` to create the MySQL database in RDS
+	2.  Run `python Create_RDS_DB.py` to create the MySQL database in RDS
 		Populated tables Predictions and Reports will exist with MLB model results from the 2019 season
 	
 **5. Create the Webpage**
