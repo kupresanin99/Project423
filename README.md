@@ -123,8 +123,8 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	3.  If you switch EC2 to 2XL, be sure to switch back so you are not charged more than a few pennies.  
 	4.  Run `python main_menu.py` from the command line.  
 	5.  Select option 1 for admin mode.
-	6.  Select option 1 for API pull.
-	7.  Select option 2 to run today's model (about 10 minutes on 2XL).
+	6.  Select option 1 for API pull (enter today's date).
+	7.  Select option 2 to run today's model (enter today's date) (about 10 minutes on 2XL).
 	8.  Upon training completion, you must enter the gambling lines manually - make up numbers here.
 	9.  Once gambling lines are input, the website will be updated with today's predictions.  
 	10.  I will update the page through 6/10. You can now see a new day of predictions hit the webpage.  
