@@ -46,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="254" column="62" lean-forward="true" selection-start-line="254" selection-start-column="62" selection-end-line="254" selection-end-column="62" />
+            <state relative-caret-position="399">
+              <caret line="247" column="42" lean-forward="true" selection-start-line="247" selection-start-column="42" selection-end-line="247" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -549,28 +549,7 @@
       <workItem from="1559676849755" duration="138000" />
       <workItem from="1559733834780" duration="1000" />
       <workItem from="1559853333240" duration="566000" />
-      <workItem from="1559906353103" duration="1578000" />
-    </task>
-    <task id="LOCAL-00219" summary="Get that menu cooking, bub!">
-      <created>1559312388984</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1559312388984</updated>
-    </task>
-    <task id="LOCAL-00220" summary="Get that menu cooking, bub!">
-      <created>1559312506478</created>
-      <option name="number" value="00220" />
-      <option name="presentableId" value="LOCAL-00220" />
-      <option name="project" value="LOCAL" />
-      <updated>1559312506478</updated>
-    </task>
-    <task id="LOCAL-00221" summary="Get that menu cooking, bub!">
-      <created>1559312555337</created>
-      <option name="number" value="00221" />
-      <option name="presentableId" value="LOCAL-00221" />
-      <option name="project" value="LOCAL" />
-      <updated>1559312555337</updated>
+      <workItem from="1559906353103" duration="1971000" />
     </task>
     <task id="LOCAL-00222" summary="Get that menu cooking, bub!">
       <created>1559312766488</created>
@@ -894,11 +873,32 @@
       <option name="project" value="LOCAL" />
       <updated>1559907964215</updated>
     </task>
-    <option name="localTasksCounter" value="268" />
+    <task id="LOCAL-00268" summary="Added randomized_state to model.">
+      <created>1559908052402</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1559908052402</updated>
+    </task>
+    <task id="LOCAL-00269" summary="Added randomized_state to model.">
+      <created>1559908142624</created>
+      <option name="number" value="00269" />
+      <option name="presentableId" value="LOCAL-00269" />
+      <option name="project" value="LOCAL" />
+      <updated>1559908142624</updated>
+    </task>
+    <task id="LOCAL-00270" summary="Added randomized_state to model.">
+      <created>1559908283830</created>
+      <option name="number" value="00270" />
+      <option name="presentableId" value="LOCAL-00270" />
+      <option name="project" value="LOCAL" />
+      <updated>1559908283830</updated>
+    </task>
+    <option name="localTasksCounter" value="271" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228222000" />
+    <option name="totallyTimeSpent" value="228615000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1209,8 +1209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="254" column="62" lean-forward="true" selection-start-line="254" selection-start-column="62" selection-end-line="254" selection-end-column="62" />
+        <state relative-caret-position="399">
+          <caret line="247" column="42" lean-forward="true" selection-start-line="247" selection-start-column="42" selection-end-line="247" selection-end-column="42" />
         </state>
       </provider>
     </entry>
