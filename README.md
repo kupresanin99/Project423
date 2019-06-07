@@ -123,7 +123,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 
 	1.  Run `python app.py` to create the public-facing webpage.
 	2.  Visit the IPv4 Public IP found on the EC2 console. Add ":3000" to your IP address to view the page.
-	3.  You should see gambling predictions through June 10th on this page.  
+	3.  The graders should see gambling predictions through June 10th on this page.  
 	
 **6. Train the model for today's games**
 
@@ -140,7 +140,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	8.  Upon training completion, you must enter the gambling lines manually.
 		a.  You can just make up numbers here - it doesn't affect the predictions.
 		b.  If you'd like to input actual lines, I used http://www.vegasinsider.com/mlb/scoreboard/
-		c.  Entering the gambling lines has no impact what our "customers" can view on the web.
+		c.  Entering the gambling lines has no impact on the predictions "customers" can view on the web.
 	9.  Once gambling lines are input, the website will be updated with today's predictions.  
 	10.  Before training and entering lines, the graders will see results through 6/10 on my webpage. 
 	11.  After training and enter lines, graders will see one additional day of predictions on the web.  
@@ -151,5 +151,5 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	2.  All other code is original.  
 	3.  Logging and testing made it to the icebox.  ¯\_(ツ)_/¯
 	4.  The model is repeatable on any given day - seeding with datetime.now().day().  
-	5.  At this point, Predictions are available publicly to the user on the webpage.
-	6.  At this point, Reports are only available privately to the developer on EC2.  
+	5.  At this point, Predictions are available publicly to the customer on the webpage.
+	6.  At this point, Reports are available privately to the developer on EC2.  
