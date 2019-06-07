@@ -150,6 +150,6 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	1.  I found some CSS a few weeks ago to make my html table look pretty.  Forgot the source.  
 	2.  All other code is original.  
 	3.  Logging and testing made it to the icebox.  ¯\_(ツ)_/¯
-	4.  The model is repeatable on any given day - seeding with datetime.now().day().  
+	4.  The model predictions are repeatable on any given day - seeding with user input.  
 	5.  At this point, predictions are available publicly to the customer on the webpage.
 	6.  At this point, reports are available privately to the developer on EC2.  

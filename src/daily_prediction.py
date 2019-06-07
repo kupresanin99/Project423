@@ -30,7 +30,6 @@ def get_predicted_runs(data, month, day, bucket):
     import boto3
     import os
     import config_model
-    from datetime import datetime
 
     data['home.win.pct'] = data['game.home.win'] / (data['game.home.win'] + data['game.home.loss'])
     data['away.win.pct'] = data['game.away.win'] / (data['game.away.win'] + data['game.away.loss'])
@@ -254,7 +253,7 @@ def get_predicted_runs(data, month, day, bucket):
                                    cv=config_model.cross_val,
                                    verbose=config_model.verbose,
                                    n_jobs=config_model.n_jobs,
-                                   random_state=datetime.now().day)
+                                   random_state=day)
 
     rf_random.fit(features, labels)
     print("Today's random forest model parameters: ")

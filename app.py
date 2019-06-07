@@ -1,8 +1,8 @@
 import traceback
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request
 import logging.config
 from flask import Flask
-from Create_RDS_DB import Predictions, Reports
+from Create_RDS_DB import Predictions
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy import desc
