@@ -69,6 +69,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 ## Backlog
 
 **Removed on June 6**
+- Check the other branches if needed.
 
 
 ## Instructions

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a14800bb-6765-4fb2-8a9c-db3852132bcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/daily_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/daily_prediction.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="246" column="56" lean-forward="true" selection-start-line="246" selection-start-column="56" selection-end-line="246" selection-end-column="56" />
+            <state relative-caret-position="406">
+              <caret line="254" column="62" lean-forward="true" selection-start-line="254" selection-start-column="62" selection-end-line="254" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -550,35 +549,7 @@
       <workItem from="1559676849755" duration="138000" />
       <workItem from="1559733834780" duration="1000" />
       <workItem from="1559853333240" duration="566000" />
-      <workItem from="1559906353103" duration="1264000" />
-    </task>
-    <task id="LOCAL-00215" summary="Get that menu cooking, bub!">
-      <created>1559311959517</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1559311959517</updated>
-    </task>
-    <task id="LOCAL-00216" summary="Get that menu cooking, bub!">
-      <created>1559312107358</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1559312107358</updated>
-    </task>
-    <task id="LOCAL-00217" summary="Get that menu cooking, bub!">
-      <created>1559312192500</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1559312192500</updated>
-    </task>
-    <task id="LOCAL-00218" summary="Get that menu cooking, bub!">
-      <created>1559312270869</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
-      <option name="project" value="LOCAL" />
-      <updated>1559312270869</updated>
+      <workItem from="1559906353103" duration="1578000" />
     </task>
     <task id="LOCAL-00219" summary="Get that menu cooking, bub!">
       <created>1559312388984</created>
@@ -895,11 +866,39 @@
       <option name="project" value="LOCAL" />
       <updated>1559906554022</updated>
     </task>
-    <option name="localTasksCounter" value="264" />
+    <task id="LOCAL-00264" summary="Added randomized_state to model.">
+      <created>1559907753049</created>
+      <option name="number" value="00264" />
+      <option name="presentableId" value="LOCAL-00264" />
+      <option name="project" value="LOCAL" />
+      <updated>1559907753050</updated>
+    </task>
+    <task id="LOCAL-00265" summary="Added randomized_state to model.">
+      <created>1559907825114</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1559907825114</updated>
+    </task>
+    <task id="LOCAL-00266" summary="Added randomized_state to model.">
+      <created>1559907917410</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1559907917410</updated>
+    </task>
+    <task id="LOCAL-00267" summary="Added randomized_state to model.">
+      <created>1559907964215</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
+      <option name="project" value="LOCAL" />
+      <updated>1559907964215</updated>
+    </task>
+    <option name="localTasksCounter" value="268" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227908000" />
+    <option name="totallyTimeSpent" value="228222000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -969,7 +968,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed the bug?" />
     <MESSAGE value="Oh Boy - Query the DB?" />
     <MESSAGE value="Querying DB hermano" />
     <MESSAGE value="Couple of DocStrings, bub." />
@@ -994,7 +992,8 @@
     <MESSAGE value="Good to go." />
     <MESSAGE value="Final version of webpage." />
     <MESSAGE value="Small upgrade to s3.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small upgrade to s3.py" />
+    <MESSAGE value="Added randomized_state to model." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added randomized_state to model." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Baseball$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1557232646418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notebooks/datapull" />
@@ -1210,8 +1209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/daily_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="246" column="56" lean-forward="true" selection-start-line="246" selection-start-column="56" selection-end-line="246" selection-end-column="56" />
+        <state relative-caret-position="406">
+          <caret line="254" column="62" lean-forward="true" selection-start-line="254" selection-start-column="62" selection-end-line="254" selection-end-column="62" />
         </state>
       </provider>
     </entry>
