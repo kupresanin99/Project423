@@ -70,11 +70,17 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 
 **Removed on June 6**
 
+
 ## Instructions
 
 **0. Connect to your EC2 instance on AWS**
 
-**1. Clone the Master branch of the GitHub repo.  In terminal, cd into project directory.**
+	It is suggested that the graders switch to a t2.2XL instance for this project.
+	Training on t2.2XL should take ~ 10 minutes.  
+	Training on micro might take ~ 10 hours.  
+	All other steps running smoothly on micro, for what it's worth.  
+
+**1. Clone the Master branch of this GitHub repo.  In terminal, cd into project directory.**
 
 **2. Create a conda environment, my_env = name of your new environment**
 	
@@ -89,8 +95,9 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 		b.  export AWS_SECRET_ACCESS_KEY=
 	
 	2.  From the terminal, edit the config.py and update the following:
-		a. `my_bucket` (Your S3 bucket name)
-		b. `DEST_BUCKET`  (Your S3 bucket name, sorry, go again)
+		(Remove kupebaseball and replace with destination S3 bucket)
+		a. `my_bucket` = "" 
+		b. `DEST_BUCKET` = "" 
 		
 	3.  Run `python s3.py` in the terminal from the project directory  
 	
@@ -101,7 +108,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 		
 **4. Initialize the database in RDS**
 
-	1.  Set your MYSQL environment variables by running the following commands, all must be in quotes
+	1.  Set your MYSQL environment variables by running the following commands.
 		export MYSQL_USER="" 
 		export MYSQL_PASSWORD=""
 		export MYSQL_HOST="" 
@@ -122,10 +129,17 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	2.  If the EC2 instance is micro, it might take 10 hours.  
 	3.  If you switch EC2 to 2XL, be sure to switch back so you are not charged more than a few pennies.  
 	4.  Run `python main_menu.py` from the command line.  
-	5.  Select option 1 for admin mode.
+	5.  Select option 1 for Admin Mode.
 	6.  Select option 1 for API pull (enter today's date).
+		a.  The API credentials are coded into the config.py file (throwaway account).
+		b.  For ease, the program uses those credentials (since you are grading 46 projects). 
+		c.  I realize these should be exported in EC2 and the graders should have their own keys.  
 	7.  Select option 2 to run today's model (enter today's date) (about 10 minutes on 2XL).
-	8.  Upon training completion, you must enter the gambling lines manually - make up numbers here.
+	8.  Upon training completion, you must enter the gambling lines manually.
+		a.  You can just make up numbers here - it doesn't affect the predictions.
+		b.  If you'd like to input actual lines, I used http://www.vegasinsider.com/mlb/scoreboard/
+		c.  Entering the gambling lines has no impact what our "customers" can view on the web.
 	9.  Once gambling lines are input, the website will be updated with today's predictions.  
-	10.  I will update the page through 6/10. You can now see a new day of predictions hit the webpage.  
+	10.  Before training and entering lines, the graders will see results through 6/10 on my webpage. 
+	11.  After training and enter lines, the graders will see one additional day of predictions on the web.  
 	

@@ -24,4 +24,10 @@ def transfer_s3():
 
 
 if __name__ == "__main__":
-    transfer_s3()
+    try:
+        transfer_s3()
+        print("\nFiles should have been transferred.  Go check S3!\n")
+    except:
+        print("Not good.  Slack Joe.")
+    finally:
+        print("\nExiting S3.py\n")
