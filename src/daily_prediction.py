@@ -10,16 +10,14 @@ def get_predicted_runs(data, month, day, bucket):
         Output:
         Returns a DF that includes the day's MLB runs predictions
         During daily processing, 49 random forest models are run on EC2 2XL instance
-        The runs predictions are served up to the webmaster, but not the end-user.
+        The runs predictions are served up to the developer on EC2, but not the end-user.
         The end-user is only interested in gambling, so we treat the modeling aspect as a black box.
         We provide our gambling recommendations based on the model results to Flask.
 
         Details:
-        This function takes about 10 minutes to run on an EC2 instance and requires some input by the webmaster.
+        This function takes about 10 minutes to run on an EC2 2XL instance and requires some input by the developer.
         The user functionality is hosted on Flask and the models / results have a daily update.
         The model is dynamic in the sense that each day, a new random forest is run for today's games.
-        The season-long gambling predictions and betting outcomes are hosted on Flask for the user.
-        To view those results requires no on-the-fly model building.
         Model-building takes place each day before the MLB games get going.
         """
 

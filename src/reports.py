@@ -1,5 +1,5 @@
 def run_yearly_reports():
-    """Pulls all gambling results from RDS for 2019 season and creates user reports to be served on Flask"""
+    """Pulls all gambling results from RDS for 2019 season and creates user reports"""
     import pandas as pd
     from time import sleep
     import sqlalchemy as sql
@@ -100,7 +100,7 @@ def display_gambling_picks(month, day):
 
 
 def run_daily_report(month, day):
-    """For a given date, returns the gambling results for the slate of MLB games.  To be served on Flask."""
+    """For a given date, returns the gambling results for the slate of MLB games."""
     import pandas as pd
     import config
     import sqlalchemy as sql
