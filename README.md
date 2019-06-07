@@ -143,3 +143,8 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	10.  Before training and entering lines, the graders will see results through 6/10 on my webpage. 
 	11.  After training and enter lines, the graders will see one additional day of predictions on the web.  
 	
+**Notes**
+
+	1.  I found some CSS a few weeks ago to make my html table look pretty.  Forgot the source.  
+	2.  All other code is mine.  Logging and testing made it to the icebox.  
+	3.  
