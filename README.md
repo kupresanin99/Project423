@@ -80,7 +80,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	Training on micro might take ~ 10 hours.  
 	All other steps running smoothly on micro, for what it's worth.  
 
-**1. Clone the Master branch of this GitHub repo.  In terminal, cd into project directory.**
+**1. Clone the master branch of this GitHub repo.  In terminal, cd into project directory.**
 
 **2. Create a conda environment, my_env = name of your new environment**
 	
@@ -117,13 +117,13 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	2.  Run `python Create_RDS_DB.py` to create the MySQL database in RDS
 		Populated tables Predictions and Reports will exist with MLB model results from the 2019 season
 	
-**5. Create the Webpage**
+**5. Create the webpage**
 
 	1.  Run `python app.py` to create the public-facing webpage.
 	2.  Visit the IPv4 Public IP found on the EC2 console. Add ":3000" to your IP address to view the page.
 	3.  You should see gambling predictions through June 10th on this page.  
 	
-**6. Train the Model for Today's Games**
+**6. Train the model for today's games**
 
 	1.  Your EC2 instance should be switched to t2.2XL - (10 minutes training time)
 	2.  If the EC2 instance is micro, it might take 10 hours.  
