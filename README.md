@@ -147,5 +147,6 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 **Notes**
 
 	1.  I found some CSS a few weeks ago to make my html table look pretty.  Forgot the source.  
-	2.  All other code is mine.  
-	3.  Logging and testing made it to the icebox.  
+	2.  All other code is original.  
+	3.  Logging and testing made it to the icebox.  ¯\_(ツ)_/¯
+	4.  The model is repeatable on any given day - seeding with datetime.now().day().  
