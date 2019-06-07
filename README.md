@@ -148,7 +148,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 **Notes**
 
 	1.  I found some CSS a few weeks ago to make my html table look pretty.  Forgot the source.  
-	2.  All other code is original.  
+	2.  All other code is original, except s3.py is from Senior QA Max.
 	3.  Logging and testing made it to the icebox.  ¯\_(ツ)_/¯
 	4.  At this point, predictions are available publicly to the customer on the webpage.
 	5.  At this point, reports are available privately to the developer on EC2.  
