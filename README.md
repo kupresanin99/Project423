@@ -97,8 +97,9 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 	
 	2.  From the terminal, edit the config.py and update the following:
 		(Remove kupebaseball and replace with destination S3 bucket)
-		a. `my_bucket` = "" 
-		b. `DEST_BUCKET` = "" 
+		(Yes, please change them both)
+		a. my_bucket = "" 
+		b. DEST_BUCKET = "" 
 		
 	3.  Run `python s3.py` in the terminal from the project directory  
 	
@@ -109,7 +110,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 		
 **4. Initialize the database in RDS**
 
-	1.  Set your MYSQL environment variables by running the following commands.
+	1.  Set your MYSQL environment variables by running the following commands in the terminal:
 		export MYSQL_USER="" 
 		export MYSQL_PASSWORD=""
 		export MYSQL_HOST="" 
