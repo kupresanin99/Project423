@@ -141,7 +141,7 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 		c.  Entering the gambling lines has no impact what our "customers" can view on the web.
 	9.  Once gambling lines are input, the website will be updated with today's predictions.  
 	10.  Before training and entering lines, the graders will see results through 6/10 on my webpage. 
-	11.  After training and enter lines, the graders will see one additional day of predictions on the web.  
+	11.  After training and enter lines, graders will see one additional day of predictions on the web.  
 	
 **Notes**
 
