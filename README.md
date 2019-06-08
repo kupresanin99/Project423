@@ -74,6 +74,8 @@ The reason the gambler must win more than 55 percent of wagers is the bookie cha
 
 ## Instructions
 
+These instructions were written assuming RDS, training on EC2, and deploying to the public IP.  
+
 **0. Connect to your EC2 instance on AWS**
 
 	It is suggested that the graders switch to a t2.2XL instance for this project.
