@@ -103,7 +103,7 @@ These instructions were written assuming RDS, training on EC2, and deploying to 
 		a. my_bucket = "" 
 		b. DEST_BUCKET = "" 
 		
-	3.  Run `python s3.py` in the terminal from the project root directory  
+	3.  Run `python s3.py` in the terminal from the project root directory.  
 	
 	4.  Navigate to S3 to see if three files have been transferred to your bucket:
 		a.  "model_data"
@@ -118,8 +118,8 @@ These instructions were written assuming RDS, training on EC2, and deploying to 
 		export MYSQL_HOST="" 
 		export MYSQL_PORT=""
 	
-	2.  Run `python Create_RDS_DB.py` from the project root directory to create the MySQL DB in RDS
-		Populated tables Predictions and Reports will exist with MLB model results from the 2019 season
+	2.  Run `python Create_RDS_DB.py` from the project root directory to create the MySQL DB in RDS.
+		Populated tables Predictions and Reports will exist with results through June 10.
 	
 **5. Create the webpage**
 
@@ -129,7 +129,7 @@ These instructions were written assuming RDS, training on EC2, and deploying to 
 	
 **6. Train the model for today's games**
 
-	1.  Your EC2 instance should be switched to t2.2XL - (10 minutes training time)
+	1.  Your EC2 instance should be switched to t2.2XL - (10 minutes training time).
 	2.  If the EC2 instance is micro, it might take 10 hours.  
 	3.  If you switch EC2 to 2XL, be sure to switch back so you are not charged more than a few pennies.  
 	4.  Run `python main_menu.py` from the project root directory.  
