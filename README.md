@@ -103,7 +103,7 @@ These instructions were written assuming RDS, training on EC2, and deploying to 
 		a. my_bucket = "" 
 		b. DEST_BUCKET = "" 
 		
-	3.  Run `python s3.py` in the terminal from the project directory  
+	3.  Run `python s3.py` in the terminal from the project root directory  
 	
 	4.  Navigate to S3 to see if three files have been transferred to your bucket:
 		a.  "model_data"
@@ -118,12 +118,12 @@ These instructions were written assuming RDS, training on EC2, and deploying to 
 		export MYSQL_HOST="" 
 		export MYSQL_PORT=""
 	
-	2.  Run `python Create_RDS_DB.py` to create the MySQL database in RDS
+	2.  Run `python Create_RDS_DB.py` from the project root directory to create the MySQL DB in RDS
 		Populated tables Predictions and Reports will exist with MLB model results from the 2019 season
 	
 **5. Create the webpage**
 
-	1.  Run `python app.py` to create the public-facing webpage.
+	1.  Run `python app.py` from the project root directory to create the public-facing webpage.
 	2.  Visit the IPv4 Public IP found on the EC2 console. Add ":3000" to your IP address to view the page.
 	3.  The graders should see gambling predictions through June 10th on this page.  
 	
@@ -132,7 +132,7 @@ These instructions were written assuming RDS, training on EC2, and deploying to 
 	1.  Your EC2 instance should be switched to t2.2XL - (10 minutes training time)
 	2.  If the EC2 instance is micro, it might take 10 hours.  
 	3.  If you switch EC2 to 2XL, be sure to switch back so you are not charged more than a few pennies.  
-	4.  Run `python main_menu.py` from the command line.  
+	4.  Run `python main_menu.py` from the project root directory.  
 	5.  Select option 1 for Admin Mode.
 	6.  Select option 1 for API pull (enter today's date).
 		a.  The API credentials are coded into the config.py file (throwaway account).
