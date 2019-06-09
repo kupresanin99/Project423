@@ -87,10 +87,10 @@ table.altrowstable td {
             {% for prediction in predictions %}
                <tr>
                    <td align="center">{{ prediction.date }}</td>
-                   <td>{{ prediction.home }}</td>
-                   <td>{{ prediction.away }}</td>
-                   <td>{{ prediction.bookie }}</td>
-                   <td>{{ prediction.predicted_runs }}</td>
+                   <td align="center">{{ prediction.home }}</td>
+                   <td align="center">{{ prediction.away }}</td>
+                   <td align="center">{{ prediction.bookie }}</td>
+                   <td align="center">{{ prediction.predicted_runs }}</td>
                </tr>
             {% endfor %}
          </tbody>
