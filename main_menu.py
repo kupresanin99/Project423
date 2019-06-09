@@ -11,6 +11,10 @@ import glob
 import config
 from src.reports import should_bet
 
+"""main_menu.py is the entry point to the developer side of functionality"""
+"""From here, the developer can pull today's data through an api pull"""
+"""Also, developer can run the model each day and enter MLB results"""
+
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 

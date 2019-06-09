@@ -7,6 +7,8 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy import desc
 
+"""app.py serves up the public-facing Flask app"""
+
 app = Flask(__name__)
 app.config.from_pyfile('config_flask.py')
 logging.config.fileConfig(app.config["LOGGING_CONFIG"])
@@ -19,6 +21,8 @@ today = today.strftime('%Y-%m-%d')
 
 @app.route('/')
 def index():
+
+    """This function serves up the landing page for the web app"""
 
     try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by(desc("date")).all()
@@ -33,6 +37,8 @@ def index():
 
 @app.route('/results', methods=['POST'])
 def get_date():
+
+    """This function provides the user menu to select dates to see baseball predictions"""
 
     try:
         dates_avail = db.session.query(Predictions.date).distinct().order_by(desc("date")).all()
